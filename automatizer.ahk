@@ -248,54 +248,9 @@ WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
 return
 
-<#+Enter::
++Enter::
 MouseGetPos, xpos, ypos 
 Send {Click, xpos, ypos}
-return
-
-<#^Enter::
-MouseGetPos, xpos, ypos 
-Send {Click, xpos, ypos}
-return
-
-<#^Left::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos - 70, ypos
-return
-
-<#^Right::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos + 70, ypos
-return
-
-<#^Up::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos, ypos - 70
-return
-
-<#^Down::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos, ypos + 70
-return
-
-<#+Left::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos - 20, ypos
-return
-
-<#+Right::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos + 20, ypos
-return
-
-<#+Up::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos, ypos - 20
-return
-
-<#+Down::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos, ypos + 20
 return
 
 <#C::
@@ -332,33 +287,96 @@ if CurrentClass in idea,ide,SunAwtFrame
 }
 return
 
-^!Left::
+Numpad1::
+return
+
+Numpad2::
+return
+
+Numpad3::
+return
+
+Numpad7::
+return
+
+Numpad9::
+return
+
+Numpad4::
+Send {Left}
+return
+
+Numpad6::
+Send {Right}
+return
+
+Numpad8::
+Send {Up}
+return
+
+Numpad5::
+Send {Down}
+return
+
+<#Numpad4::
 Send ^{PgUp}
 return
 
-^!Right::
+<#Numpad6::
 Send ^{PgDn}
 return
 
-^+Up::
+<#Numpad8::
 Send {Up}
 Send {Up}
 Send {Up}
 return
 
-^+Down::
+<#Numpad5::
 Send {Down}
 Send {Down}
 Send {Down}
 return
 
-^!Up::
+<#^Numpad8::
 Send {WheelUp}
 Send {WheelUp}
 Send {WheelUp}
 return
 
-^!Down::
+<#^Numpad5::
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+return
+
+<#Up::
+Send {Up}
+Send {Up}
+Send {Up}
+return
+
+<#Down::
+Send {Down}
+Send {Down}
+Send {Down}
+return
+
+<#Left::
+Send ^{PgUp}
+return
+
+<#Right::
+Send ^{PgDn}
+return
+
+<#^Up::
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+return
+
+<#^Down::
 Send {WheelDown}
 Send {WheelDown}
 Send {WheelDown}
