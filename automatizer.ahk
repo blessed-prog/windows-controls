@@ -43,14 +43,6 @@ id_pgdn := ""
 id_div := ""
 id_mult := ""
 
-^!M::
-WinGet, id_m, ID, A
-return
-
-^M::
-WinActivate, ahk_id %id_m%
-return
-
 ^!'::
 WinGet, id_apos, ID, A
 return
@@ -119,40 +111,8 @@ return
 WinGet, id_p, ID, A
 return
 
-^J::
-WinActivate, ahk_id %id_j%
-return
-
-^!J::
-WinGet, id_j, ID, A
-return
-
-^K::
-WinActivate, ahk_id %id_k%
-return
-
-^!K::
-WinGet, id_k, ID, A
-return
-
-^L::
-WinActivate, ahk_id %id_l%
-return
-
-^!L::
-WinGet, id_l, ID, A
-return
-
 ^P::
 WinActivate, ahk_id %id_p%
-return
-
-^!I::
-WinGet, id_i, ID, A
-return
-
-^I::
-WinActivate, ahk_id %id_i%
 return
 
 ^!U::
@@ -161,6 +121,22 @@ return
 
 ^U::
 WinActivate, ahk_id %id_u%
+return
+
+^!PgUp::
+WinGet, id_pgup, ID, A
+return
+
+^PgUp::
+WinActivate, ahk_id %id_pgup%
+return
+
+^!PgDn::
+WinGet, id_pgdn, ID, A
+return
+
+^PgDn::
+WinActivate, ahk_id %id_pgdn%
 return
 
 ^!NumpadDiv::
@@ -193,22 +169,6 @@ return
 
 ^End::
 WinActivate, ahk_id %id_end%
-return
-
-^!PgUp::
-WinGet, id_pgup, ID, A
-return
-
-^PgUp::
-WinActivate, ahk_id %id_pgup%
-return
-
-^!PgDn::
-WinGet, id_pgdn, ID, A
-return
-
-^PgDn::
-WinActivate, ahk_id %id_pgdn%
 return
 
 ^!Numpad0::
@@ -288,7 +248,6 @@ WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
 return
 
-
 <#+Enter::
 MouseGetPos, xpos, ypos 
 Send {Click, xpos, ypos}
@@ -339,6 +298,18 @@ MouseGetPos, xpos, ypos
 MouseMove, xpos, ypos + 20
 return
 
+<#C::
+Run C:\
+return
+
+<#D::
+Run D:\
+return
+
+<#!Enter::
+Send {RButton}
+return
+
 !Down::
 WinGetClass, CurrentClass, A
 if CurrentClass in idea,ide,SunAwtFrame
@@ -359,6 +330,26 @@ if CurrentClass in idea,ide,SunAwtFrame
 {
     Send {PgUp}
 }
+return
+
+^!Left::
+Send ^{PgUp}
+return
+
+^!Right::
+Send ^{PgDn}
+return
+
+^+Up::
+Send {Up}
+Send {Up}
+Send {Up}
+return
+
+^+Down::
+Send {Down}
+Send {Down}
+Send {Down}
 return
 
 ^!Up::
