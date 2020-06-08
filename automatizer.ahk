@@ -370,6 +370,14 @@ return
 Send ^{PgDn}
 return
 
+<#^Left::
+Send ^{PgUp}
+return
+
+<#^Right::
+Send ^{PgDn}
+return
+
 <#^Up::
 Send {WheelUp}
 Send {WheelUp}
@@ -380,4 +388,24 @@ return
 Send {WheelDown}
 Send {WheelDown}
 Send {WheelDown}
+return
+
+<#+Left::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos - 80, ypos
+return
+
+<#+Right::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos + 80, ypos
+return
+
+<#+Up::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos, ypos - 80
+return
+
+<#+Down::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos, ypos + 80
 return
