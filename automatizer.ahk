@@ -248,7 +248,12 @@ WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
 return
 
-+Enter::
+<#^Enter::
+MouseGetPos, xpos, ypos 
+Send {Click, xpos, ypos}
+return
+
+^!Enter::
 MouseGetPos, xpos, ypos 
 Send {Click, xpos, ypos}
 return
@@ -259,6 +264,14 @@ return
 
 <#D::
 Run D:\
+return
+
+<#G::
+Run C:\Users\aache\OneDrive\Documents
+return
+
+<#H::
+Run C:\Users\aache
 return
 
 <#!Enter::
