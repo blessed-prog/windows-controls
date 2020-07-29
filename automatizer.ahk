@@ -99,13 +99,6 @@ return
 WinActivate, ahk_id %id_9%
 return
 
-^!O::
-WinGet, id_o, ID, A
-return
-
-^O::
-WinActivate, ahk_id %id_o%
-return
 
 ^!P::
 WinGet, id_p, ID, A
@@ -278,58 +271,6 @@ return
 Send {RButton}
 return
 
-!Down::
-WinGetClass, CurrentClass, A
-if CurrentClass in idea,ide,SunAwtFrame
-{
-    Send !{Down}
-} else
-{
-    Send {PgDn}
-}
-return
-
-!Up::
-WinGetClass, CurrentClass, A
-if CurrentClass in idea,ide,SunAwtFrame
-{
-    Send !{Up}
-} else
-{
-    Send {PgUp}
-}
-return
-
-Numpad1::
-return
-
-Numpad2::
-return
-
-Numpad3::
-return
-
-Numpad7::
-return
-
-Numpad9::
-return
-
-Numpad4::
-Send {Left}
-return
-
-Numpad6::
-Send {Right}
-return
-
-Numpad8::
-Send {Up}
-return
-
-Numpad5::
-Send {Down}
-return
 
 <#Numpad4::
 Send ^{PgUp}
@@ -419,6 +360,64 @@ MouseMove, xpos, ypos - 80
 return
 
 <#+Down::
-MouseGetPos, xpos, ypos 
+MouseGetPos, xpos, ypos
 MouseMove, xpos, ypos + 80
+return
+
+Numpad4::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos - 40, ypos
+return
+
+Numpad6::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos + 40, ypos
+return
+
+Numpad8::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos, ypos - 40
+return
+
+Numpad5::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos, ypos + 40
+return
+
+!Numpad4::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos - 100, ypos
+return
+
+!Numpad6::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos + 100, ypos
+return
+
+!Numpad8::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos, ypos - 100
+return
+
+!Numpad5::
+MouseGetPos, xpos, ypos 
+MouseMove, xpos, ypos + 100
+return
+
+Numpad7::
+MouseGetPos, xpos, ypos 
+Send {Click, xpos, ypos}
+return
+
+Numpad9::
+Send {RButton}
+return
+
+!Numpad7::
+MouseGetPos, xpos, ypos 
+Send {Click, xpos, ypos}
+return
+
+!Numpad9::
+Send {RButton}
 return
