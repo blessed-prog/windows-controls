@@ -251,6 +251,11 @@ MouseGetPos, xpos, ypos
 Send {Click, xpos, ypos}
 return
 
+<#Enter::
+MouseGetPos, xpos, ypos 
+Send {Click, xpos, ypos}
+return
+
 <#C::
 Run C:\
 return
