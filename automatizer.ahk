@@ -43,6 +43,11 @@ id_pgdn := ""
 id_div := ""
 id_mult := ""
 
+id_plus := ""
+id_minus := ""
+id_enter := ""
+id_dot := ""
+
 ^!'::
 WinGet, id_apos, ID, A
 return
@@ -130,6 +135,38 @@ return
 
 ^PgDn::
 WinActivate, ahk_id %id_pgdn%
+return
+
+^!NumpadAdd::
+WinGet, id_plus, ID, A
+return
+
+^NumpadAdd::
+WinActivate, ahk_id %id_plus%
+return
+
+^!NumpadSub::
+WinGet, id_minus, ID, A
+return
+
+^NumpadSub::
+WinActivate, ahk_id %id_minus%
+return
+
+^!NumpadEnter::
+WinGet, id_enter, ID, A
+return
+
+^NumpadEnter::
+WinActivate, ahk_id %id_enter%
+return
+
+^!NumpadDot::
+WinGet, id_dot, ID, A
+return
+
+^NumpadDot::
+WinActivate, ahk_id %id_dot%
 return
 
 ^!NumpadDiv::
