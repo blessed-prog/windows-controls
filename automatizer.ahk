@@ -476,76 +476,81 @@ MouseGetPos, xpos, ypos
 MouseMove, xpos, ypos + 80
 return
 
-Numpad1::
+!Numpad1::
 MouseMove, res_w / 6, res_h * 5 / 6
 return
 
-Numpad2::
+!Numpad2::
 MouseMove, res_w / 2, res_h * 5 / 6
 return
 
-Numpad3::
+!Numpad3::
 MouseMove, res_w * 5 / 6, res_h * 5 / 6
 return
 
-Numpad4::
+!Numpad4::
 MouseMove, res_w / 6, res_h / 2
 return
 
-Numpad6::
+!Numpad6::
 MouseMove, res_w * 5 / 6, res_h / 2
 return
 
-Numpad7::
+!Numpad7::
 MouseMove, res_w / 6, res_h / 6
 return
 
-Numpad8::
+!Numpad8::
 MouseMove, res_w / 2, res_h / 6
 return
 
-Numpad9::
+!Numpad9::
 MouseMove, res_w * 5 / 6, res_h / 6
+return
+
+!Numpad5::
+MouseMove, res_w / 2, res_h / 2
+return
+
+Numpad1::
+MouseMove, res_w / 12, res_h * 11 / 12
+return
+
+Numpad2::
+MouseMove, res_w / 2, res_h * 11 / 12
+return
+
+Numpad3::
+MouseMove, res_w * 11 / 12, res_h * 11 / 12
+return
+
+Numpad4::
+MouseMove, res_w / 12, res_h / 2
+return
+
+Numpad6::
+MouseMove, res_w * 11 / 12, res_h / 2
+return
+
+Numpad7::
+MouseMove, res_w / 12, res_h / 12
+return
+
+Numpad8::
+MouseMove, res_w / 2, res_h / 12
+return
+
+Numpad9::
+MouseMove, res_w * 11 / 12, res_h / 12
 return
 
 Numpad5::
 MouseMove, res_w / 2, res_h / 2
 return
 
-!Numpad1::
-MouseMove, res_w / 12, res_h * 11 / 12
-return
-
-!Numpad2::
-MouseMove, res_w / 2, res_h * 11 / 12
-return
-
-!Numpad3::
-MouseMove, res_w * 11 / 12, res_h * 11 / 12
-return
-
-!Numpad4::
-MouseMove, res_w / 12, res_h / 2
-return
-
-!Numpad6::
-MouseMove, res_w * 11 / 12, res_h / 2
-return
-
-!Numpad7::
-MouseMove, res_w / 12, res_h / 12
-return
-
-!Numpad8::
-MouseMove, res_w / 2, res_h / 12
-return
-
-!Numpad9::
-MouseMove, res_w * 11 / 12, res_h / 12
-return
-
-!Numpad5::
-MouseMove, res_w / 2, res_h / 2
+!NumpadAdd::
+MouseGetPos, xpos, ypos 
+Send {Click, xpos, ypos}
 return
 
 !NumpadEnter::
