@@ -20,6 +20,13 @@ id_7_win := ""
 id_8_win := ""
 id_9_win := ""
 
+id_pgup_win := ""
+id_pgdn_win := ""
+id_div_win := ""
+id_mult_win := ""
+id_home_win := ""
+id_minus_win := ""
+
 id_0 := ""
 id_1 := ""
 id_2 := ""
@@ -49,7 +56,6 @@ id_mult := ""
 id_plus := ""
 id_minus := ""
 id_enter := ""
-id_dot := ""
 
 ^!'::
 WinGet, id_apos, ID, A
@@ -139,12 +145,28 @@ return
 WinActivate, ahk_id %id_pgup%
 return
 
+<#^PgUp::
+WinGet, id_pgup_win, ID, A
+return
+
+<#PgUp::
+WinActivate, ahk_id %id_pgup_win%
+return
+
 ^!PgDn::
 WinGet, id_pgdn, ID, A
 return
 
 ^PgDn::
 WinActivate, ahk_id %id_pgdn%
+return
+
+<#^PgDn::
+WinGet, id_pgdn_win, ID, A
+return
+
+<#PgDn::
+WinActivate, ahk_id %id_pgdn_win%
 return
 
 ^!NumpadAdd::
@@ -163,20 +185,20 @@ return
 WinActivate, ahk_id %id_minus%
 return
 
+<#^NumpadSub::
+WinGet, id_minus_win, ID, A
+return
+
+<#NumpadSub::
+WinActivate, ahk_id %id_minus_win%
+return
+
 ^!NumpadEnter::
 WinGet, id_enter, ID, A
 return
 
 ^NumpadEnter::
 WinActivate, ahk_id %id_enter%
-return
-
-^!NumpadDot::
-WinGet, id_dot, ID, A
-return
-
-^NumpadDot::
-WinActivate, ahk_id %id_dot%
 return
 
 ^!NumpadDiv::
@@ -187,6 +209,14 @@ return
 WinActivate, ahk_id %id_div%
 return
 
+<#^NumpadDiv::
+WinGet, id_div_win, ID, A
+return
+
+<#NumpadDiv::
+WinActivate, ahk_id %id_div_win%
+return
+
 ^!NumpadMult::
 WinGet, id_mult, ID, A
 return
@@ -195,12 +225,28 @@ return
 WinActivate, ahk_id %id_mult%
 return
 
+<#^NumpadMult::
+WinGet, id_mult_win, ID, A
+return
+
+<#NumpadMult::
+WinActivate, ahk_id %id_mult_win%
+return
+
 ^!Home::
 WinGet, id_home, ID, A
 return
 
 ^Home::
 WinActivate, ahk_id %id_home%
+return
+
+<#^Home::
+WinGet, id_home_win, ID, A
+return
+
+<#Home::
+WinActivate, ahk_id %id_home_win%
 return
 
 ^!End::
@@ -476,86 +522,116 @@ MouseGetPos, xpos, ypos
 MouseMove, xpos, ypos + 80
 return
 
+ClickNow()
+{
+MouseGetPos, xpos, ypos 
+Send {Click, xpos, ypos}
+}
+	
 !Numpad1::
 MouseMove, res_w / 6, res_h * 5 / 6
+ClickNow()
 return
 
 !Numpad2::
 MouseMove, res_w / 2, res_h * 5 / 6
+ClickNow()
 return
 
 !Numpad3::
 MouseMove, res_w * 5 / 6, res_h * 5 / 6
+ClickNow()
 return
 
 !Numpad4::
 MouseMove, res_w / 6, res_h / 2
+ClickNow()
 return
 
 !Numpad6::
 MouseMove, res_w * 5 / 6, res_h / 2
+ClickNow()
 return
 
 !Numpad7::
 MouseMove, res_w / 6, res_h / 6
+ClickNow()
 return
 
 !Numpad8::
 MouseMove, res_w / 2, res_h / 6
+ClickNow()
 return
 
 !Numpad9::
 MouseMove, res_w * 5 / 6, res_h / 6
+ClickNow()
 return
 
 !Numpad5::
 MouseMove, res_w / 2, res_h / 2
+ClickNow()
 return
 
 Numpad1::
 MouseMove, res_w / 12, res_h * 11 / 12
+ClickNow()
 return
 
 Numpad2::
 MouseMove, res_w / 2, res_h * 11 / 12
+ClickNow()
 return
 
 Numpad3::
 MouseMove, res_w * 11 / 12, res_h * 11 / 12
+ClickNow()
 return
 
 Numpad4::
 MouseMove, res_w / 12, res_h / 2
+ClickNow()
 return
 
 Numpad6::
 MouseMove, res_w * 11 / 12, res_h / 2
+ClickNow()
 return
 
 Numpad7::
 MouseMove, res_w / 12, res_h / 12
+ClickNow()
 return
 
 Numpad8::
 MouseMove, res_w / 2, res_h / 12
+ClickNow()
 return
 
 Numpad9::
 MouseMove, res_w * 11 / 12, res_h / 12
+ClickNow()
 return
 
 Numpad5::
 MouseMove, res_w / 2, res_h / 2
+ClickNow()
+return
+
+<#NumpadAdd::
+ClickNow()
+return
+
+<#NumpadEnter::
+ClickNow()
 return
 
 !NumpadAdd::
-MouseGetPos, xpos, ypos 
-Send {Click, xpos, ypos}
+ClickNow()
 return
 
 !NumpadEnter::
-MouseGetPos, xpos, ypos 
-Send {Click, xpos, ypos}
+ClickNow()
 return
 
 WinGetPosEx(hWindow,ByRef X="",ByRef Y="",ByRef Width="",ByRef Height=""
@@ -666,10 +742,14 @@ return
 ResizeWin(res_w * 2 / 3, 0, res_w / 3, res_h)
 return
 
-<#[::
+<#!Up::
+ResizeWin(0, 0, res_w, res_h)
+return
+
+<#!Left::
 ResizeWin(0, 0, res_w / 2, res_h)
 return
 
-<#]::
+<#!Right::
 ResizeWin(res_w / 2, 0, res_w / 2, res_h)
 return
