@@ -4,10 +4,8 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-res_w = 2560
-res_h = 1440
-
-curr_w = ""
+res_w = 1980
+res_h = 1080
 
 id_0_win := ""
 id_1_win := ""
@@ -20,6 +18,7 @@ id_7_win := ""
 id_8_win := ""
 id_9_win := ""
 
+id_plus_win := ""
 id_pgup_win := ""
 id_pgdn_win := ""
 id_div_win := ""
@@ -38,9 +37,6 @@ id_7 := ""
 id_8 := ""
 id_9 := ""
 
-id_r_br := ""
-id_l_br := ""
-
 id_ls := ""
 id_gt := ""
 id_apos := ""
@@ -57,84 +53,322 @@ id_plus := ""
 id_minus := ""
 id_enter := ""
 
+; MOuse clicks
+
+<#,::
+MouseMove, res_w / 12, res_h * 11 / 12
+ClickNow()
+return
+
+<#.::
+MouseMove, res_w / 2, res_h * 11 / 12
+ClickNow()
+return
+
+<#/::
+MouseMove, res_w * 11 / 12, res_h * 11 / 12
+ClickNow()
+return
+
+<#L::
+MouseMove, res_w / 12, res_h / 2
+ClickNow()
+return
+
+<#'::
+MouseMove, res_w * 11 / 12, res_h / 2
+ClickNow()
+return
+
+<#P::
+MouseMove, res_w / 12, res_h / 12
+ClickNow()
+return
+
+<#[::
+MouseMove, res_w / 2, res_h / 12
+ClickNow()
+return
+
+<#]::
+MouseMove, res_w * 11 / 12, res_h / 12
+ClickNow()
+return
+
+<#;::
+MouseMove, res_w / 2, res_h / 2
+ClickNow()
+return
+
+
+; LAPTOP KEYS
+
+!+,::
+WinGet, id_1_win, ID, A
+return
+
+!,::
+WinActivate, ahk_id %id_1_win%
+return
+
+!+.::
+WinGet, id_2_win, ID, A
+return
+
+!.::
+WinActivate, ahk_id %id_2_win%
+return
+
+!+/::
+WinGet, id_3_win, ID, A
+return
+
+!/::
+WinActivate, ahk_id %id_3_win%
+return
+
+!+L::
+WinGet, id_4_win, ID, A
+return
+
+!L::
+WinActivate, ahk_id %id_4_win%
+return
+
+!+;::
+WinGet, id_5_win, ID, A
+return
+
+!;::
+WinActivate, ahk_id %id_5_win%
+return
+
+!+'::
+WinGet, id_6_win, ID, A
+return
+
+!'::
+WinActivate, ahk_id %id_6_win%
+return
+
+!+P::
+WinGet, id_7_win, ID, A
+return
+
+!P::
+WinActivate, ahk_id %id_7_win%
+return
+
+!+[::
+WinGet, id_8_win, ID, A
+return
+
+![::
+WinActivate, ahk_id %id_8_win%
+return
+
+!+]::
+WinGet, id_9_win, ID, A
+return
+
+!]::
+WinActivate, ahk_id %id_9_win%
+return
+
+!+\::
+WinGet, id_plus_win, ID, A
+return
+
+!\::
+WinActivate, ahk_id %id_plus_win%
+return
+
+!+O::
+WinGet, id_pgdn_win, ID, A
+return
+
+!O::
+WinActivate, ahk_id %id_pgdn_win%
+return
+
+!+-::
+WinGet, id_div_win, ID, A
+return
+
+!-::
+WinActivate, ahk_id %id_div_win%
+return
+
+!+=::
+WinGet, id_mult_win, ID, A
+return
+
+!=::
+WinActivate, ahk_id %id_mult_win%
+return
+
+^!9::
+WinGet, id_home, ID, A
+return
+
+^9::
+WinActivate, ahk_id %id_home%
+return
+
+!+9::
+WinGet, id_pgup_win, ID, A
+return
+
+!9::
+WinActivate, ahk_id %id_pgup_win%
+return
+
+!+0::
+WinGet, id_home_win, ID, A
+return
+
+!0::
+WinActivate, ahk_id %id_home_win%
+return
+
+^!0::
+WinGet, id_pgup, ID, A
+return
+
+^0::
+WinActivate, ahk_id %id_pgup%
+return
+
+^!/::
+WinGet, id_3, ID, A
+return
+
+^/::
+WinActivate, ahk_id %id_3%
+return
+
+^!\::
+WinGet, id_plus, ID, A
+return
+
+^\::
+WinActivate, ahk_id %id_plus%
+return
+
 ^!'::
-WinGet, id_apos, ID, A
+WinGet, id_6, ID, A
 return
 
 ^'::
-WinActivate, ahk_id %id_apos%
+WinActivate, ahk_id %id_6%
 return
 
 ^!;::
-WinGet, id_semicolon, ID, A
+WinGet, id_5, ID, A
 return
 
 ^;::
-WinActivate, ahk_id %id_semicolon%
+WinActivate, ahk_id %id_5%
 return
 
 ^!.::
-WinGet, id_gt, ID, A
+WinGet, id_2, ID, A
 return
 
 ^.::
-WinActivate, ahk_id %id_gt%
+WinActivate, ahk_id %id_2%
 return
 
 ^!,::
-WinGet, id_ls, ID, A
+WinGet, id_1, ID, A
 return
 
 ^,::
-WinActivate, ahk_id %id_ls%
+WinActivate, ahk_id %id_1%
 return
 
-^!7::
+^![::
+WinGet, id_8, ID, A
+return
+
+^[::
+WinActivate, ahk_id %id_8%
+return
+
+^!]::
+WinGet, id_9, ID, A
+return
+
+^]::
+WinActivate, ahk_id %id_9%
+return
+
+^!P::
 WinGet, id_7, ID, A
+return
+
+^P::
+WinActivate, ahk_id %id_7%
+return
+
+^!O::
+WinGet, id_pgdn, ID, A
+return
+
+^O::
+WinActivate, ahk_id %id_pgdn%
+return
+
+^!L::
+WinGet, id_4, ID, A
+return
+
+^L::
+WinActivate, ahk_id %id_4%
+return
+
+^1::
+WinActivate, ahk_id %id_1%
+return
+
+^2::
+WinActivate, ahk_id %id_2%
+return
+
+^3::
+WinActivate, ahk_id %id_3%
+return
+
+^4::
+WinActivate, ahk_id %id_4%
+return
+
+^5::
+WinActivate, ahk_id %id_5%
+return
+
+^6::
+WinActivate, ahk_id %id_6%
 return
 
 ^7::
 WinActivate, ahk_id %id_7%
 return
 
-^!8::
-WinGet, id_8, ID, A
+^!-::
+WinGet, id_div, ID, A
 return
 
-^8::
-WinActivate, ahk_id %id_8%
+^-::
+WinActivate, ahk_id %id_div%
 return
 
-^!9::
-WinGet, id_9, ID, A
+^=::
+WinActivate, ahk_id %id_mult%
 return
 
-^9::
-WinActivate, ahk_id %id_9%
-return
-
-^![::
-WinGet, id_r_br, ID, A
-return
-
-^[::
-WinActivate, ahk_id %id_r_br%
-return
-
-^!]::
-WinGet, id_l_br, ID, A
-return
-
-^]::
-WinActivate, ahk_id %id_l_br%
-return
-
-^!P::
-WinGet, id_p, ID, A
-return
-
-^P::
-WinActivate, ahk_id %id_p%
+^!=::
+WinGet, id_mult, ID, A
 return
 
 ^!PgUp::
@@ -145,11 +379,11 @@ return
 WinActivate, ahk_id %id_pgup%
 return
 
-<#^PgUp::
+!+PgUp::
 WinGet, id_pgup_win, ID, A
 return
 
-<#PgUp::
+!PgUp::
 WinActivate, ahk_id %id_pgup_win%
 return
 
@@ -161,11 +395,11 @@ return
 WinActivate, ahk_id %id_pgdn%
 return
 
-<#^PgDn::
+!+PgDn::
 WinGet, id_pgdn_win, ID, A
 return
 
-<#PgDn::
+!PgDn::
 WinActivate, ahk_id %id_pgdn_win%
 return
 
@@ -177,19 +411,23 @@ return
 WinActivate, ahk_id %id_plus%
 return
 
-^!NumpadSub::
-WinGet, id_minus, ID, A
+!+NumpadAdd::
+WinGet, id_plus_win, ID, A
+return
+
+!NumpadAdd::
+WinActivate, ahk_id %id_plus_win%
 return
 
 ^NumpadSub::
-WinActivate, ahk_id %id_minus%
+WinActivate, ahk_id %id_minus_win%
 return
 
-<#^NumpadSub::
+!+NumpadSub::
 WinGet, id_minus_win, ID, A
 return
 
-<#NumpadSub::
+!NumpadSub::
 WinActivate, ahk_id %id_minus_win%
 return
 
@@ -209,11 +447,11 @@ return
 WinActivate, ahk_id %id_div%
 return
 
-<#^NumpadDiv::
+!+NumpadDiv::
 WinGet, id_div_win, ID, A
 return
 
-<#NumpadDiv::
+!NumpadDiv::
 WinActivate, ahk_id %id_div_win%
 return
 
@@ -225,11 +463,11 @@ return
 WinActivate, ahk_id %id_mult%
 return
 
-<#^NumpadMult::
+!+NumpadMult::
 WinGet, id_mult_win, ID, A
 return
 
-<#NumpadMult::
+!NumpadMult::
 WinActivate, ahk_id %id_mult_win%
 return
 
@@ -241,11 +479,11 @@ return
 WinActivate, ahk_id %id_home%
 return
 
-<#^Home::
+!+Home::
 WinGet, id_home_win, ID, A
 return
 
-<#Home::
+!Home::
 WinActivate, ahk_id %id_home_win%
 return
 
@@ -257,83 +495,83 @@ return
 WinActivate, ahk_id %id_end%
 return
 
-<#^Numpad0::
+!+Numpad0::
 WinGet, id_0_win, ID, A
 return
 
-<#Numpad0::
+!Numpad0::
 WinActivate, ahk_id %id_0_win%
 return
 
-<#^Numpad1::
+!+Numpad1::
 WinGet, id_1_win, ID, A
 return
 
-<#Numpad1::
+!Numpad1::
 WinActivate, ahk_id %id_1_win%
 return
 
-<#^Numpad2::
+!+Numpad2::
 WinGet, id_2_win, ID, A
 return
 
-<#Numpad2::
+!Numpad2::
 WinActivate, ahk_id %id_2_win%
 return
 
-<#^Numpad3::
+!+Numpad3::
 WinGet, id_3_win, ID, A
 return
 
-<#Numpad3::
+!Numpad3::
 WinActivate, ahk_id %id_3_win%
 return
 
-<#^Numpad4::
+!+Numpad4::
 WinGet, id_4_win, ID, A
 return
 
-<#Numpad4::
+!Numpad4::
 WinActivate, ahk_id %id_4_win%
 return
 
-<#^Numpad5::
+!+Numpad5::
 WinGet, id_5_win, ID, A
 return
 
-<#Numpad5::
+!Numpad5::
 WinActivate, ahk_id %id_5_win%
 return
 
-<#^Numpad6::
+!+Numpad6::
 WinGet, id_6_win, ID, A
 return
 
-<#Numpad6::
+!Numpad6::
 WinActivate, ahk_id %id_6_win%
 return
 
-<#^Numpad7::
+!+Numpad7::
 WinGet, id_7_win, ID, A
 return
 
-<#Numpad7::
+!Numpad7::
 WinActivate, ahk_id %id_7_win%
 return
 
-<#^Numpad8::
+!+Numpad8::
 WinGet, id_8_win, ID, A
 return
 
-<#Numpad8::
+!Numpad8::
 WinActivate, ahk_id %id_8_win%
 return
 
-<#^Numpad9::
+!+Numpad9::
 WinGet, id_9_win, ID, A
 return
 
-<#Numpad9::
+!Numpad9::
 WinActivate, ahk_id %id_9_win%
 return
 
@@ -415,17 +653,7 @@ WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
 return
 
-<#^Enter::
-MouseGetPos, xpos, ypos 
-Send {Click, xpos, ypos}
-return
-
 ^!Enter::
-MouseGetPos, xpos, ypos 
-Send {Click, xpos, ypos}
-return
-
-<#Enter::
 MouseGetPos, xpos, ypos 
 Send {Click, xpos, ypos}
 return
@@ -438,6 +666,10 @@ return
 Run C:\
 return
 
+<#R::
+Run C:\Programs
+return
+
 <#D::
 Run D:\
 return
@@ -448,10 +680,6 @@ return
 
 <#T::
 Run C:\Temp
-return
-
-<#P::
-Run C:\Programs
 return
 
 <#H::
@@ -494,32 +722,14 @@ return
 Send {WheelUp}
 Send {WheelUp}
 Send {WheelUp}
+Send {WheelUp}
 return
 
 <#^Down::
 Send {WheelDown}
 Send {WheelDown}
 Send {WheelDown}
-return
-
-<#+Left::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos - 80, ypos
-return
-
-<#+Right::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos + 80, ypos
-return
-
-<#+Up::
-MouseGetPos, xpos, ypos 
-MouseMove, xpos, ypos - 80
-return
-
-<#+Down::
-MouseGetPos, xpos, ypos
-MouseMove, xpos, ypos + 80
+Send {WheelDown}
 return
 
 ClickNow()
@@ -527,49 +737,8 @@ ClickNow()
 MouseGetPos, xpos, ypos 
 Send {Click, xpos, ypos}
 }
-	
-!Numpad1::
-MouseMove, res_w / 6, res_h * 5 / 6
-ClickNow()
-return
 
-!Numpad2::
-MouseMove, res_w / 2, res_h * 5 / 6
-ClickNow()
-return
-
-!Numpad3::
-MouseMove, res_w * 5 / 6, res_h * 5 / 6
-ClickNow()
-return
-
-!Numpad4::
-MouseMove, res_w / 6, res_h / 2
-ClickNow()
-return
-
-!Numpad6::
-MouseMove, res_w * 5 / 6, res_h / 2
-ClickNow()
-return
-
-!Numpad7::
-MouseMove, res_w / 6, res_h / 6
-ClickNow()
-return
-
-!Numpad8::
-MouseMove, res_w / 2, res_h / 6
-ClickNow()
-return
-
-!Numpad9::
-MouseMove, res_w * 5 / 6, res_h / 6
-ClickNow()
-return
-
-!Numpad5::
-MouseMove, res_w / 2, res_h / 2
+<#Enter::
 ClickNow()
 return
 
@@ -615,22 +784,6 @@ return
 
 Numpad5::
 MouseMove, res_w / 2, res_h / 2
-ClickNow()
-return
-
-<#NumpadAdd::
-ClickNow()
-return
-
-<#NumpadEnter::
-ClickNow()
-return
-
-!NumpadAdd::
-ClickNow()
-return
-
-!NumpadEnter::
 ClickNow()
 return
 
@@ -730,17 +883,17 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
 
-<#;::
-ResizeWin(0, 0, res_w / 3, res_h)
-return
+; <#;::
+; ResizeWin(0, 0, res_w / 3, res_h)
+; return
 
-<#'::
-ResizeWin(res_w / 3, 0, res_w / 3, res_h)
-return
+; <#'::
+; ResizeWin(res_w / 3, 0, res_w / 3, res_h)
+; return
 
-<#\::
-ResizeWin(res_w * 2 / 3, 0, res_w / 3, res_h)
-return
+; <#\::
+; ResizeWin(res_w * 2 / 3, 0, res_w / 3, res_h)
+; return
 
 <#!Up::
 ResizeWin(0, 0, res_w, res_h)
