@@ -177,17 +177,17 @@ MouseMove, res_w * 11 / 12, res_h / 2
 ClickNow()
 return
 
-!P::
+!O::
 MouseMove, res_w / 12, res_h / 12
 ClickNow()
 return
 
-![::
+!P::
 MouseMove, res_w / 2, res_h / 12
 ClickNow()
 return
 
-!]::
+![::
 MouseMove, res_w * 11 / 12, res_h / 12
 ClickNow()
 return
@@ -196,7 +196,6 @@ return
 MouseMove, res_w / 2, res_h / 2
 ClickNow()
 return
-
 
 ; LAPTOP KEYS
 
@@ -248,43 +247,43 @@ return
 WinActivate, ahk_id %id_6_win%
 return
 
-<#^P::
+<#^O::
 WinGet, id_7_win, ID, A
 return
 
-<#P::
+<#O::
 WinActivate, ahk_id %id_7_win%
 return
 
-<#^[::
+<#^P::
 WinGet, id_8_win, ID, A
 return
 
-<#[::
+<#P::
 WinActivate, ahk_id %id_8_win%
 return
 
-<#^]::
+<#^[::
 WinGet, id_9_win, ID, A
 return
 
-<#]::
+<#[::
 WinActivate, ahk_id %id_9_win%
 return
 
-<#^\::
+<#^]::
 WinGet, id_plus_win, ID, A
 return
 
-<#\::
+<#]::
 WinActivate, ahk_id %id_plus_win%
 return
 
-<#^O::
+<#^I::
 WinGet, id_pgdn_win, ID, A
 return
 
-<#O::
+<#I::
 WinActivate, ahk_id %id_pgdn_win%
 return
 
@@ -305,11 +304,11 @@ WinActivate, ahk_id %id_mult_win%
 return
 
 ^!9::
-WinGet, id_home, ID, A
+WinGet, id_pgup, ID, A
 return
 
 ^9::
-WinActivate, ahk_id %id_home%
+WinActivate, ahk_id %id_pgup%
 return
 
 <#^9::
@@ -320,22 +319,6 @@ return
 WinActivate, ahk_id %id_pgup_win%
 return
 
-<#^0::
-WinGet, id_home_win, ID, A
-return
-
-<#0::
-WinActivate, ahk_id %id_home_win%
-return
-
-^!0::
-WinGet, id_pgup, ID, A
-return
-
-^0::
-WinActivate, ahk_id %id_pgup%
-return
-
 ^!/::
 WinGet, id_3, ID, A
 return
@@ -344,11 +327,11 @@ return
 WinActivate, ahk_id %id_3%
 return
 
-^!\::
+^!]::
 WinGet, id_plus, ID, A
 return
 
-^\::
+^]::
 WinActivate, ahk_id %id_plus%
 return
 
@@ -384,35 +367,35 @@ return
 WinActivate, ahk_id %id_1%
 return
 
-^![::
+^!P::
 WinGet, id_8, ID, A
 return
 
-^[::
+^P::
 WinActivate, ahk_id %id_8%
 return
 
-^!]::
+^![::
 WinGet, id_9, ID, A
 return
 
-^]::
+^[::
 WinActivate, ahk_id %id_9%
 return
 
-^!P::
+^!O::
 WinGet, id_7, ID, A
 return
 
-^P::
+^O::
 WinActivate, ahk_id %id_7%
 return
 
-^!O::
+^!I::
 WinGet, id_pgdn, ID, A
 return
 
-^O::
+^I::
 WinActivate, ahk_id %id_pgdn%
 return
 
