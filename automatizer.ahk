@@ -727,6 +727,18 @@ return
 Run C:\Users\aache\OneDrive\Documents
 return
 
+<#X::
+Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+return
+
+<#Z::
+Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+return
+
+<#A::
+Run C:\Windows\System32\cmd.exe
+return
+
 <#T::
 Run C:\Temp
 return
