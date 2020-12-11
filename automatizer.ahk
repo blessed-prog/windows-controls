@@ -79,7 +79,7 @@ id_enter := ""
 
 ^!1::
 WinGet, id_1_dig, ID, A
-return-
+return
 
 ^1::
 WinActivate, ahk_id %id_1_dig%
