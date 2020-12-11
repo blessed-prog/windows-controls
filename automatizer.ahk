@@ -13,6 +13,9 @@ id_e_win := ""
 id_a_win := ""
 id_s_win := ""
 id_d_win := ""
+id_z_win := ""
+id_x_win := ""
+id_c_win := ""
 
 id_1_dig := ""
 id_2_dig := ""
@@ -76,7 +79,7 @@ id_enter := ""
 
 ^!1::
 WinGet, id_1_dig, ID, A
-return
+return-
 
 ^1::
 WinActivate, ahk_id %id_1_dig%
@@ -122,19 +125,11 @@ return
 WinActivate, ahk_id %id_1_dig_win%
 return
 
-!1::
-WinActivate, ahk_id %id_1_dig_win%
-return
-
 <#^2::
 WinGet, id_2_dig_win, ID, A
 return
 
 <#2::
-WinActivate, ahk_id %id_2_dig_win%
-return
-
-!2::
 WinActivate, ahk_id %id_2_dig_win%
 return
 
@@ -146,10 +141,6 @@ return
 WinActivate, ahk_id %id_3_dig_win%
 return
 
-!3::
-WinActivate, ahk_id %id_3_dig_win%
-return
-
 <#^4::
 WinGet, id_4_dig_win, ID, A
 return
@@ -158,22 +149,13 @@ return
 WinActivate, ahk_id %id_4_dig_win%
 return
 
-!4::
-WinActivate, ahk_id %id_4_dig_win%
-return
-
 <#^5::
 WinGet, id_5_dig_win, ID, A
-return
-
-!5::
-WinActivate, ahk_id %id_5_dig_win%
 return
 
 <#5::
 WinActivate, ahk_id %id_5_dig_win%
 return
-
 
 ; ===================== MOUSE ======================
 
@@ -270,6 +252,30 @@ return
 
 !D::
 WinActivate, ahk_id %id_d_win%
+return
+
+<#^Z::
+WinGet, id_z_win, ID, A
+return
+
+!Z::
+WinActivate, ahk_id %id_z_win%
+return
+
+<#^X::
+WinGet, id_x_win, ID, A
+return
+
+!X::
+WinActivate, ahk_id %id_x_win%
+return
+
+<#^C::
+WinGet, id_c_win, ID, A
+return
+
+!C::
+WinActivate, ahk_id %id_c_win%
 return
 
 <#^,::
