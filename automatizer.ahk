@@ -46,7 +46,6 @@ id_div_win := ""
 id_mult_win := ""
 id_home_win := ""
 id_minus_win := ""
-id_0_win := ""
 
 id_0 := ""
 id_1 := ""
@@ -199,10 +198,10 @@ return
 ; ClickNow()
 ; return
 
-; !;::
-; MouseMove, res_w / 2, res_h / 2
-; ClickNow()
-; return
+!Enter::
+MouseMove, res_w / 2, res_h / 2
+ClickNow()
+return
 
 ; LAPTOP KEYS
 
@@ -610,11 +609,19 @@ return
 WinActivate, ahk_id %id_plus_win%
 return
 
+!NumpadAdd::
+WinActivate, ahk_id %id_plus_win%
+return
+
 <#^NumpadSub::
 WinGet, id_minus_win, ID, A
 return
 
 <#NumpadSub::
+WinActivate, ahk_id %id_minus_win%
+return
+
+!NumpadSub::
 WinActivate, ahk_id %id_minus_win%
 return
 
@@ -642,6 +649,10 @@ return
 WinActivate, ahk_id %id_div_win%
 return
 
+!NumpadDiv::
+WinActivate, ahk_id %id_div_win%
+return
+
 ^!NumpadMult::
 WinGet, id_mult, ID, A
 return
@@ -655,6 +666,10 @@ WinGet, id_mult_win, ID, A
 return
 
 <#NumpadMult::
+WinActivate, ahk_id %id_mult_win%
+return
+
+!NumpadMult::
 WinActivate, ahk_id %id_mult_win%
 return
 
@@ -694,11 +709,19 @@ return
 WinActivate, ahk_id %id_1_win%
 return
 
+!Numpad1::
+WinActivate, ahk_id %id_1_win%
+return
+
 <#^Numpad2::
 WinGet, id_2_win, ID, A
 return
 
 <#Numpad2::
+WinActivate, ahk_id %id_2_win%
+return
+
+!Numpad2::
 WinActivate, ahk_id %id_2_win%
 return
 
@@ -710,11 +733,19 @@ return
 WinActivate, ahk_id %id_3_win%
 return
 
+!Numpad3::
+WinActivate, ahk_id %id_3_win%
+return
+
 <#^Numpad4::
 WinGet, id_4_win, ID, A
 return
 
 <#Numpad4::
+WinActivate, ahk_id %id_4_win%
+return
+
+!Numpad4::
 WinActivate, ahk_id %id_4_win%
 return
 
@@ -726,11 +757,19 @@ return
 WinActivate, ahk_id %id_5_win%
 return
 
+!Numpad5::
+WinActivate, ahk_id %id_5_win%
+return
+
 <#^Numpad6::
 WinGet, id_6_win, ID, A
 return
 
 <#Numpad6::
+WinActivate, ahk_id %id_6_win%
+return
+
+!Numpad6::
 WinActivate, ahk_id %id_6_win%
 return
 
@@ -742,11 +781,19 @@ return
 WinActivate, ahk_id %id_7_win%
 return
 
+!Numpad7::
+WinActivate, ahk_id %id_7_win%
+return
+
 <#^Numpad8::
 WinGet, id_8_win, ID, A
 return
 
 <#Numpad8::
+WinActivate, ahk_id %id_8_win%
+return
+
+!Numpad8::
 WinActivate, ahk_id %id_8_win%
 return
 
@@ -758,6 +805,10 @@ return
 WinActivate, ahk_id %id_9_win%
 return
 
+!Numpad9::
+WinActivate, ahk_id %id_9_win%
+return
+
 ^!Numpad1::
 WinGet, id_1, ID, A
 return
@@ -765,6 +816,7 @@ return
 ^Numpad1::
 WinActivate, ahk_id %id_1%
 return
+
 ^!Numpad2::
 WinGet, id_2, ID, A
 return
@@ -787,6 +839,7 @@ return
 ^Numpad4::
 WinActivate, ahk_id %id_4%
 return
+
 ^!Numpad5::
 WinGet, id_5, ID, A
 return
@@ -815,6 +868,7 @@ return
 ^Numpad8::
 WinActivate, ahk_id %id_8%
 return
+
 ^!Numpad9::
 WinGet, id_9, ID, A
 return
