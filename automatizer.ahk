@@ -173,10 +173,14 @@ return
 ; ClickNow()
 ; return
 
-; !L::
-; MouseMove, res_w / 12, res_h / 2
-; ClickNow()
-; return
+RAlt::
+MouseMove, res_w / 2, res_h / 2
+ClickNow()
+return
+
+RShift::
+ClickNow()
+return
 
 ; !'::
 ; MouseMove, res_w * 11 / 12, res_h / 2
@@ -198,10 +202,10 @@ return
 ; ClickNow()
 ; return
 
-!Enter::
-MouseMove, res_w / 2, res_h / 2
-ClickNow()
-return
+; !Enter::
+; MouseMove, res_w / 2, res_h / 2
+; ClickNow()
+; return
 
 ; LAPTOP KEYS
 
@@ -357,6 +361,10 @@ return
 WinActivate, ahk_id %id_7_win%
 return
 
+!O::
+WinActivate, ahk_id %id_7_win%
+return
+
 <#^P::
 WinGet, id_8_win, ID, A
 return
@@ -455,6 +463,14 @@ return
 
 ^/::
 WinActivate, ahk_id %id_3%
+return
+
+^!\::
+WinGet, id_minus, ID, A
+return
+
+^\::
+WinActivate, ahk_id %id_minus%
 return
 
 ^!]::
@@ -599,6 +615,14 @@ return
 
 ^NumpadAdd::
 WinActivate, ahk_id %id_plus%
+return
+
+^!NumpadSub::
+WinGet, id_minus, ID, A
+return
+
+^NumpadSub::
+WinActivate, ahk_id %id_minus%
 return
 
 <#^NumpadAdd::
