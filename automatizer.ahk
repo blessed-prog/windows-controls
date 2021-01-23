@@ -4,9 +4,6 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-res_w = 1980
-res_h = 1080
-
 id_q_win := ""
 id_w_win := ""
 id_e_win := ""
@@ -28,16 +25,6 @@ id_2_dig_win := ""
 id_3_dig_win := ""
 id_4_dig_win := ""
 id_5_dig_win := ""
-
-id_1_win := ""
-id_2_win := ""
-id_3_win := ""
-id_4_win := ""
-id_5_win := ""
-id_6_win := ""
-id_7_win := ""
-id_8_win := ""
-id_9_win := ""
 
 id_plus_win := ""
 id_pgup_win := ""
@@ -158,54 +145,50 @@ return
 
 ; ===================== MOUSE ======================
 
-; !,::
-; MouseMove, res_w / 12, res_h * 11 / 12
-; ClickNow()
-; return
-
-; !.::
-; MouseMove, res_w / 2, res_h * 11 / 12
-; ClickNow()
-; return
-
-; !/::
-; MouseMove, res_w * 11 / 12, res_h * 11 / 12
-; ClickNow()
-; return
-
-RAlt::
-MouseMove, res_w / 2, res_h / 2
+!,::
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 11 / 12
 ClickNow()
 return
 
-RShift::
+!.::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 11 / 12
 ClickNow()
 return
 
-; !'::
-; MouseMove, res_w * 11 / 12, res_h / 2
-; ClickNow()
-; return
+!/::
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 11 / 12
+ClickNow()
+return
 
-; !O::
-; MouseMove, res_w / 12, res_h / 12
-; ClickNow()
-; return
+!'::
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 2
+ClickNow()
+return
 
-; !P::
-; MouseMove, res_w / 2, res_h / 12
-; ClickNow()
-; return
+!O::
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 12
+ClickNow()
+return
 
-; ![::
-; MouseMove, res_w * 11 / 12, res_h / 12
-; ClickNow()
-; return
+!P::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 12
+ClickNow()
+return
 
-; !Enter::
-; MouseMove, res_w / 2, res_h / 2
-; ClickNow()
-; return
+![::
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 12
+ClickNow()
+return
+
+!;::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
+ClickNow()
+return
+
+!L::
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
+ClickNow()
+return
 
 ; LAPTOP KEYS
 
@@ -279,114 +262,6 @@ return
 
 !C::
 WinActivate, ahk_id %id_c_win%
-return
-
-<#^,::
-WinGet, id_1_win, ID, A
-return
-
-<#,::
-WinActivate, ahk_id %id_1_win%
-return
-
-!,::
-WinActivate, ahk_id %id_1_win%
-return
-
-<#^.::
-WinGet, id_2_win, ID, A
-return
-
-<#.::
-WinActivate, ahk_id %id_2_win%
-return
-
-!.::
-WinActivate, ahk_id %id_2_win%
-return
-
-<#^/::
-WinGet, id_3_win, ID, A
-return
-
-<#/::
-WinActivate, ahk_id %id_3_win%
-return
-
-!/::
-WinActivate, ahk_id %id_3_win%
-return
-
-<#^L::
-WinGet, id_4_win, ID, A
-return
-
-<#L::
-WinActivate, ahk_id %id_4_win%
-return
-
-!L::
-WinActivate, ahk_id %id_4_win%
-return
-
-<#^;::
-WinGet, id_5_win, ID, A
-return
-
-<#;::
-WinActivate, ahk_id %id_5_win%
-return
-
-!;::
-WinActivate, ahk_id %id_5_win%
-return
-
-<#^'::
-WinGet, id_6_win, ID, A
-return
-
-<#'::
-WinActivate, ahk_id %id_6_win%
-return
-
-!'::
-WinActivate, ahk_id %id_6_win%
-return
-
-<#^O::
-WinGet, id_7_win, ID, A
-return
-
-<#O::
-WinActivate, ahk_id %id_7_win%
-return
-
-!O::
-WinActivate, ahk_id %id_7_win%
-return
-
-<#^P::
-WinGet, id_8_win, ID, A
-return
-
-<#P::
-WinActivate, ahk_id %id_8_win%
-return
-
-!P::
-WinActivate, ahk_id %id_8_win%
-return
-
-<#^[::
-WinGet, id_9_win, ID, A
-return
-
-<#[::
-WinActivate, ahk_id %id_9_win%
-return
-
-![::
-WinActivate, ahk_id %id_9_win%
 return
 
 <#^]::
@@ -725,114 +600,6 @@ return
 WinActivate, ahk_id %id_end%
 return
 
-<#^Numpad1::
-WinGet, id_1_win, ID, A
-return
-
-<#Numpad1::
-WinActivate, ahk_id %id_1_win%
-return
-
-!Numpad1::
-WinActivate, ahk_id %id_1_win%
-return
-
-<#^Numpad2::
-WinGet, id_2_win, ID, A
-return
-
-<#Numpad2::
-WinActivate, ahk_id %id_2_win%
-return
-
-!Numpad2::
-WinActivate, ahk_id %id_2_win%
-return
-
-<#^Numpad3::
-WinGet, id_3_win, ID, A
-return
-
-<#Numpad3::
-WinActivate, ahk_id %id_3_win%
-return
-
-!Numpad3::
-WinActivate, ahk_id %id_3_win%
-return
-
-<#^Numpad4::
-WinGet, id_4_win, ID, A
-return
-
-<#Numpad4::
-WinActivate, ahk_id %id_4_win%
-return
-
-!Numpad4::
-WinActivate, ahk_id %id_4_win%
-return
-
-<#^Numpad5::
-WinGet, id_5_win, ID, A
-return
-
-<#Numpad5::
-WinActivate, ahk_id %id_5_win%
-return
-
-!Numpad5::
-WinActivate, ahk_id %id_5_win%
-return
-
-<#^Numpad6::
-WinGet, id_6_win, ID, A
-return
-
-<#Numpad6::
-WinActivate, ahk_id %id_6_win%
-return
-
-!Numpad6::
-WinActivate, ahk_id %id_6_win%
-return
-
-<#^Numpad7::
-WinGet, id_7_win, ID, A
-return
-
-<#Numpad7::
-WinActivate, ahk_id %id_7_win%
-return
-
-!Numpad7::
-WinActivate, ahk_id %id_7_win%
-return
-
-<#^Numpad8::
-WinGet, id_8_win, ID, A
-return
-
-<#Numpad8::
-WinActivate, ahk_id %id_8_win%
-return
-
-!Numpad8::
-WinActivate, ahk_id %id_8_win%
-return
-
-<#^Numpad9::
-WinGet, id_9_win, ID, A
-return
-
-<#Numpad9::
-WinActivate, ahk_id %id_9_win%
-return
-
-!Numpad9::
-WinActivate, ahk_id %id_9_win%
-return
-
 ^!Numpad1::
 WinGet, id_1, ID, A
 return
@@ -1005,47 +772,47 @@ Send {Click, xpos, ypos}
 }
 
 Numpad1::
-MouseMove, res_w / 12, res_h * 11 / 12
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 11 / 12
 ClickNow()
 return
 
 Numpad2::
-MouseMove, res_w / 2, res_h * 11 / 12
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 11 / 12
 ClickNow()
 return
 
 Numpad3::
-MouseMove, res_w * 11 / 12, res_h * 11 / 12
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 11 / 12
 ClickNow()
 return
 
 Numpad4::
-MouseMove, res_w / 12, res_h / 2
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
 ClickNow()
 return
 
 Numpad6::
-MouseMove, res_w * 11 / 12, res_h / 2
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 2
 ClickNow()
 return
 
 Numpad7::
-MouseMove, res_w / 12, res_h / 12
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 12
 ClickNow()
 return
 
 Numpad8::
-MouseMove, res_w / 2, res_h / 12
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 12
 ClickNow()
 return
 
 Numpad9::
-MouseMove, res_w * 11 / 12, res_h / 12
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 12
 ClickNow()
 return
 
 Numpad5::
-MouseMove, res_w / 2, res_h / 2
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
 ClickNow()
 return
 
@@ -1146,25 +913,25 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
 }
 
 ; <#;::
-; ResizeWin(0, 0, res_w / 3, res_h)
+; ResizeWin(0, 0, A_ScreenWidth / 3, A_ScreenHeight)
 ; return
 
 ; <#'::
-; ResizeWin(res_w / 3, 0, res_w / 3, res_h)
+; ResizeWin(A_ScreenWidth / 3, 0, A_ScreenWidth / 3, A_ScreenHeight)
 ; return
 
 ; <#\::
-; ResizeWin(res_w * 2 / 3, 0, res_w / 3, res_h)
+; ResizeWin(A_ScreenWidth * 2 / 3, 0, A_ScreenWidth / 3, A_ScreenHeight)
 ; return
 
 <#!Up::
-ResizeWin(0, 0, res_w, res_h)
+ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
 return
 
 <#!Left::
-ResizeWin(0, 0, res_w / 2, res_h)
+ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
 return
 
 <#!Right::
-ResizeWin(res_w / 2, 0, res_w / 2, res_h)
+ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
 return
