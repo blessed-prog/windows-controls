@@ -14,6 +14,16 @@ id_z_win := ""
 id_x_win := ""
 id_c_win := ""
 
+id_1_win := ""
+id_2_win := ""
+id_3_win := ""
+id_4_win := ""
+id_5_win := ""
+id_6_win := ""
+id_7_win := ""
+id_8_win := ""
+id_9_win := ""
+
 id_1_dig := ""
 id_2_dig := ""
 id_3_dig := ""
@@ -667,6 +677,187 @@ return
 ^Numpad9::
 WinActivate, ahk_id %id_9%
 return
+
+<#^,::
+WinGet, id_1_win, ID, A
+return
+
+<#,::
+WinActivate, ahk_id %id_1_win%
+return
+
+<#^.::
+WinGet, id_2_win, ID, A
+return
+
+<#.::
+WinActivate, ahk_id %id_2_win%
+return
+
+<#^/::
+WinGet, id_3_win, ID, A
+return
+
+<#/::
+WinActivate, ahk_id %id_3_win%
+return
+
+<#^L::
+WinGet, id_4_win, ID, A
+return
+
+<#L::
+WinActivate, ahk_id %id_4_win%
+return
+
+<#^;::
+WinGet, id_5_win, ID, A
+return
+
+<#;::
+WinActivate, ahk_id %id_5_win%
+return
+
+<#^'::
+WinGet, id_6_win, ID, A
+return
+
+<#'::
+WinActivate, ahk_id %id_6_win%
+return
+
+<#^O::
+WinGet, id_7_win, ID, A
+return
+
+<#O::
+WinActivate, ahk_id %id_7_win%
+return
+
+<#^P::
+WinGet, id_8_win, ID, A
+return
+
+<#P::
+WinActivate, ahk_id %id_8_win%
+return
+
+<#^[::
+WinGet, id_9_win, ID, A
+return
+
+<#[::
+WinActivate, ahk_id %id_9_win%
+return
+
+<#^Numpad1::
+WinGet, id_1_win, ID, A
+return
+
+<#Numpad1::
+WinActivate, ahk_id %id_1_win%
+return
+
+!Numpad1::
+WinActivate, ahk_id %id_1_win%
+return
+
+<#^Numpad2::
+WinGet, id_2_win, ID, A
+return
+
+<#Numpad2::
+WinActivate, ahk_id %id_2_win%
+return
+
+!Numpad2::
+WinActivate, ahk_id %id_2_win%
+return
+
+<#^Numpad3::
+WinGet, id_3_win, ID, A
+return
+
+<#Numpad3::
+WinActivate, ahk_id %id_3_win%
+return
+
+!Numpad3::
+WinActivate, ahk_id %id_3_win%
+return
+
+<#^Numpad4::
+WinGet, id_4_win, ID, A
+return
+
+<#Numpad4::
+WinActivate, ahk_id %id_4_win%
+return
+
+!Numpad4::
+WinActivate, ahk_id %id_4_win%
+return
+
+<#^Numpad5::
+WinGet, id_5_win, ID, A
+return
+
+<#Numpad5::
+WinActivate, ahk_id %id_5_win%
+return
+
+!Numpad5::
+WinActivate, ahk_id %id_5_win%
+return
+
+<#^Numpad6::
+WinGet, id_6_win, ID, A
+return
+
+<#Numpad6::
+WinActivate, ahk_id %id_6_win%
+return
+
+!Numpad6::
+WinActivate, ahk_id %id_6_win%
+return
+
+<#^Numpad7::
+WinGet, id_7_win, ID, A
+return
+
+<#Numpad7::
+WinActivate, ahk_id %id_7_win%
+return
+
+!Numpad7::
+WinActivate, ahk_id %id_7_win%
+return
+
+<#^Numpad8::
+WinGet, id_8_win, ID, A
+return
+
+<#Numpad8::
+WinActivate, ahk_id %id_8_win%
+return
+
+!Numpad8::
+WinActivate, ahk_id %id_8_win%
+return
+
+<#^Numpad9::
+WinGet, id_9_win, ID, A
+return
+
+<#Numpad9::
+WinActivate, ahk_id %id_9_win%
+return
+
+!Numpad9::
+WinActivate, ahk_id %id_9_win%
+return
+
 
 +!q::
 WinGetClass, CurrentClass, A
