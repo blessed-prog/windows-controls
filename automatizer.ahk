@@ -758,19 +758,11 @@ return
 WinActivate, ahk_id %id_1_win%
 return
 
-!Numpad1::
-WinActivate, ahk_id %id_1_win%
-return
-
 <#^Numpad2::
 WinGet, id_2_win, ID, A
 return
 
 <#Numpad2::
-WinActivate, ahk_id %id_2_win%
-return
-
-!Numpad2::
 WinActivate, ahk_id %id_2_win%
 return
 
@@ -782,19 +774,11 @@ return
 WinActivate, ahk_id %id_3_win%
 return
 
-!Numpad3::
-WinActivate, ahk_id %id_3_win%
-return
-
 <#^Numpad4::
 WinGet, id_4_win, ID, A
 return
 
 <#Numpad4::
-WinActivate, ahk_id %id_4_win%
-return
-
-!Numpad4::
 WinActivate, ahk_id %id_4_win%
 return
 
@@ -806,19 +790,11 @@ return
 WinActivate, ahk_id %id_5_win%
 return
 
-!Numpad5::
-WinActivate, ahk_id %id_5_win%
-return
-
 <#^Numpad6::
 WinGet, id_6_win, ID, A
 return
 
 <#Numpad6::
-WinActivate, ahk_id %id_6_win%
-return
-
-!Numpad6::
 WinActivate, ahk_id %id_6_win%
 return
 
@@ -830,19 +806,11 @@ return
 WinActivate, ahk_id %id_7_win%
 return
 
-!Numpad7::
-WinActivate, ahk_id %id_7_win%
-return
-
 <#^Numpad8::
 WinGet, id_8_win, ID, A
 return
 
 <#Numpad8::
-WinActivate, ahk_id %id_8_win%
-return
-
-!Numpad8::
 WinActivate, ahk_id %id_8_win%
 return
 
@@ -853,11 +821,6 @@ return
 <#Numpad9::
 WinActivate, ahk_id %id_9_win%
 return
-
-!Numpad9::
-WinActivate, ahk_id %id_9_win%
-return
-
 
 +!q::
 WinGetClass, CurrentClass, A
