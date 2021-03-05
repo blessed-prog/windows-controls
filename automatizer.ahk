@@ -156,17 +156,17 @@ return
 ; ===================== MOUSE ======================
 
 !,::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 11 / 12
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
 !.::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 11 / 12
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
 !/::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 11 / 12
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
@@ -176,17 +176,17 @@ ClickNow()
 return
 
 !O::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 12
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 4
 ClickNow()
 return
 
 !P::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 12
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
 ClickNow()
 return
 
 ![::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 12
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 4
 ClickNow()
 return
 
@@ -865,6 +865,8 @@ return
 Run C:\Windows\System32\cmd.exe
 return
 
+id_temp := ""
+
 <#T::
 Run C:\Temp
 return
@@ -926,17 +928,17 @@ Send {Click, xpos, ypos}
 }
 
 Numpad1::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 11 / 12
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
 Numpad2::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 11 / 12
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
 Numpad3::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 11 / 12
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
@@ -951,17 +953,17 @@ ClickNow()
 return
 
 Numpad7::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 12
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 4
 ClickNow()
 return
 
 Numpad8::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 12
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
 ClickNow()
 return
 
 Numpad9::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 12
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 4
 ClickNow()
 return
 
