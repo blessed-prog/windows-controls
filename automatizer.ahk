@@ -14,6 +14,10 @@ id_z_win := ""
 id_x_win := ""
 id_c_win := ""
 
+id_r_win := ""
+id_f_win := ""
+id_v_win := ""
+
 id_1_win := ""
 id_2_win := ""
 id_3_win := ""
@@ -276,6 +280,30 @@ return
 
 !C::
 WinActivate, ahk_id %id_c_win%
+return
+
+<#^R::
+WinGet, id_r_win, ID, A
+return
+
+!R::
+WinActivate, ahk_id %id_r_win%
+return
+
+<#^F::
+WinGet, id_f_win, ID, A
+return
+
+!F::
+WinActivate, ahk_id %id_f_win%
+return
+
+<#^V::
+WinGet, id_v_win, ID, A
+return
+
+!V::
+WinActivate, ahk_id %id_v_win%
 return
 
 <#^]::
