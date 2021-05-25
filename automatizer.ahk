@@ -44,7 +44,6 @@ id_mult_win := ""
 id_home_win := ""
 id_minus_win := ""
 
-id_0 := ""
 id_1 := ""
 id_2 := ""
 id_3 := ""
@@ -117,7 +116,7 @@ return
 WinGet, id_1_dig_win, ID, A
 return
 
-<#1::
+!1::
 WinActivate, ahk_id %id_1_dig_win%
 return
 
@@ -125,7 +124,7 @@ return
 WinGet, id_2_dig_win, ID, A
 return
 
-<#2::
+!2::
 WinActivate, ahk_id %id_2_dig_win%
 return
 
@@ -133,7 +132,7 @@ return
 WinGet, id_3_dig_win, ID, A
 return
 
-<#3::
+!3::
 WinActivate, ahk_id %id_3_dig_win%
 return
 
@@ -141,7 +140,7 @@ return
 WinGet, id_4_dig_win, ID, A
 return
 
-<#4::
+!4::
 WinActivate, ahk_id %id_4_dig_win%
 return
 
@@ -149,53 +148,58 @@ return
 WinGet, id_5_dig_win, ID, A
 return
 
-<#5::
+!5::
 WinActivate, ahk_id %id_5_dig_win%
 return
 
 ; ===================== MOUSE ======================
 
-!,::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 3 / 4
-ClickNow()
-return
-
-!.::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
-ClickNow()
-return
-
-!/::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 3 / 4
-ClickNow()
-return
-
-!'::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 2
-ClickNow()
-return
-
-!O::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 4
-ClickNow()
-return
-
-!P::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
-ClickNow()
-return
-
-![::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 4
-ClickNow()
-return
-
-!;::
+<#Enter::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
 ClickNow()
 return
 
-!L::
+<#,::
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 3 / 4
+ClickNow()
+return
+
+<#.::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
+ClickNow()
+return
+
+<#/::
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 3 / 4
+ClickNow()
+return
+
+<#'::
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 2
+ClickNow()
+return
+
+<#O::
+MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 4
+ClickNow()
+return
+
+<#P::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
+ClickNow()
+return
+
+<#[::
+MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 4
+ClickNow()
+return
+
+<#;::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
+ClickNow()
+return
+
+<#L::
 MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
 ClickNow()
 return
@@ -278,20 +282,12 @@ return
 WinGet, id_plus_win, ID, A
 return
 
-<#]::
-WinActivate, ahk_id %id_plus_win%
-return
-
 !]::
 WinActivate, ahk_id %id_plus_win%
 return
 
 <#^I::
 WinGet, id_pgdn_win, ID, A
-return
-
-<#I::
-WinActivate, ahk_id %id_pgdn_win%
 return
 
 !I::
@@ -302,20 +298,12 @@ return
 WinGet, id_div_win, ID, A
 return
 
-<#-::
-WinActivate, ahk_id %id_div_win%
-return
-
 !-::
 WinActivate, ahk_id %id_div_win%
 return
 
 <#^=::
 WinGet, id_mult_win, ID, A
-return
-
-<#=::
-WinActivate, ahk_id %id_mult_win%
 return
 
 !=::
@@ -332,10 +320,6 @@ return
 
 <#^9::
 WinGet, id_pgup_win, ID, A
-return
-
-<#9::
-WinActivate, ahk_id %id_pgup_win%
 return
 
 !9::
@@ -466,10 +450,6 @@ return
 WinGet, id_pgup_win, ID, A
 return
 
-<#PgUp::
-WinActivate, ahk_id %id_pgup_win%
-return
-
 !PgUp::
 WinActivate, ahk_id %id_pgup_win%
 return
@@ -486,203 +466,15 @@ return
 WinGet, id_pgdn_win, ID, A
 return
 
-<#PgDn::
-WinActivate, ahk_id %id_pgdn_win%
-return
-
 !PgDn::
 WinActivate, ahk_id %id_pgdn_win%
-return
-
-^!NumpadAdd::
-WinGet, id_plus, ID, A
-return
-
-^NumpadAdd::
-WinActivate, ahk_id %id_plus%
-return
-
-^!NumpadSub::
-WinGet, id_minus, ID, A
-return
-
-^NumpadSub::
-WinActivate, ahk_id %id_minus%
-return
-
-<#^NumpadAdd::
-WinGet, id_plus_win, ID, A
-return
-
-<#NumpadAdd::
-WinActivate, ahk_id %id_plus_win%
-return
-
-!NumpadAdd::
-WinActivate, ahk_id %id_plus_win%
-return
-
-<#^NumpadSub::
-WinGet, id_minus_win, ID, A
-return
-
-<#NumpadSub::
-WinActivate, ahk_id %id_minus_win%
-return
-
-!NumpadSub::
-WinActivate, ahk_id %id_minus_win%
-return
-
-^!NumpadEnter::
-WinGet, id_enter, ID, A
-return
-
-^NumpadEnter::
-WinActivate, ahk_id %id_enter%
-return
-
-^!NumpadDiv::
-WinGet, id_div, ID, A
-return
-
-^NumpadDiv::
-WinActivate, ahk_id %id_div%
-return
-
-<#^NumpadDiv::
-WinGet, id_div_win, ID, A
-return
-
-<#NumpadDiv::
-WinActivate, ahk_id %id_div_win%
-return
-
-!NumpadDiv::
-WinActivate, ahk_id %id_div_win%
-return
-
-^!NumpadMult::
-WinGet, id_mult, ID, A
-return
-
-^NumpadMult::
-WinActivate, ahk_id %id_mult%
-return
-
-<#^NumpadMult::
-WinGet, id_mult_win, ID, A
-return
-
-<#NumpadMult::
-WinActivate, ahk_id %id_mult_win%
-return
-
-!NumpadMult::
-WinActivate, ahk_id %id_mult_win%
-return
-
-^!Home::
-WinGet, id_home, ID, A
-return
-
-^Home::
-WinActivate, ahk_id %id_home%
-return
-
-<#^Home::
-WinGet, id_home_win, ID, A
-return
-
-<#Home::
-WinActivate, ahk_id %id_home_win%
-return
-
-!Home::
-WinActivate, ahk_id %id_home_win%
-return
-
-^!End::
-WinGet, id_end, ID, A
-return
-
-^End::
-WinActivate, ahk_id %id_end%
-return
-
-^!Numpad1::
-WinGet, id_1, ID, A
-return
-
-^Numpad1::
-WinActivate, ahk_id %id_1%
-return
-
-^!Numpad2::
-WinGet, id_2, ID, A
-return
-
-^Numpad2::
-WinActivate, ahk_id %id_2%
-return
-^!Numpad3::
-WinGet, id_3, ID, A
-return
-
-^Numpad3::
-WinActivate, ahk_id %id_3%
-return
-
-^!Numpad4::
-WinGet, id_4, ID, A
-return
-
-^Numpad4::
-WinActivate, ahk_id %id_4%
-return
-
-^!Numpad5::
-WinGet, id_5, ID, A
-return
-
-^Numpad5::
-WinActivate, ahk_id %id_5%
-return
-^!Numpad6::
-WinGet, id_6, ID, A
-return
-
-^Numpad6::
-WinActivate, ahk_id %id_6%
-return
-^!Numpad7::
-WinGet, id_7, ID, A
-return
-
-^Numpad7::
-WinActivate, ahk_id %id_7%
-return
-^!Numpad8::
-WinGet, id_8, ID, A
-return
-
-^Numpad8::
-WinActivate, ahk_id %id_8%
-return
-
-^!Numpad9::
-WinGet, id_9, ID, A
-return
-
-^Numpad9::
-WinActivate, ahk_id %id_9%
 return
 
 <#^,::
 WinGet, id_1_win, ID, A
 return
 
-<#,::
+!,::
 WinActivate, ahk_id %id_1_win%
 return
 
@@ -690,7 +482,7 @@ return
 WinGet, id_2_win, ID, A
 return
 
-<#.::
+!.::
 WinActivate, ahk_id %id_2_win%
 return
 
@@ -698,7 +490,7 @@ return
 WinGet, id_3_win, ID, A
 return
 
-<#/::
+!/::
 WinActivate, ahk_id %id_3_win%
 return
 
@@ -706,7 +498,7 @@ return
 WinGet, id_4_win, ID, A
 return
 
-<#L::
+!L::
 WinActivate, ahk_id %id_4_win%
 return
 
@@ -714,7 +506,7 @@ return
 WinGet, id_5_win, ID, A
 return
 
-<#;::
+!;::
 WinActivate, ahk_id %id_5_win%
 return
 
@@ -722,7 +514,7 @@ return
 WinGet, id_6_win, ID, A
 return
 
-<#'::
+!'::
 WinActivate, ahk_id %id_6_win%
 return
 
@@ -730,7 +522,7 @@ return
 WinGet, id_7_win, ID, A
 return
 
-<#O::
+!O::
 WinActivate, ahk_id %id_7_win%
 return
 
@@ -738,7 +530,7 @@ return
 WinGet, id_8_win, ID, A
 return
 
-<#P::
+!P::
 WinActivate, ahk_id %id_8_win%
 return
 
@@ -746,91 +538,13 @@ return
 WinGet, id_9_win, ID, A
 return
 
-<#[::
-WinActivate, ahk_id %id_9_win%
-return
-
-<#^Numpad1::
-WinGet, id_1_win, ID, A
-return
-
-<#Numpad1::
-WinActivate, ahk_id %id_1_win%
-return
-
-<#^Numpad2::
-WinGet, id_2_win, ID, A
-return
-
-<#Numpad2::
-WinActivate, ahk_id %id_2_win%
-return
-
-<#^Numpad3::
-WinGet, id_3_win, ID, A
-return
-
-<#Numpad3::
-WinActivate, ahk_id %id_3_win%
-return
-
-<#^Numpad4::
-WinGet, id_4_win, ID, A
-return
-
-<#Numpad4::
-WinActivate, ahk_id %id_4_win%
-return
-
-<#^Numpad5::
-WinGet, id_5_win, ID, A
-return
-
-<#Numpad5::
-WinActivate, ahk_id %id_5_win%
-return
-
-<#^Numpad6::
-WinGet, id_6_win, ID, A
-return
-
-<#Numpad6::
-WinActivate, ahk_id %id_6_win%
-return
-
-<#^Numpad7::
-WinGet, id_7_win, ID, A
-return
-
-<#Numpad7::
-WinActivate, ahk_id %id_7_win%
-return
-
-<#^Numpad8::
-WinGet, id_8_win, ID, A
-return
-
-<#Numpad8::
-WinActivate, ahk_id %id_8_win%
-return
-
-<#^Numpad9::
-WinGet, id_9_win, ID, A
-return
-
-<#Numpad9::
+![::
 WinActivate, ahk_id %id_9_win%
 return
 
 +!q::
 WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
-return
-
-
-<#Enter::
-MouseGetPos, xpos, ypos 
-Send {Click, xpos, ypos}
 return
 
 <#W::
@@ -883,9 +597,11 @@ return
 Send {Up}
 Send {Up}
 Send {Up}
+Send {Up}
 return
 
 <#Down::
+Send {Down}
 Send {Down}
 Send {Down}
 Send {Down}
@@ -926,51 +642,6 @@ ClickNow()
 MouseGetPos, xpos, ypos 
 Send {Click, xpos, ypos}
 }
-
-Numpad1::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 3 / 4
-ClickNow()
-return
-
-Numpad2::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
-ClickNow()
-return
-
-Numpad3::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight * 3 / 4
-ClickNow()
-return
-
-Numpad4::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
-ClickNow()
-return
-
-Numpad6::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 2
-ClickNow()
-return
-
-Numpad7::
-MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 4
-ClickNow()
-return
-
-Numpad8::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
-ClickNow()
-return
-
-Numpad9::
-MouseMove, A_ScreenWidth * 11 / 12, A_ScreenHeight / 4
-ClickNow()
-return
-
-Numpad5::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
-ClickNow()
-return
 
 WinGetPosEx(hWindow,ByRef X="",ByRef Y="",ByRef Width="",ByRef Height=""
 			,ByRef Offset_Left="",ByRef Offset_Top=""
