@@ -163,6 +163,16 @@ MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
 ClickNow()
 return
 
+<#Backspace::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 5
+ClickNow()
+return
+
+<#Rshift::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 4 / 5
+ClickNow()
+return
+
 <#,::
 MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 3 / 4
 ClickNow()
@@ -625,11 +635,9 @@ return
 Send {Up}
 Send {Up}
 Send {Up}
-Send {Up}
 return
 
 <#Down::
-Send {Down}
 Send {Down}
 Send {Down}
 Send {Down}
