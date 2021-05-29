@@ -120,7 +120,7 @@ return
 WinGet, id_1_dig_win, ID, A
 return
 
-!1::
+<#1::
 WinActivate, ahk_id %id_1_dig_win%
 return
 
@@ -132,6 +132,10 @@ return
 WinActivate, ahk_id %id_2_dig_win%
 return
 
+<#2::
+WinActivate, ahk_id %id_2_dig_win%
+return
+
 <#^3::
 WinGet, id_3_dig_win, ID, A
 return
@@ -140,11 +144,15 @@ return
 WinActivate, ahk_id %id_3_dig_win%
 return
 
+<#3::
+WinActivate, ahk_id %id_3_dig_win%
+return
+
 <#^4::
 WinGet, id_4_dig_win, ID, A
 return
 
-!4::
+<#4::
 WinActivate, ahk_id %id_4_dig_win%
 return
 
