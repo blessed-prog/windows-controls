@@ -37,6 +37,19 @@ id_r_rctrl := ""
 id_f_rctrl := ""
 id_v_rctrl := ""
 
+id_q_win := ""
+id_w_win := ""
+id_e_win := ""
+id_a_win := ""
+id_s_win := ""
+id_d_win := ""
+id_z_win := ""
+id_x_win := ""
+id_c_win := ""
+id_r_win := ""
+id_f_win := ""
+id_v_win := ""
+
 id_q_alt := ""
 id_w_alt := ""
 id_e_alt := ""
@@ -71,6 +84,10 @@ id_2_dig_win := ""
 id_3_dig_win := ""
 id_4_dig_win := ""
 id_5_dig_win := ""
+
+id_2_dig_alt := ""
+id_3_dig_alt := ""
+id_5_dig_alt := ""
 
 id_pgup_alt := ""
 id_pgdn_alt := ""
@@ -143,52 +160,28 @@ return
 WinActivate, ahk_id %id_5_dig%
 return
 
-<#^1::
-WinGet, id_1_dig_win, ID, A
-return
-
-<#1::
-WinActivate, ahk_id %id_1_dig_win%
-return
-
 <#^2::
-WinGet, id_2_dig_win, ID, A
+WinGet, id_2_dig_alt, ID, A
 return
 
 !2::
-WinActivate, ahk_id %id_2_dig_win%
-return
-
-<#2::
-WinActivate, ahk_id %id_2_dig_win%
+WinActivate, ahk_id %id_2_dig_alt%
 return
 
 <#^3::
-WinGet, id_3_dig_win, ID, A
+WinGet, id_3_dig_alt, ID, A
 return
 
 !3::
-WinActivate, ahk_id %id_3_dig_win%
-return
-
-<#3::
-WinActivate, ahk_id %id_3_dig_win%
-return
-
-<#^4::
-WinGet, id_4_dig_win, ID, A
-return
-
-<#4::
-WinActivate, ahk_id %id_4_dig_win%
+WinActivate, ahk_id %id_3_dig_alt%
 return
 
 <#^5::
-WinGet, id_5_dig_win, ID, A
+WinGet, id_5_dig_alt, ID, A
 return
 
 !5::
-WinActivate, ahk_id %id_5_dig_win%
+WinActivate, ahk_id %id_5_dig_alt%
 return
 
 <#>+1::
@@ -306,8 +299,6 @@ return
 !Q::
 WinActivate, ahk_id %id_q_alt%
 return
-
-; RCTRL
 
 >^!Q::
 WinGet, id_q_rctrl, ID, A
@@ -599,6 +590,142 @@ return
 WinActivate, ahk_id %id_pgdn_alt%
 return
 
+<#!1::
+WinGet, id_1_dig_win, ID, A
+return
+
+<#1::
+WinActivate, ahk_id %id_1_dig_win%
+return
+
+<#!2::
+WinGet, id_2_dig_win, ID, A
+return
+
+<#2::
+WinActivate, ahk_id %id_2_dig_win%
+return
+
+<#!3::
+WinGet, id_3_dig_win, ID, A
+return
+
+<#3::
+WinActivate, ahk_id %id_3_dig_win%
+return
+
+<#!4::
+WinGet, id_4_dig_win, ID, A
+return
+
+<#4::
+WinActivate, ahk_id %id_4_dig_win%
+return
+
+<#!5::
+WinGet, id_5_dig_win, ID, A
+return
+
+<#5::
+WinActivate, ahk_id %id_5_dig_win%
+return
+
+<#!Q::
+WinGet, id_q_win, ID, A
+return
+
+<#Q::
+WinActivate, ahk_id %id_q_win%
+return
+
+<#!W::
+WinGet, id_w_win, ID, A
+return
+
+<#W::
+WinActivate, ahk_id %id_w_win%
+return
+
+<#!E::
+WinGet, id_e_win, ID, A
+return
+
+<#E::
+WinActivate, ahk_id %id_e_win%
+return
+
+<#!R::
+WinGet, id_r_win, ID, A
+return
+
+<#R::
+WinActivate, ahk_id %id_r_win%
+return
+
+<#!A::
+WinGet, id_a_win, ID, A
+return
+
+<#A::
+WinActivate, ahk_id %id_a_win%
+return
+
+<#!S::
+WinGet, id_s_win, ID, A
+return
+
+<#S::
+WinActivate, ahk_id %id_s_win%
+return
+
+<#!D::
+WinGet, id_d_win, ID, A
+return
+
+<#D::
+WinActivate, ahk_id %id_d_win%
+return
+
+<#!F::
+WinGet, id_f_win, ID, A
+return
+
+<#F::
+WinActivate, ahk_id %id_f_win%
+return
+
+<#!Z::
+WinGet, id_z_win, ID, A
+return
+
+<#Z::
+WinActivate, ahk_id %id_z_win%
+return
+
+<#!X::
+WinGet, id_x_win, ID, A
+return
+
+<#X::
+WinActivate, ahk_id %id_x_win%
+return
+
+<#!C::
+WinGet, id_c_win, ID, A
+return
+
+<#C::
+WinActivate, ahk_id %id_c_win%
+return
+
+<#!V::
+WinGet, id_v_win, ID, A
+return
+
+<#V::
+WinActivate, ahk_id %id_v_win%
+return
+
 ^!9::
 WinGet, id_pgup, ID, A
 return
@@ -836,47 +963,7 @@ WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
 return
 
-<#W::
-Run C:\Work
-return
-
-<#C::
-Run C:\
-return
-
-<#Q::
-Run C:\Programs
-return
-
-<#D::
-Run D:\
-return
-
-<#G::
-Run C:\Users\aache\OneDrive\Documents
-return
-
-<#X::
-Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs
-return
-
-<#Z::
-Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-return
-
-<#A::
-Run C:\Windows\System32\cmd.exe
-return
-
 id_temp := ""
-
-<#T::
-Run C:\Temp
-return
-
-<#H::
-Run C:\Users\aache
-return
 
 <#!Enter::
 Send {RButton}
@@ -1017,6 +1104,50 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
 
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
+
+<#+E::
+Run C:\
+return
+
+<#+W::
+Run C:\Work
+return
+
+<#+C::
+Run C:\
+return
+
+<#+Q::
+Run C:\Programs
+return
+
+<#+D::
+Run D:\
+return
+
+<#+G::
+Run C:\Users\aache\OneDrive\Documents
+return
+
+<#+X::
+Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+return
+
+<#+Z::
+Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+return
+
+<#+A::
+Run C:\Windows\System32\cmd.exe
+return
+
+<#+T::
+Run C:\Temp
+return
+
+<#+H::
+Run C:\Users\aache
+return
 
 ; <#;::
 ; ResizeWin(0, 0, A_ScreenWidth / 3, A_ScreenHeight)
