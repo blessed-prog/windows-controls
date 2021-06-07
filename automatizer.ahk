@@ -107,12 +107,8 @@ id_gt := ""
 id_apos := ""
 id_semicolon := ""
 
-id_home := ""
-id_end := ""
 id_pgup := ""
 id_pgdn := ""
-id_div := ""
-id_mult := ""
 
 id_plus := ""
 id_minus := ""
@@ -292,7 +288,7 @@ MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
 ClickNow()
 return
 
-<#^Q::
+<#!Q::
 WinGet, id_q_alt, ID, A
 return
 
@@ -494,7 +490,7 @@ return
 WinActivate, ahk_id %id_v_rshift%
 return
 
-<#^W::
+<#!W::
 WinGet, id_w_alt, ID, A
 return
 
@@ -502,7 +498,7 @@ return
 WinActivate, ahk_id %id_w_alt%
 return
 
-<#^E::
+<#!E::
 WinGet, id_e_alt, ID, A
 return
 
@@ -510,7 +506,7 @@ return
 WinActivate, ahk_id %id_e_alt%
 return
 
-<#^A::
+<#!A::
 WinGet, id_a_alt, ID, A
 return
 
@@ -518,7 +514,7 @@ return
 WinActivate, ahk_id %id_a_alt%
 return
 
-<#^S::
+<#!S::
 WinGet, id_s_alt, ID, A
 return
 
@@ -526,7 +522,7 @@ return
 WinActivate, ahk_id %id_s_alt%
 return
 
-<#^D::
+<#!D::
 WinGet, id_d_alt, ID, A
 return
 
@@ -534,7 +530,7 @@ return
 WinActivate, ahk_id %id_d_alt%
 return
 
-<#^Z::
+<#!Z::
 WinGet, id_z_alt, ID, A
 return
 
@@ -542,7 +538,7 @@ return
 WinActivate, ahk_id %id_z_alt%
 return
 
-<#^X::
+<#!X::
 WinGet, id_x_alt, ID, A
 return
 
@@ -550,7 +546,7 @@ return
 WinActivate, ahk_id %id_x_alt%
 return
 
-<#^C::
+<#!C::
 WinGet, id_c_alt, ID, A
 return
 
@@ -558,7 +554,7 @@ return
 WinActivate, ahk_id %id_c_alt%
 return
 
-<#^R::
+<#!R::
 WinGet, id_r_alt, ID, A
 return
 
@@ -566,7 +562,7 @@ return
 WinActivate, ahk_id %id_r_alt%
 return
 
-<#^F::
+<#!F::
 WinGet, id_f_alt, ID, A
 return
 
@@ -574,7 +570,7 @@ return
 WinActivate, ahk_id %id_f_alt%
 return
 
-<#^V::
+<#!V::
 WinGet, id_v_alt, ID, A
 return
 
@@ -590,7 +586,7 @@ return
 WinActivate, ahk_id %id_pgdn_alt%
 return
 
-<#!1::
+<#+1::
 WinGet, id_1_dig_win, ID, A
 return
 
@@ -598,7 +594,7 @@ return
 WinActivate, ahk_id %id_1_dig_win%
 return
 
-<#!2::
+<#+2::
 WinGet, id_2_dig_win, ID, A
 return
 
@@ -606,7 +602,7 @@ return
 WinActivate, ahk_id %id_2_dig_win%
 return
 
-<#!3::
+<#+3::
 WinGet, id_3_dig_win, ID, A
 return
 
@@ -614,7 +610,7 @@ return
 WinActivate, ahk_id %id_3_dig_win%
 return
 
-<#!4::
+<#+4::
 WinGet, id_4_dig_win, ID, A
 return
 
@@ -622,7 +618,7 @@ return
 WinActivate, ahk_id %id_4_dig_win%
 return
 
-<#!5::
+<#+5::
 WinGet, id_5_dig_win, ID, A
 return
 
@@ -630,7 +626,7 @@ return
 WinActivate, ahk_id %id_5_dig_win%
 return
 
-<#!Q::
+<#+Q::
 WinGet, id_q_win, ID, A
 return
 
@@ -638,7 +634,7 @@ return
 WinActivate, ahk_id %id_q_win%
 return
 
-<#!W::
+<#+W::
 WinGet, id_w_win, ID, A
 return
 
@@ -646,7 +642,7 @@ return
 WinActivate, ahk_id %id_w_win%
 return
 
-<#!E::
+<#+E::
 WinGet, id_e_win, ID, A
 return
 
@@ -654,7 +650,7 @@ return
 WinActivate, ahk_id %id_e_win%
 return
 
-<#!R::
+<#+R::
 WinGet, id_r_win, ID, A
 return
 
@@ -662,7 +658,7 @@ return
 WinActivate, ahk_id %id_r_win%
 return
 
-<#!A::
+<#+A::
 WinGet, id_a_win, ID, A
 return
 
@@ -670,7 +666,7 @@ return
 WinActivate, ahk_id %id_a_win%
 return
 
-<#!S::
+<#+S::
 WinGet, id_s_win, ID, A
 return
 
@@ -678,7 +674,7 @@ return
 WinActivate, ahk_id %id_s_win%
 return
 
-<#!D::
+<#+D::
 WinGet, id_d_win, ID, A
 return
 
@@ -686,7 +682,7 @@ return
 WinActivate, ahk_id %id_d_win%
 return
 
-<#!F::
+<#+F::
 WinGet, id_f_win, ID, A
 return
 
@@ -694,7 +690,7 @@ return
 WinActivate, ahk_id %id_f_win%
 return
 
-<#!Z::
+<#+Z::
 WinGet, id_z_win, ID, A
 return
 
@@ -702,7 +698,7 @@ return
 WinActivate, ahk_id %id_z_win%
 return
 
-<#!X::
+<#+X::
 WinGet, id_x_win, ID, A
 return
 
@@ -710,7 +706,7 @@ return
 WinActivate, ahk_id %id_x_win%
 return
 
-<#!C::
+<#+C::
 WinGet, id_c_win, ID, A
 return
 
@@ -718,7 +714,7 @@ return
 WinActivate, ahk_id %id_c_win%
 return
 
-<#!V::
+<#+V::
 WinGet, id_v_win, ID, A
 return
 
@@ -836,22 +832,6 @@ return
 
 ^L::
 WinActivate, ahk_id %id_4%
-return
-
-^!-::
-WinGet, id_div, ID, A
-return
-
-^-::
-WinActivate, ahk_id %id_div%
-return
-
-^=::
-WinActivate, ahk_id %id_mult%
-return
-
-^!=::
-WinGet, id_mult, ID, A
 return
 
 ^!PgUp::
@@ -989,19 +969,19 @@ return
 Send ^{PgDn}
 return
 
-; <#^Up::
-; Send {WheelUp}
-; Send {WheelUp}
-; Send {WheelUp}
-; Send {WheelUp}
-; return
+<#^Up::
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+return
 
-; <#^Down::
-; Send {WheelDown}
-; Send {WheelDown}
-; Send {WheelDown}
-; Send {WheelDown}
-; return
+<#^Down::
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+return
 
 ClickNow()
 {
@@ -1105,48 +1085,62 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
 
-<#+E::
+<#^E::
 Run C:\
 return
 
-<#+W::
+<#^W::
 Run C:\Work
 return
 
-<#+C::
+<#^C::
 Run C:\
 return
 
-<#+Q::
+<#^Q::
 Run C:\Programs
 return
 
-<#+D::
+<#^D::
 Run D:\
 return
 
-<#+G::
+<#^G::
 Run C:\Users\aache\OneDrive\Documents
 return
 
-<#+X::
+<#^X::
 Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 return
 
-<#+Z::
+<#^Z::
 Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 return
 
-<#+A::
+<#^A::
 Run C:\Windows\System32\cmd.exe
 return
 
-<#+T::
+<#^T::
 Run C:\Temp
 return
 
-<#+H::
+<#^H::
 Run C:\Users\aache
+return
+
+^WheelUp::
+return
+
+^-::
+Send ^{WheelDown}
+return
+
+^=::
+Send ^{WheelUp}
+return
+
+^WheelDown::
 return
 
 ; <#;::
@@ -1161,8 +1155,12 @@ return
 ; ResizeWin(A_ScreenWidth * 2 / 3, 0, A_ScreenWidth / 3, A_ScreenHeight)
 ; return
 
-<#^Up::
-ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
+<#!Left::
+ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
+return
+
+<#!Right::
+ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
 return
 
 <#^Left::
