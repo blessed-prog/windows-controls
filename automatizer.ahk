@@ -156,7 +156,7 @@ return
 WinActivate, ahk_id %id_5_dig%
 return
 
-<#^2::
+<#!2::
 WinGet, id_2_dig_alt, ID, A
 return
 
@@ -164,7 +164,7 @@ return
 WinActivate, ahk_id %id_2_dig_alt%
 return
 
-<#^3::
+<#!3::
 WinGet, id_3_dig_alt, ID, A
 return
 
@@ -172,7 +172,7 @@ return
 WinActivate, ahk_id %id_3_dig_alt%
 return
 
-<#^5::
+<#!5::
 WinGet, id_5_dig_alt, ID, A
 return
 
