@@ -1163,6 +1163,10 @@ return
 ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
 return
 
+<#!Up::
+ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
+return
+
 <#^Left::
 ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
 return
