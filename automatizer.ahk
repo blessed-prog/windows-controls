@@ -578,7 +578,7 @@ return
 WinActivate, ahk_id %id_v_alt%
 return
 
-<#^I::
+<#!I::
 WinGet, id_pgdn_alt, ID, A
 return
 
@@ -842,7 +842,7 @@ return
 WinActivate, ahk_id %id_pgup%
 return
 
-<#^PgUp::
+<#!PgUp::
 WinGet, id_pgup_alt, ID, A
 return
 
@@ -858,7 +858,7 @@ return
 WinActivate, ahk_id %id_pgdn%
 return
 
-<#^PgDn::
+<#!PgDn::
 WinGet, id_pgdn_alt, ID, A
 return
 
@@ -1164,10 +1164,6 @@ ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
 return
 
 <#!Up::
-ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
-return
-
-<#+Up::
 ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
 return
 
