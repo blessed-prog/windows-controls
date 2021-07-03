@@ -239,6 +239,11 @@ ClickNow()
 return
 
 <#Rshift::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
+ClickNow()
+return
+
+<#Rctrl::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
 ClickNow()
 return
@@ -961,11 +966,11 @@ Send {Down}
 Send {Down}
 return
 
-<#Left::
+<#^Left::
 Send ^{PgUp}
 return
 
-<#Right::
+<#^Right::
 Send ^{PgDn}
 return
 
@@ -1170,10 +1175,26 @@ return
 ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
 return
 
-<#^Left::
-ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
+<#Left::
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
 return
 
-<#^Right::
-ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
+<#Right::
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
 return
