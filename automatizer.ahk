@@ -224,7 +224,7 @@ return
 ; ===================== MOUSE ======================
 
 <#Enter::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
 ClickNow()
 return
 
@@ -239,7 +239,7 @@ ClickNow()
 return
 
 <#Rshift::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 4 / 5
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
@@ -1141,6 +1141,9 @@ Send ^{WheelUp}
 return
 
 ^WheelDown::
+return
+
+^<#Enter::
 return
 
 ; <#;::
