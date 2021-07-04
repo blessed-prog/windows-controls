@@ -966,6 +966,14 @@ Send {Down}
 Send {Down}
 return
 
+!Left::
+Send ^{PgUp}
+return
+
+!Right::
+Send ^{PgDn}
+return
+
 <#^Left::
 Send ^{PgUp}
 return
