@@ -1,41 +1,7 @@
-
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-
-id_1_rshift := ""
-id_2_rshift := ""
-id_3_rshift := ""
-id_4_rshift := ""
-id_5_rshift := ""
-
-id_q_rshift := ""
-id_w_rshift := ""
-id_e_rshift := ""
-id_a_rshift := ""
-id_s_rshift := ""
-id_d_rshift := ""
-id_z_rshift := ""
-id_x_rshift := ""
-id_c_rshift := ""
-id_r_rshift := ""
-id_f_rshift := ""
-id_v_rshift := ""
-
-
-id_q_rctrl := ""
-id_w_rctrl := ""
-id_e_rctrl := ""
-id_a_rctrl := ""
-id_s_rctrl := ""
-id_d_rctrl := ""
-id_z_rctrl := ""
-id_x_rctrl := ""
-id_c_rctrl := ""
-id_r_rctrl := ""
-id_f_rctrl := ""
-id_v_rctrl := ""
 
 id_q_win := ""
 id_w_win := ""
@@ -49,6 +15,16 @@ id_c_win := ""
 id_r_win := ""
 id_f_win := ""
 id_v_win := ""
+
+id_f1_ctrl := ""
+id_f2_ctrl := ""
+id_f3_ctrl := ""
+id_f4_ctrl := ""
+
+id_f1_alt := ""
+id_f2_alt := ""
+id_f3_alt := ""
+id_f4_alt := ""
 
 id_q_alt := ""
 id_w_alt := ""
@@ -99,12 +75,9 @@ id_4 := ""
 id_5 := ""
 id_6 := ""
 id_7 := ""
-id_8 := ""
-id_9 := ""
+id_p_ctrl := ""
+id_left_bracket_ctrl := ""
 
-id_ls := ""
-id_gt := ""
-id_apos := ""
 id_semicolon := ""
 
 id_pgup := ""
@@ -113,6 +86,40 @@ id_pgdn := ""
 id_plus := ""
 id_minus := ""
 id_enter := ""
+
+; ===================== F1-F4 =======================
+
+^!F1::
+WinGet, id_f1_ctrl, ID, A
+return
+
+^F1::
+WinActivate, ahk_id %id_f1_ctrl%
+return
+
+^!F2::
+WinGet, id_f2_ctrl, ID, A
+return
+
+^F2::
+WinActivate, ahk_id %id_f2_ctrl%
+return
+
+^!F3::
+WinGet, id_f3_ctrl, ID, A
+return
+
+^F3::
+WinActivate, ahk_id %id_f3_ctrl%
+return
+
+^!F4::
+WinGet, id_f4_ctrl, ID, A
+return
+
+^F4::
+WinActivate, ahk_id %id_f4_ctrl%
+return
 
 ; ===================== DIGITS ======================
 
@@ -179,47 +186,6 @@ return
 !5::
 WinActivate, ahk_id %id_5_dig_alt%
 return
-
-<#>+1::
-WinGet, id_1_rshift, ID, A
-return
-
->+1::
-WinActivate, ahk_id %id_1_rshift%
-return
-
-<#>+2::
-WinGet, id_2_rshift, ID, A
-return
-
->+2::
-WinActivate, ahk_id %id_2_rshift%
-return
-
-<#>+3::
-WinGet, id_3_rshift, ID, A
-return
-
->+3::
-WinActivate, ahk_id %id_3_rshift%
-return
-
-<#>+4::
-WinGet, id_4_rshift, ID, A
-return
-
->+4::
-WinActivate, ahk_id %id_4_rshift%
-return
-
-<#>+5::
-WinGet, id_5_rshift, ID, A
-return
-
->+5::
-WinActivate, ahk_id %id_5_rshift%
-return
-
 
 ; ===================== MOUSE ======================
 
@@ -293,206 +259,44 @@ MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
 ClickNow()
 return
 
+<#!F1::
+WinGet, id_f1_alt, ID, A
+return
+
+!F1::
+WinActivate, ahk_id %id_f1_alt%
+return
+
+<#!F2::
+WinGet, id_f2_alt, ID, A
+return
+
+!F2::
+WinActivate, ahk_id %id_f2_alt%
+return
+
+<#!F3::
+WinGet, id_f3_alt, ID, A
+return
+
+!F3::
+WinActivate, ahk_id %id_f3_alt%
+return
+
+<#!F4::
+WinGet, id_f4_alt, ID, A
+return
+
+!F4::
+WinActivate, ahk_id %id_f4_alt%
+return
+
 <#!Q::
 WinGet, id_q_alt, ID, A
 return
 
 !Q::
 WinActivate, ahk_id %id_q_alt%
-return
-
->^!Q::
-WinGet, id_q_rctrl, ID, A
-return
-
->^Q::
-WinActivate, ahk_id %id_q_rctrl%
-return
-
->^!W::
-WinGet, id_w_rctrl, ID, A
-return
-
->^W::
-WinActivate, ahk_id %id_w_rctrl%
-return
-
->^!E::
-WinGet, id_e_rctrl, ID, A
-return
-
->^E::
-WinActivate, ahk_id %id_e_rctrl%
-return
-
->^!A::
-WinGet, id_a_rctrl, ID, A
-return
-
->^A::
-WinActivate, ahk_id %id_a_rctrl%
-return
-
->^!S::
-WinGet, id_s_rctrl, ID, A
-return
-
->^S::
-WinActivate, ahk_id %id_s_rctrl%
-return
-
->^!D::
-WinGet, id_d_rctrl, ID, A
-return
-
->^D::
-WinActivate, ahk_id %id_d_rctrl%
-return
-
->^!Z::
-WinGet, id_z_rctrl, ID, A
-return
-
->^Z::
-WinActivate, ahk_id %id_z_rctrl%
-return
-
->^!X::
-WinGet, id_x_rctrl, ID, A
-return
-
->^X::
-WinActivate, ahk_id %id_x_rctrl%
-return
-
->^!C::
-WinGet, id_c_rctrl, ID, A
-return
-
->^C::
-WinActivate, ahk_id %id_c_rctrl%
-return
-
->^!R::
-WinGet, id_r_rctrl, ID, A
-return
-
->^R::
-WinActivate, ahk_id %id_r_rctrl%
-return
-
->^!F::
-WinGet, id_f_rctrl, ID, A
-return
-
->^F::
-WinActivate, ahk_id %id_f_rctrl%
-return
-
->^!V::
-WinGet, id_v_rctrl, ID, A
-return
-
->^V::
-WinActivate, ahk_id %id_v_rctrl%
-return
-
-; RSHIFT
-
-<#>+Q::
-WinGet, id_q_rshift, ID, A
-return
-
->+Q::
-WinActivate, ahk_id %id_q_rshift%
-return
-
-<#>+W::
-WinGet, id_w_rshift, ID, A
-return
-
->+W::
-WinActivate, ahk_id %id_w_rshift%
-return
-
-<#>+E::
-WinGet, id_e_rshift, ID, A
-return
-
->+E::
-WinActivate, ahk_id %id_e_rshift%
-return
-
-<#>+A::
-WinGet, id_a_rshift, ID, A
-return
-
->+A::
-WinActivate, ahk_id %id_a_rshift%
-return
-
-<#>+S::
-WinGet, id_s_rshift, ID, A
-return
-
->+S::
-WinActivate, ahk_id %id_s_rshift%
-return
-
-<#>+D::
-WinGet, id_d_rshift, ID, A
-return
-
->+D::
-WinActivate, ahk_id %id_d_rshift%
-return
-
-<#>+Z::
-WinGet, id_z_rshift, ID, A
-return
-
->+Z::
-WinActivate, ahk_id %id_z_rshift%
-return
-
-<#>+X::
-WinGet, id_x_rshift, ID, A
-return
-
->+X::
-WinActivate, ahk_id %id_x_rshift%
-return
-
-<#>+C::
-WinGet, id_c_rshift, ID, A
-return
-
->+C::
-WinActivate, ahk_id %id_c_rshift%
-return
-
-<#>+R::
-WinGet, id_r_rshift, ID, A
-return
-
->+R::
-WinActivate, ahk_id %id_r_rshift%
-return
-
-<#>+F::
-WinGet, id_f_rshift, ID, A
-return
-
->+F::
-WinActivate, ahk_id %id_f_rshift%
-return
-
-<#>+V::
-WinGet, id_v_rshift, ID, A
-return
-
->+V::
-WinActivate, ahk_id %id_v_rshift%
 return
 
 <#!W::
@@ -800,19 +604,19 @@ WinActivate, ahk_id %id_1%
 return
 
 ^!P::
-WinGet, id_8, ID, A
+WinGet, id_p_ctrl, ID, A
 return
 
 ^P::
-WinActivate, ahk_id %id_8%
+WinActivate, ahk_id %id_p_ctrl%
 return
 
 ^![::
-WinGet, id_9, ID, A
+WinGet, id_left_bracket_ctrl, ID, A
 return
 
 ^[::
-WinActivate, ahk_id %id_9%
+WinActivate, ahk_id %id_left_bracket_ctrl%
 return
 
 ^!O::
@@ -1114,12 +918,8 @@ return
 Run C:\Programs
 return
 
-<#^D::
-Run D:\
-return
-
-<#^G::
-Run C:\Users\aache\OneDrive\Documents
+<#^S::
+Run %A_MyDocuments%
 return
 
 <#^X::
@@ -1136,10 +936,6 @@ return
 
 <#^T::
 Run C:\Temp
-return
-
-<#^H::
-Run C:\Users\aache
 return
 
 ^WheelUp::
@@ -1171,17 +967,17 @@ return
 ; ResizeWin(A_ScreenWidth * 2 / 3, 0, A_ScreenWidth / 3, A_ScreenHeight)
 ; return
 
-<#!Left::
-ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
-return
+;<#!Left::
+;ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
+;return
 
-<#!Right::
-ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
-return
+;<#!Right::
+;ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
+;return
 
-<#!Up::
-ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
-return
+;<#!Up::
+;ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
+;return
 
 <#Left::
 Send {Left}
