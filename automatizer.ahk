@@ -42,11 +42,11 @@ id_v_alt := ""
 id_comma_win := ""
 id_pt_win := ""
 id_slash_win := ""
-id_L_win := ""
-id_semicolon_win := ""
+id_del_win := ""
+id_end_win := ""
 id_quote_win := ""
-id_O_win := ""
-id_P_win := ""
+id_ins_win := ""
+id_home_win := ""
 id_left_bracket_win := ""
 
 id_1_dig := ""
@@ -71,11 +71,10 @@ id_pgdn_alt := ""
 id_1 := ""
 id_2 := ""
 id_3 := ""
-id_4 := ""
-id_5 := ""
-id_6 := ""
-id_7 := ""
-id_p_ctrl := ""
+id_del_ctrl := ""
+id_end_ctrl := ""
+id_ins_ctrl := ""
+id_home_ctrl := ""
 id_left_bracket_ctrl := ""
 
 id_semicolon := ""
@@ -163,7 +162,7 @@ return
 WinActivate, ahk_id %id_5_dig%
 return
 
-<#!2::
+>^>+2::
 WinGet, id_2_dig_alt, ID, A
 return
 
@@ -171,7 +170,7 @@ return
 WinActivate, ahk_id %id_2_dig_alt%
 return
 
-<#!3::
+>^>+3::
 WinGet, id_3_dig_alt, ID, A
 return
 
@@ -179,7 +178,7 @@ return
 WinActivate, ahk_id %id_3_dig_alt%
 return
 
-<#!5::
+>^>+5::
 WinGet, id_5_dig_alt, ID, A
 return
 
@@ -259,7 +258,7 @@ MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
 ClickNow()
 return
 
-<#!F1::
+>^>+F1::
 WinGet, id_f1_alt, ID, A
 return
 
@@ -267,7 +266,7 @@ return
 WinActivate, ahk_id %id_f1_alt%
 return
 
-<#!F2::
+>^>+F2::
 WinGet, id_f2_alt, ID, A
 return
 
@@ -275,7 +274,7 @@ return
 WinActivate, ahk_id %id_f2_alt%
 return
 
-<#!F3::
+>^>+F3::
 WinGet, id_f3_alt, ID, A
 return
 
@@ -283,7 +282,7 @@ return
 WinActivate, ahk_id %id_f3_alt%
 return
 
-<#!F4::
+>^>+F4::
 WinGet, id_f4_alt, ID, A
 return
 
@@ -291,7 +290,7 @@ return
 WinActivate, ahk_id %id_f4_alt%
 return
 
-<#!Q::
+>^>+Q::
 WinGet, id_q_alt, ID, A
 return
 
@@ -299,7 +298,7 @@ return
 WinActivate, ahk_id %id_q_alt%
 return
 
-<#!W::
+>^>+W::
 WinGet, id_w_alt, ID, A
 return
 
@@ -307,7 +306,7 @@ return
 WinActivate, ahk_id %id_w_alt%
 return
 
-<#!E::
+>^>+E::
 WinGet, id_e_alt, ID, A
 return
 
@@ -315,7 +314,7 @@ return
 WinActivate, ahk_id %id_e_alt%
 return
 
-<#!A::
+>^>+A::
 WinGet, id_a_alt, ID, A
 return
 
@@ -323,7 +322,7 @@ return
 WinActivate, ahk_id %id_a_alt%
 return
 
-<#!S::
+>^>+S::
 WinGet, id_s_alt, ID, A
 return
 
@@ -331,7 +330,7 @@ return
 WinActivate, ahk_id %id_s_alt%
 return
 
-<#!D::
+>^>+D::
 WinGet, id_d_alt, ID, A
 return
 
@@ -339,7 +338,7 @@ return
 WinActivate, ahk_id %id_d_alt%
 return
 
-<#!Z::
+>^>+Z::
 WinGet, id_z_alt, ID, A
 return
 
@@ -347,7 +346,7 @@ return
 WinActivate, ahk_id %id_z_alt%
 return
 
-<#!X::
+>^>+X::
 WinGet, id_x_alt, ID, A
 return
 
@@ -355,7 +354,7 @@ return
 WinActivate, ahk_id %id_x_alt%
 return
 
-<#!C::
+>^>+C::
 WinGet, id_c_alt, ID, A
 return
 
@@ -363,7 +362,7 @@ return
 WinActivate, ahk_id %id_c_alt%
 return
 
-<#!R::
+>^>+R::
 WinGet, id_r_alt, ID, A
 return
 
@@ -371,7 +370,7 @@ return
 WinActivate, ahk_id %id_r_alt%
 return
 
-<#!F::
+>^>+F::
 WinGet, id_f_alt, ID, A
 return
 
@@ -379,7 +378,7 @@ return
 WinActivate, ahk_id %id_f_alt%
 return
 
-<#!V::
+>^>+V::
 WinGet, id_v_alt, ID, A
 return
 
@@ -387,7 +386,7 @@ return
 WinActivate, ahk_id %id_v_alt%
 return
 
-<#!I::
+>^>+I::
 WinGet, id_pgdn_alt, ID, A
 return
 
@@ -572,19 +571,27 @@ WinActivate, ahk_id %id_plus%
 return
 
 ^!'::
-WinGet, id_6, ID, A
+WinGet, id_pgdn_ctrl, ID, A
 return
 
 ^'::
-WinActivate, ahk_id %id_6%
+WinActivate, ahk_id %id_pgdn_ctrl%
 return
 
 ^!;::
-WinGet, id_5, ID, A
+WinGet, id_end_ctrl, ID, A
 return
 
 ^;::
-WinActivate, ahk_id %id_5%
+WinActivate, ahk_id %id_end_ctrl%
+return
+
+^!End::
+WinGet, id_end_ctrl, ID, A
+return
+
+^End::
+WinActivate, ahk_id %id_end_ctrl%
 return
 
 ^!.::
@@ -604,11 +611,19 @@ WinActivate, ahk_id %id_1%
 return
 
 ^!P::
-WinGet, id_p_ctrl, ID, A
+WinGet, id_home_ctrl, ID, A
 return
 
 ^P::
-WinActivate, ahk_id %id_p_ctrl%
+WinActivate, ahk_id %id_home_ctrl%
+return
+
+^!Home::
+WinGet, id_home_ctrl, ID, A
+return
+
+^Home::
+WinActivate, ahk_id %id_home_ctrl%
 return
 
 ^![::
@@ -620,12 +635,21 @@ WinActivate, ahk_id %id_left_bracket_ctrl%
 return
 
 ^!O::
-WinGet, id_7, ID, A
+WinGet, id_ins_ctrl, ID, A
 return
 
 ^O::
-WinActivate, ahk_id %id_7%
+WinActivate, ahk_id %id_ins_ctrl%
 return
+
+^!Ins::
+WinGet, id_ins_ctrl, ID, A
+return
+
+^Ins::
+WinActivate, ahk_id %id_ins_ctrl%
+return
+
 
 ^!I::
 WinGet, id_pgdn, ID, A
@@ -636,11 +660,19 @@ WinActivate, ahk_id %id_pgdn%
 return
 
 ^!L::
-WinGet, id_4, ID, A
+WinGet, id_del_ctrl, ID, A
 return
 
 ^L::
-WinActivate, ahk_id %id_4%
+WinActivate, ahk_id %id_del_ctrl%
+return
+
+>+>!Del::
+WinGet, id_del_ctrl, ID, A
+return
+
+^Del::
+WinActivate, ahk_id %id_del_ctrl%
 return
 
 ^!PgUp::
@@ -651,7 +683,7 @@ return
 WinActivate, ahk_id %id_pgup%
 return
 
-<#!PgUp::
+>^>+PgUp::
 WinGet, id_pgup_alt, ID, A
 return
 
@@ -660,14 +692,14 @@ WinActivate, ahk_id %id_pgup_alt%
 return
 
 ^!PgDn::
-WinGet, id_pgdn, ID, A
+WinGet, id_pgdn_ctrl, ID, A
 return
 
 ^PgDn::
-WinActivate, ahk_id %id_pgdn%
+WinActivate, ahk_id %id_pgdn_ctrl%
 return
 
-<#!PgDn::
+>^>+PgDn::
 WinGet, id_pgdn_alt, ID, A
 return
 
@@ -700,19 +732,35 @@ WinActivate, ahk_id %id_slash_win%
 return
 
 <#^L::
-WinGet, id_L_win, ID, A
+WinGet, id_del_win, ID, A
 return
 
 !L::
-WinActivate, ahk_id %id_L_win%
+WinActivate, ahk_id %id_del_win%
+return
+
+>^>+Del::
+WinGet, id_del_win, ID, A
+return
+
+!Del::
+WinActivate, ahk_id %id_del_win%
 return
 
 <#^;::
-WinGet, id_semicolon_win, ID, A
+WinGet, id_end_win, ID, A
 return
 
 !;::
-WinActivate, ahk_id %id_semicolon_win%
+WinActivate, ahk_id %id_end_win%
+return
+
+>^>+End::
+WinGet, id_end_win, ID, A
+return
+
+!End::
+WinActivate, ahk_id %id_end_win%
 return
 
 <#^'::
@@ -723,20 +771,36 @@ return
 WinActivate, ahk_id %id_quote_win%
 return
 
+>^>+Ins::
+WinGet, id_ins_win, ID, A
+return
+
+!Ins::
+WinActivate, ahk_id %id_ins_win%
+return
+
 <#^O::
-WinGet, id_O_win, ID, A
+WinGet, id_ins_win, ID, A
 return
 
 !O::
-WinActivate, ahk_id %id_O_win%
+WinActivate, ahk_id %id_ins_win%
 return
 
 <#^P::
-WinGet, id_P_win, ID, A
+WinGet, id_home_win, ID, A
+return
+
+!Home::
+WinActivate, ahk_id %id_home_win%
+return
+
+>^>+Home::
+WinGet, id_home_win, ID, A
 return
 
 !P::
-WinActivate, ahk_id %id_P_win%
+WinActivate, ahk_id %id_home_win%
 return
 
 <#^[::
