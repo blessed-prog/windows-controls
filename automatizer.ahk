@@ -39,11 +39,14 @@ id_r_alt := ""
 id_f_alt := ""
 id_v_alt := ""
 
+id_i_alt := ""
+id_9_alt := ""
+
 id_comma_win := ""
 id_pt_win := ""
 id_slash_win := ""
-id_del_win := ""
-id_end_win := ""
+id_del_alt := ""
+id_end_alt := ""
 id_quote_win := ""
 id_ins_win := ""
 id_home_win := ""
@@ -75,20 +78,18 @@ id_del_ctrl := ""
 id_end_ctrl := ""
 id_ins_ctrl := ""
 id_home_ctrl := ""
-id_left_bracket_ctrl := ""
+id_pgup_ctrl := ""
+id_pgdn_ctrl := ""
 
-id_semicolon := ""
+id_i_ctrl := ""
+id_9_ctrl := ""
 
-id_pgup := ""
-id_pgdn := ""
-
-id_plus := ""
+id_right_bracket_ctrl := ""
 id_minus := ""
-id_enter := ""
 
 ; ===================== F1-F4 =======================
 
-^!F1::
+>^>!F1::
 WinGet, id_f1_ctrl, ID, A
 return
 
@@ -96,7 +97,7 @@ return
 WinActivate, ahk_id %id_f1_ctrl%
 return
 
-^!F2::
+>^>!F2::
 WinGet, id_f2_ctrl, ID, A
 return
 
@@ -104,7 +105,7 @@ return
 WinActivate, ahk_id %id_f2_ctrl%
 return
 
-^!F3::
+>^>!F3::
 WinGet, id_f3_ctrl, ID, A
 return
 
@@ -112,7 +113,7 @@ return
 WinActivate, ahk_id %id_f3_ctrl%
 return
 
-^!F4::
+>^>!F4::
 WinGet, id_f4_ctrl, ID, A
 return
 
@@ -122,7 +123,7 @@ return
 
 ; ===================== DIGITS ======================
 
-^!1::
+>^>!1::
 WinGet, id_1_dig, ID, A
 return
 
@@ -130,7 +131,7 @@ return
 WinActivate, ahk_id %id_1_dig%
 return
 
-^!2::
+>^>!2::
 WinGet, id_2_dig, ID, A
 return
 
@@ -138,7 +139,7 @@ return
 WinActivate, ahk_id %id_2_dig%
 return
 
-^!3::
+>^>!3::
 WinGet, id_3_dig, ID, A
 return
 
@@ -146,7 +147,7 @@ return
 WinActivate, ahk_id %id_3_dig%
 return
 
-^!4::
+>^>!4::
 WinGet, id_4_dig, ID, A
 return
 
@@ -154,7 +155,7 @@ return
 WinActivate, ahk_id %id_4_dig%
 return
 
-^!5::
+>^>!5::
 WinGet, id_5_dig, ID, A
 return
 
@@ -386,14 +387,6 @@ return
 WinActivate, ahk_id %id_v_alt%
 return
 
->^>+I::
-WinGet, id_pgdn_alt, ID, A
-return
-
-!I::
-WinActivate, ahk_id %id_pgdn_alt%
-return
-
 <#+1::
 WinGet, id_1_dig_win, ID, A
 return
@@ -530,23 +523,7 @@ return
 WinActivate, ahk_id %id_v_win%
 return
 
-^!9::
-WinGet, id_pgup, ID, A
-return
-
-^9::
-WinActivate, ahk_id %id_pgup%
-return
-
-<#^9::
-WinGet, id_pgup_alt, ID, A
-return
-
-!9::
-WinActivate, ahk_id %id_pgup_alt%
-return
-
-^!/::
+>^>!/::
 WinGet, id_3, ID, A
 return
 
@@ -554,7 +531,7 @@ return
 WinActivate, ahk_id %id_3%
 return
 
-^!\::
+>^>!\::
 WinGet, id_minus, ID, A
 return
 
@@ -562,15 +539,15 @@ return
 WinActivate, ahk_id %id_minus%
 return
 
-^!]::
-WinGet, id_plus, ID, A
+>^>!]::
+WinGet, id_right_bracket_ctrl, ID, A
 return
 
 ^]::
-WinActivate, ahk_id %id_plus%
+WinActivate, ahk_id %id_right_bracket_ctrl%
 return
 
-^!'::
+>^>!'::
 WinGet, id_pgdn_ctrl, ID, A
 return
 
@@ -578,7 +555,7 @@ return
 WinActivate, ahk_id %id_pgdn_ctrl%
 return
 
-^!;::
+>^>!;::
 WinGet, id_end_ctrl, ID, A
 return
 
@@ -586,7 +563,7 @@ return
 WinActivate, ahk_id %id_end_ctrl%
 return
 
-^!End::
+>^>!End::
 WinGet, id_end_ctrl, ID, A
 return
 
@@ -594,7 +571,7 @@ return
 WinActivate, ahk_id %id_end_ctrl%
 return
 
-^!.::
+>^>!.::
 WinGet, id_2, ID, A
 return
 
@@ -602,7 +579,7 @@ return
 WinActivate, ahk_id %id_2%
 return
 
-^!,::
+>^>!,::
 WinGet, id_1, ID, A
 return
 
@@ -610,7 +587,7 @@ return
 WinActivate, ahk_id %id_1%
 return
 
-^!P::
+>^>!P::
 WinGet, id_home_ctrl, ID, A
 return
 
@@ -618,7 +595,7 @@ return
 WinActivate, ahk_id %id_home_ctrl%
 return
 
-^!Home::
+>^>!Home::
 WinGet, id_home_ctrl, ID, A
 return
 
@@ -626,15 +603,15 @@ return
 WinActivate, ahk_id %id_home_ctrl%
 return
 
-^![::
-WinGet, id_left_bracket_ctrl, ID, A
+>^>![::
+WinGet, id_pgup_ctrl, ID, A
 return
 
 ^[::
-WinActivate, ahk_id %id_left_bracket_ctrl%
+WinActivate, ahk_id %id_pgup_ctrl%
 return
 
-^!O::
+>^>!O::
 WinGet, id_ins_ctrl, ID, A
 return
 
@@ -642,7 +619,7 @@ return
 WinActivate, ahk_id %id_ins_ctrl%
 return
 
-^!Ins::
+>^>!Ins::
 WinGet, id_ins_ctrl, ID, A
 return
 
@@ -650,16 +627,39 @@ return
 WinActivate, ahk_id %id_ins_ctrl%
 return
 
+>^>+9::
+WinGet, id_9_alt, ID, A
+return
 
-^!I::
-WinGet, id_pgdn, ID, A
+!9::
+WinActivate, ahk_id %id_9_alt%
+return
+
+>^>+I::
+WinGet, id_i_alt, ID, A
+return
+
+!I::
+WinActivate, ahk_id %id_i_alt%
+return
+
+>^>!I::
+WinGet, id_i_ctrl, ID, A
 return
 
 ^I::
-WinActivate, ahk_id %id_pgdn%
+WinActivate, ahk_id %id_i_ctrl%
 return
 
-^!L::
+>^>!9::
+WinGet, id_9_ctrl, ID, A
+return
+
+^9::
+WinActivate, ahk_id %id_9_ctrl%
+return
+
+>^>!L::
 WinGet, id_del_ctrl, ID, A
 return
 
@@ -675,12 +675,12 @@ return
 WinActivate, ahk_id %id_del_ctrl%
 return
 
-^!PgUp::
-WinGet, id_pgup, ID, A
+>^>!PgUp::
+WinGet, id_pgup_ctrl, ID, A
 return
 
 ^PgUp::
-WinActivate, ahk_id %id_pgup%
+WinActivate, ahk_id %id_pgup_ctrl%
 return
 
 >^>+PgUp::
@@ -691,7 +691,7 @@ return
 WinActivate, ahk_id %id_pgup_alt%
 return
 
-^!PgDn::
+>^>!PgDn::
 WinGet, id_pgdn_ctrl, ID, A
 return
 
@@ -732,35 +732,35 @@ WinActivate, ahk_id %id_slash_win%
 return
 
 <#^L::
-WinGet, id_del_win, ID, A
+WinGet, id_del_alt, ID, A
 return
 
 !L::
-WinActivate, ahk_id %id_del_win%
+WinActivate, ahk_id %id_del_alt%
 return
 
 >^>+Del::
-WinGet, id_del_win, ID, A
+WinGet, id_del_alt, ID, A
 return
 
 !Del::
-WinActivate, ahk_id %id_del_win%
+WinActivate, ahk_id %id_del_alt%
 return
 
 <#^;::
-WinGet, id_end_win, ID, A
+WinGet, id_end_alt, ID, A
 return
 
 !;::
-WinActivate, ahk_id %id_end_win%
+WinActivate, ahk_id %id_end_alt%
 return
 
 >^>+End::
-WinGet, id_end_win, ID, A
+WinGet, id_end_alt, ID, A
 return
 
 !End::
-WinActivate, ahk_id %id_end_win%
+WinActivate, ahk_id %id_end_alt%
 return
 
 <#^'::
