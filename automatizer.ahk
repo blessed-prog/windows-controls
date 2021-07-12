@@ -189,8 +189,26 @@ return
 
 ; ===================== MOUSE ======================
 
+>^Home::
+Send {Home}
+return
+
+>^End::
+Send {End}
+return
+
 <#Enter::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
+ClickNow()
+return
+
+Home::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
+ClickNow()
+return
+
+End::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
 ClickNow()
 return
 
@@ -1002,7 +1020,26 @@ return
 Run C:\Temp
 return
 
-^WheelUp::
+<^WheelUp::
+return
+
+<^WheelDown::
+return
+
+<#WheelUp::
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+return
+
+<#WheelDown::
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
 return
 
 ^-::
@@ -1011,9 +1048,6 @@ return
 
 ^=::
 Send ^{WheelUp}
-return
-
-^WheelDown::
 return
 
 ^<#Enter::
@@ -1039,9 +1073,9 @@ return
 ;ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
 ;return
 
-;<#!Up::
-;ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
-;return
+<#!Up::
+ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
+return
 
 <#Left::
 Send {Left}
