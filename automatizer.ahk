@@ -20,11 +20,19 @@ id_f1_ctrl := ""
 id_f2_ctrl := ""
 id_f3_ctrl := ""
 id_f4_ctrl := ""
+id_f5_ctrl := ""
+id_f6_ctrl := ""
+id_f7_ctrl := ""
+id_f8_ctrl := ""
 
 id_f1_alt := ""
 id_f2_alt := ""
 id_f3_alt := ""
 id_f4_alt := ""
+id_f5_alt := ""
+id_f6_alt := ""
+id_f7_alt := ""
+id_f8_alt := ""
 
 id_q_alt := ""
 id_w_alt := ""
@@ -119,6 +127,38 @@ return
 
 ^F4::
 WinActivate, ahk_id %id_f4_ctrl%
+return
+
+>^>!F5::
+WinGet, id_f5_ctrl, ID, A
+return
+
+^F5::
+WinActivate, ahk_id %id_f5_ctrl%
+return
+
+>^>!F6::
+WinGet, id_f6_ctrl, ID, A
+return
+
+^F6::
+WinActivate, ahk_id %id_f6_ctrl%
+return
+
+>^>!F7::
+WinGet, id_f7_ctrl, ID, A
+return
+
+^F7::
+WinActivate, ahk_id %id_f7_ctrl%
+return
+
+>^>!F8::
+WinGet, id_f8_ctrl, ID, A
+return
+
+^F8::
+WinActivate, ahk_id %id_f8_ctrl%
 return
 
 ; ===================== DIGITS ======================
@@ -307,6 +347,38 @@ return
 
 !F4::
 WinActivate, ahk_id %id_f4_alt%
+return
+
+>^>+F5::
+WinGet, id_f5_alt, ID, A
+return
+
+!F5::
+WinActivate, ahk_id %id_f5_alt%
+return
+
+>^>+F6::
+WinGet, id_f6_alt, ID, A
+return
+
+!F6::
+WinActivate, ahk_id %id_f6_alt%
+return
+
+>^>+F7::
+WinGet, id_f7_alt, ID, A
+return
+
+!F7::
+WinActivate, ahk_id %id_f7_alt%
+return
+
+>^>+F8::
+WinGet, id_f8_alt, ID, A
+return
+
+!F8::
+WinActivate, ahk_id %id_f8_alt%
 return
 
 >^>+Q::
