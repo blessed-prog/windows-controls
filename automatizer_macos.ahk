@@ -25,36 +25,36 @@ id_f6_ctrl := ""
 id_f7_ctrl := ""
 id_f8_ctrl := ""
 
-id_f1_rshift := ""
-id_f2_rshift := ""
-id_f3_rshift := ""
-id_f4_rshift := ""
-id_f5_rshift := ""
-id_f6_rshift := ""
-id_f7_rshift := ""
-id_f8_rshift := ""
+id_f1_alt := ""
+id_f2_alt := ""
+id_f3_alt := ""
+id_f4_alt := ""
+id_f5_alt := ""
+id_f6_alt := ""
+id_f7_alt := ""
+id_f8_alt := ""
 
-id_q_rshift := ""
-id_w_rshift := ""
-id_e_rshift := ""
-id_a_rshift := ""
-id_s_rshift := ""
-id_d_rshift := ""
-id_z_rshift := ""
-id_x_rshift := ""
-id_c_rshift := ""
-id_r_rshift := ""
-id_f_rshift := ""
-id_v_rshift := ""
+id_q_alt := ""
+id_w_alt := ""
+id_e_alt := ""
+id_a_alt := ""
+id_s_alt := ""
+id_d_alt := ""
+id_z_alt := ""
+id_x_alt := ""
+id_c_alt := ""
+id_r_alt := ""
+id_f_alt := ""
+id_v_alt := ""
 
-id_i_rshift := ""
-id_9_rshift := ""
+id_i_alt := ""
+id_9_alt := ""
 
 id_comma_win := ""
 id_pt_win := ""
 id_slash_win := ""
-id_del_rshift := ""
-id_end_rshift := ""
+id_del_alt := ""
+id_end_alt := ""
 id_quote_win := ""
 id_ins_win := ""
 id_home_win := ""
@@ -72,13 +72,12 @@ id_3_dig_win := ""
 id_4_dig_win := ""
 id_5_dig_win := ""
 
-id_1_dig_rshift := ""
-id_2_dig_rshift := ""
-id_3_dig_rshift := ""
-id_5_dig_rshift := ""
+id_2_dig_alt := ""
+id_3_dig_alt := ""
+id_5_dig_alt := ""
 
-id_pgup_rshift := ""
-id_pgdn_rshift := ""
+id_pgup_alt := ""
+id_pgdn_alt := ""
 
 id_1 := ""
 id_2 := ""
@@ -95,6 +94,72 @@ id_9_ctrl := ""
 
 id_right_bracket_ctrl := ""
 id_minus := ""
+
+; ===================== F1-F4 =======================
+
+>^>!F1::
+WinGet, id_f1_ctrl, ID, A
+return
+
+^F1::
+WinActivate, ahk_id %id_f1_ctrl%
+return
+
+>^>!F2::
+WinGet, id_f2_ctrl, ID, A
+return
+
+^F2::
+WinActivate, ahk_id %id_f2_ctrl%
+return
+
+>^>!F3::
+WinGet, id_f3_ctrl, ID, A
+return
+
+^F3::
+WinActivate, ahk_id %id_f3_ctrl%
+return
+
+>^>!F4::
+WinGet, id_f4_ctrl, ID, A
+return
+
+^F4::
+WinActivate, ahk_id %id_f4_ctrl%
+return
+
+>^>!F5::
+WinGet, id_f5_ctrl, ID, A
+return
+
+^F5::
+WinActivate, ahk_id %id_f5_ctrl%
+return
+
+>^>!F6::
+WinGet, id_f6_ctrl, ID, A
+return
+
+^F6::
+WinActivate, ahk_id %id_f6_ctrl%
+return
+
+>^>!F7::
+WinGet, id_f7_ctrl, ID, A
+return
+
+^F7::
+WinActivate, ahk_id %id_f7_ctrl%
+return
+
+>^>!F8::
+WinGet, id_f8_ctrl, ID, A
+return
+
+^F8::
+WinActivate, ahk_id %id_f8_ctrl%
+return
 
 ; ===================== DIGITS ======================
 
@@ -138,47 +203,52 @@ return
 WinActivate, ahk_id %id_5_dig%
 return
 
-^>+1::
-WinGet, id_1_dig_rshift, ID, A
-return
-
->+1::
-WinActivate, ahk_id %id_1_dig_rshift%
-return
-
 ^>+2::
-WinGet, id_2_dig_rshift, ID, A
+WinGet, id_2_dig_alt, ID, A
 return
 
->+2::
-WinActivate, ahk_id %id_2_dig_rshift%
+!2::
+WinActivate, ahk_id %id_2_dig_alt%
 return
 
 ^>+3::
-WinGet, id_3_dig_rshift, ID, A
+WinGet, id_3_dig_alt, ID, A
 return
 
->+3::
-WinActivate, ahk_id %id_3_dig_rshift%
+!3::
+WinActivate, ahk_id %id_3_dig_alt%
 return
 
 ^>+5::
-WinGet, id_5_dig_rshift, ID, A
+WinGet, id_5_dig_alt, ID, A
 return
 
->+5::
-WinActivate, ahk_id %id_5_dig_rshift%
+!5::
+WinActivate, ahk_id %id_5_dig_alt%
 return
 
 ; ===================== MOUSE ======================
 
-<+Enter::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
-ClickNow()
+>^Home::
+Send {Home}
+return
+
+>^End::
+Send {End}
 return
 
 >+Enter::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
+ClickNow()
+return
+
+Home::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
+ClickNow()
+return
+
+End::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
 ClickNow()
 return
 
@@ -248,139 +318,163 @@ ClickNow()
 return
 
 ^>+F1::
-WinGet, id_f1_rshift, ID, A
+WinGet, id_f1_alt, ID, A
 return
 
->+F1::
-WinActivate, ahk_id %id_f1_rshift%
+!F1::
+WinActivate, ahk_id %id_f1_alt%
 return
 
 ^>+F2::
-WinGet, id_f2_rshift, ID, A
+WinGet, id_f2_alt, ID, A
 return
 
->+F2::
-WinActivate, ahk_id %id_f2_rshift%
+!F2::
+WinActivate, ahk_id %id_f2_alt%
 return
 
 ^>+F3::
-WinGet, id_f3_rshift, ID, A
+WinGet, id_f3_alt, ID, A
 return
 
->+F3::
-WinActivate, ahk_id %id_f3_rshift%
+!F3::
+WinActivate, ahk_id %id_f3_alt%
 return
 
 ^>+F4::
-WinGet, id_f4_rshift, ID, A
+WinGet, id_f4_alt, ID, A
 return
 
->+F4::
-WinActivate, ahk_id %id_f4_rshift%
+!F4::
+WinActivate, ahk_id %id_f4_alt%
 return
 
 ^>+F5::
-WinGet, id_f5_rshift, ID, A
+WinGet, id_f5_alt, ID, A
 return
 
->+F5::
-WinActivate, ahk_id %id_f5_rshift%
+!F5::
+WinActivate, ahk_id %id_f5_alt%
+return
+
+^>+F6::
+WinGet, id_f6_alt, ID, A
+return
+
+!F6::
+WinActivate, ahk_id %id_f6_alt%
+return
+
+^>+F7::
+WinGet, id_f7_alt, ID, A
+return
+
+!F7::
+WinActivate, ahk_id %id_f7_alt%
+return
+
+^>+F8::
+WinGet, id_f8_alt, ID, A
+return
+
+!F8::
+WinActivate, ahk_id %id_f8_alt%
 return
 
 ^>+Q::
-WinGet, id_q_rshift, ID, A
+WinGet, id_q_alt, ID, A
 return
 
->+Q::
-WinActivate, ahk_id %id_q_rshift%
+!Q::
+WinActivate, ahk_id %id_q_alt%
 return
 
 ^>+W::
-WinGet, id_w_rshift, ID, A
+WinGet, id_w_alt, ID, A
 return
 
->+W::
-WinActivate, ahk_id %id_w_rshift%
+!W::
+WinActivate, ahk_id %id_w_alt%
 return
 
 ^>+E::
-WinGet, id_e_rshift, ID, A
+WinGet, id_e_alt, ID, A
 return
 
->+E::
-WinActivate, ahk_id %id_e_rshift%
+!E::
+WinActivate, ahk_id %id_e_alt%
 return
 
 ^>+A::
-WinGet, id_a_rshift, ID, A
+WinGet, id_a_alt, ID, A
 return
 
->+A::
-WinActivate, ahk_id %id_a_rshift%
+!A::
+WinActivate, ahk_id %id_a_alt%
 return
 
 ^>+S::
-WinGet, id_s_rshift, ID, A
+WinGet, id_s_alt, ID, A
 return
 
->+S::
-WinActivate, ahk_id %id_s_rshift%
+!S::
+WinActivate, ahk_id %id_s_alt%
 return
 
 ^>+D::
-WinGet, id_d_rshift, ID, A
+WinGet, id_d_alt, ID, A
 return
 
->+D::
-WinActivate, ahk_id %id_d_rshift%
+!D::
+WinActivate, ahk_id %id_d_alt%
 return
 
 ^>+Z::
-WinGet, id_z_rshift, ID, A
+WinGet, id_z_alt, ID, A
 return
 
->+Z::
-WinActivate, ahk_id %id_z_rshift%
+!Z::
+WinActivate, ahk_id %id_z_alt%
 return
 
 ^>+X::
-WinGet, id_x_rshift, ID, A
+WinGet, id_x_alt, ID, A
 return
 
->+X::
-WinActivate, ahk_id %id_x_rshift%
+!X::
+WinActivate, ahk_id %id_x_alt%
 return
 
 ^>+C::
-WinGet, id_c_rshift, ID, A
+WinGet, id_c_alt, ID, A
 return
 
->+C::
-WinActivate, ahk_id %id_c_rshift%
+!C::
+WinActivate, ahk_id %id_c_alt%
 return
 
 ^>+R::
-WinGet, id_r_rshift, ID, A
+WinGet, id_r_alt, ID, A
 return
 
->+R::
-WinActivate, ahk_id %id_r_rshift%
+!R::
+WinActivate, ahk_id %id_r_alt%
 return
 
 ^>+F::
-WinGet, id_f_rshift, ID, A
+WinGet, id_f_alt, ID, A
 return
 
->+F::
-WinActivate, ahk_id %id_f_rshift%
+!F::
+WinActivate, ahk_id %id_f_alt%
 return
 
 ^>+V::
-WinGet, id_v_rshift, ID, A
+WinGet, id_v_alt, ID, A
 return
 
->+V::
-WinActivate, ahk_id %id_v_rshift%
+!V::
+WinActivate, ahk_id %id_v_alt%
 return
 
 <#+1::
@@ -624,19 +718,19 @@ WinActivate, ahk_id %id_ins_ctrl%
 return
 
 ^>+9::
-WinGet, id_9_rshift, ID, A
+WinGet, id_9_alt, ID, A
 return
 
->+9::
-WinActivate, ahk_id %id_9_rshift%
+!9::
+WinActivate, ahk_id %id_9_alt%
 return
 
 ^>+I::
-WinGet, id_i_rshift, ID, A
+WinGet, id_i_alt, ID, A
 return
 
->+I::
-WinActivate, ahk_id %id_i_rshift%
+!I::
+WinActivate, ahk_id %id_i_alt%
 return
 
 >^>!I::
@@ -679,6 +773,30 @@ return
 WinActivate, ahk_id %id_pgup_ctrl%
 return
 
+^>+PgUp::
+WinGet, id_pgup_alt, ID, A
+return
+
+!PgUp::
+WinActivate, ahk_id %id_pgup_alt%
+return
+
+>^>!PgDn::
+WinGet, id_pgdn_ctrl, ID, A
+return
+
+^PgDn::
+WinActivate, ahk_id %id_pgdn_ctrl%
+return
+
+^>+PgDn::
+WinGet, id_pgdn_alt, ID, A
+return
+
+!PgDn::
+WinActivate, ahk_id %id_pgdn_alt%
+return
+
 <#^,::
 WinGet, id_comma_win, ID, A
 return
@@ -703,28 +821,36 @@ return
 WinActivate, ahk_id %id_slash_win%
 return
 
-^>+L::
-WinGet, id_del_rshift, ID, A
+<#^L::
+WinGet, id_del_alt, ID, A
 return
 
->+L::
-WinActivate, ahk_id %id_del_rshift%
+!L::
+WinActivate, ahk_id %id_del_alt%
+return
+
+^>+Del::
+WinGet, id_del_alt, ID, A
+return
+
+!Del::
+WinActivate, ahk_id %id_del_alt%
 return
 
 <#^;::
-WinGet, id_end_rshift, ID, A
+WinGet, id_end_alt, ID, A
 return
 
 !;::
-WinActivate, ahk_id %id_end_rshift%
+WinActivate, ahk_id %id_end_alt%
 return
 
 ^>+End::
-WinGet, id_end_rshift, ID, A
+WinGet, id_end_alt, ID, A
 return
 
 !End::
-WinActivate, ahk_id %id_end_rshift%
+WinActivate, ahk_id %id_end_alt%
 return
 
 <#^'::
@@ -930,43 +1056,39 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
 
->+Tab::
-Send, !{Tab}
-return
-
-<!<+E::
+<#^E::
 Run C:\
 return
 
-<!<+W::
+<#^W::
 Run C:\Work
 return
 
-<!<+C::
+<#^C::
 Run C:\
 return
 
-<!<+Q::
+<#^Q::
 Run C:\Programs
 return
 
-<!<+S::
+<#^S::
 Run %A_MyDocuments%
 return
 
-<!<+X::
+<#^X::
 Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 return
 
-<!<+Z::
+<#^Z::
 Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 return
 
-<!<+A::
+<#^A::
 Run C:\Windows\System32\cmd.exe
 return
 
-<!<+T::
+<#^T::
 Run C:\Temp
 return
 
