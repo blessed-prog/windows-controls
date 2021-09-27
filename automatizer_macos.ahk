@@ -172,26 +172,13 @@ return
 
 ; ===================== MOUSE ======================
 
->^Home::
-Send {Home}
-return
-
->^End::
-Send {End}
+<+Enter::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
+ClickNow()
 return
 
 >+Enter::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
-ClickNow()
-return
-
-Home::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
-ClickNow()
-return
-
-End::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
 ClickNow()
 return
 
@@ -943,39 +930,43 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
 
-<#^E::
+>+Tab::
+Send, !{Tab}
+return
+
+<!<+E::
 Run C:\
 return
 
-<#^W::
+<!<+W::
 Run C:\Work
 return
 
-<#^C::
+<!<+C::
 Run C:\
 return
 
-<#^Q::
+<!<+Q::
 Run C:\Programs
 return
 
-<#^S::
+<!<+S::
 Run %A_MyDocuments%
 return
 
-<#^X::
+<!<+X::
 Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 return
 
-<#^Z::
+<!<+Z::
 Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 return
 
-<#^A::
+<!<+A::
 Run C:\Windows\System32\cmd.exe
 return
 
-<#^T::
+<!<+T::
 Run C:\Temp
 return
 
