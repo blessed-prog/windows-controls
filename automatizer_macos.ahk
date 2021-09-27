@@ -16,15 +16,6 @@ id_r_win := ""
 id_f_win := ""
 id_v_win := ""
 
-id_f1_ctrl := ""
-id_f2_ctrl := ""
-id_f3_ctrl := ""
-id_f4_ctrl := ""
-id_f5_ctrl := ""
-id_f6_ctrl := ""
-id_f7_ctrl := ""
-id_f8_ctrl := ""
-
 id_f1_alt := ""
 id_f2_alt := ""
 id_f3_alt := ""
@@ -66,12 +57,6 @@ id_3_dig := ""
 id_4_dig := ""
 id_5_dig := ""
 
-id_1_dig_win := ""
-id_2_dig_win := ""
-id_3_dig_win := ""
-id_4_dig_win := ""
-id_5_dig_win := ""
-
 id_2_dig_alt := ""
 id_3_dig_alt := ""
 id_5_dig_alt := ""
@@ -95,75 +80,9 @@ id_9_ctrl := ""
 id_right_bracket_ctrl := ""
 id_minus := ""
 
-; ===================== F1-F4 =======================
-
->^>!F1::
-WinGet, id_f1_ctrl, ID, A
-return
-
-^F1::
-WinActivate, ahk_id %id_f1_ctrl%
-return
-
->^>!F2::
-WinGet, id_f2_ctrl, ID, A
-return
-
-^F2::
-WinActivate, ahk_id %id_f2_ctrl%
-return
-
->^>!F3::
-WinGet, id_f3_ctrl, ID, A
-return
-
-^F3::
-WinActivate, ahk_id %id_f3_ctrl%
-return
-
->^>!F4::
-WinGet, id_f4_ctrl, ID, A
-return
-
-^F4::
-WinActivate, ahk_id %id_f4_ctrl%
-return
-
->^>!F5::
-WinGet, id_f5_ctrl, ID, A
-return
-
-^F5::
-WinActivate, ahk_id %id_f5_ctrl%
-return
-
->^>!F6::
-WinGet, id_f6_ctrl, ID, A
-return
-
-^F6::
-WinActivate, ahk_id %id_f6_ctrl%
-return
-
->^>!F7::
-WinGet, id_f7_ctrl, ID, A
-return
-
-^F7::
-WinActivate, ahk_id %id_f7_ctrl%
-return
-
->^>!F8::
-WinGet, id_f8_ctrl, ID, A
-return
-
-^F8::
-WinActivate, ahk_id %id_f8_ctrl%
-return
-
 ; ===================== DIGITS ======================
 
-^>!1::
+^!1::
 WinGet, id_1_dig, ID, A
 return
 
@@ -171,7 +90,7 @@ return
 WinActivate, ahk_id %id_1_dig%
 return
 
-^>!2::
+^!2::
 WinGet, id_2_dig, ID, A
 return
 
@@ -179,7 +98,7 @@ return
 WinActivate, ahk_id %id_2_dig%
 return
 
-^>!3::
+^!3::
 WinGet, id_3_dig, ID, A
 return
 
@@ -187,7 +106,7 @@ return
 WinActivate, ahk_id %id_3_dig%
 return
 
-^>!4::
+^!4::
 WinGet, id_4_dig, ID, A
 return
 
@@ -195,7 +114,7 @@ return
 WinActivate, ahk_id %id_4_dig%
 return
 
-^>!5::
+^!5::
 WinGet, id_5_dig, ID, A
 return
 
@@ -264,16 +183,6 @@ return
 
 <#Backspace::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 5
-ClickNow()
-return
-
-<#Rshift::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
-ClickNow()
-return
-
-<#Rctrl::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
@@ -480,46 +389,6 @@ return
 
 !V::
 WinActivate, ahk_id %id_v_alt%
-return
-
-<#+1::
-WinGet, id_1_dig_win, ID, A
-return
-
-<#1::
-WinActivate, ahk_id %id_1_dig_win%
-return
-
-<#+2::
-WinGet, id_2_dig_win, ID, A
-return
-
-<#2::
-WinActivate, ahk_id %id_2_dig_win%
-return
-
-<#+3::
-WinGet, id_3_dig_win, ID, A
-return
-
-<#3::
-WinActivate, ahk_id %id_3_dig_win%
-return
-
-<#+4::
-WinGet, id_4_dig_win, ID, A
-return
-
-<#4::
-WinActivate, ahk_id %id_4_dig_win%
-return
-
-<#+5::
-WinGet, id_5_dig_win, ID, A
-return
-
-<#5::
-WinActivate, ahk_id %id_5_dig_win%
 return
 
 <#+Q::
