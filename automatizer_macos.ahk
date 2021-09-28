@@ -994,3 +994,17 @@ Send {Right}
 Send {Right}
 Send {Right}
 return
+
+!<+Up::
+Send {Up}
+Send {Up}
+Send {Up}
+Send {Up}
+return
+
+!<+Down::
+Send {Down}
+Send {Down}
+Send {Down}
+Send {Down}
+return
