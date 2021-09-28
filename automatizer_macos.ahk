@@ -3,18 +3,18 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-id_q_win := ""
-id_w_win := ""
-id_e_win := ""
-id_a_win := ""
-id_s_win := ""
-id_d_win := ""
-id_z_win := ""
-id_x_win := ""
-id_c_win := ""
-id_r_win := ""
-id_f_win := ""
-id_v_win := ""
+id_q_rshift := ""
+id_w_rshift := ""
+id_e_rshift := ""
+id_a_rshift := ""
+id_s_rshift := ""
+id_d_rshift := ""
+id_z_rshift := ""
+id_x_rshift := ""
+id_c_rshift := ""
+id_r_rshift := ""
+id_f_rshift := ""
+id_v_rshift := ""
 
 id_f1_alt := ""
 id_f2_alt := ""
@@ -41,15 +41,15 @@ id_v_alt := ""
 id_i_alt := ""
 id_9_alt := ""
 
-id_comma_win := ""
-id_pt_win := ""
-id_slash_win := ""
+id_comma_rshift := ""
+id_pt_rshift := ""
+id_slash_rshift := ""
 id_del_alt := ""
 id_end_alt := ""
-id_quote_win := ""
-id_ins_win := ""
-id_home_win := ""
-id_left_bracket_win := ""
+id_quote_rshift := ""
+id_ins_rshift := ""
+id_home_rshift := ""
+id_left_bracket_rshift := ""
 
 id_1_dig := ""
 id_2_dig := ""
@@ -173,16 +173,6 @@ return
 
 End::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
-ClickNow()
-return
-
-<#\::
-MouseMove, A_ScreenWidth / 4, A_ScreenHeight / 2
-ClickNow()
-return
-
-<#Backspace::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 5
 ClickNow()
 return
 
@@ -391,100 +381,100 @@ return
 WinActivate, ahk_id %id_v_alt%
 return
 
-<#+Q::
-WinGet, id_q_win, ID, A
+#>+Q::
+WinGet, id_q_rshift, ID, A
 return
 
-<#Q::
-WinActivate, ahk_id %id_q_win%
+>+Q::
+WinActivate, ahk_id %id_q_rshift%
 return
 
-<#+W::
-WinGet, id_w_win, ID, A
+#>+W::
+WinGet, id_w_rshift, ID, A
 return
 
-<#W::
-WinActivate, ahk_id %id_w_win%
+>+W::
+WinActivate, ahk_id %id_w_rshift%
 return
 
-<#+E::
-WinGet, id_e_win, ID, A
+#>+E::
+WinGet, id_e_rshift, ID, A
 return
 
-<#E::
-WinActivate, ahk_id %id_e_win%
+>+E::
+WinActivate, ahk_id %id_e_rshift%
 return
 
-<#+R::
-WinGet, id_r_win, ID, A
+#>+R::
+WinGet, id_r_rshift, ID, A
 return
 
-<#R::
-WinActivate, ahk_id %id_r_win%
+>+R::
+WinActivate, ahk_id %id_r_rshift%
 return
 
-<#+A::
-WinGet, id_a_win, ID, A
+#>+A::
+WinGet, id_a_rshift, ID, A
 return
 
-<#A::
-WinActivate, ahk_id %id_a_win%
+>+A::
+WinActivate, ahk_id %id_a_rshift%
 return
 
-<#+S::
-WinGet, id_s_win, ID, A
+>+S::
+WinGet, id_s_rshift, ID, A
 return
 
-<#S::
-WinActivate, ahk_id %id_s_win%
+>+S::
+WinActivate, ahk_id %id_s_rshift%
 return
 
-<#+D::
-WinGet, id_d_win, ID, A
+#>+D::
+WinGet, id_d_rshift, ID, A
 return
 
-<#D::
-WinActivate, ahk_id %id_d_win%
+>+D::
+WinActivate, ahk_id %id_d_rshift%
 return
 
-<#+F::
-WinGet, id_f_win, ID, A
+#>+F::
+WinGet, id_f_rshift, ID, A
 return
 
-<#F::
-WinActivate, ahk_id %id_f_win%
+>+F::
+WinActivate, ahk_id %id_f_rshift%
 return
 
-<#+Z::
-WinGet, id_z_win, ID, A
+#>+Z::
+WinGet, id_z_rshift, ID, A
 return
 
-<#Z::
-WinActivate, ahk_id %id_z_win%
+>+Z::
+WinActivate, ahk_id %id_z_rshift%
 return
 
-<#+X::
-WinGet, id_x_win, ID, A
+#>+X::
+WinGet, id_x_rshift, ID, A
 return
 
-<#X::
-WinActivate, ahk_id %id_x_win%
+>+X::
+WinActivate, ahk_id %id_x_rshift%
 return
 
-<#+C::
-WinGet, id_c_win, ID, A
+#>+C::
+WinGet, id_c_rshift, ID, A
 return
 
-<#C::
-WinActivate, ahk_id %id_c_win%
+>+C::
+WinActivate, ahk_id %id_c_rshift%
 return
 
-<#+V::
-WinGet, id_v_win, ID, A
+#>+V::
+WinGet, id_v_rshift, ID, A
 return
 
-<#V::
-WinActivate, ahk_id %id_v_win%
+>+V::
+WinActivate, ahk_id %id_v_rshift%
 return
 
 >^>!/::
@@ -672,27 +662,27 @@ WinActivate, ahk_id %id_pgdn_alt%
 return
 
 <#^,::
-WinGet, id_comma_win, ID, A
+WinGet, id_comma_rshift, ID, A
 return
 
 !,::
-WinActivate, ahk_id %id_comma_win%
+WinActivate, ahk_id %id_comma_rshift%
 return
 
 <#^.::
-WinGet, id_pt_win, ID, A
+WinGet, id_pt_rshift, ID, A
 return
 
 !.::
-WinActivate, ahk_id %id_pt_win%
+WinActivate, ahk_id %id_pt_rshift%
 return
 
 <#^/::
-WinGet, id_slash_win, ID, A
+WinGet, id_slash_rshift, ID, A
 return
 
 !/::
-WinActivate, ahk_id %id_slash_win%
+WinActivate, ahk_id %id_slash_rshift%
 return
 
 <#^L::
@@ -728,51 +718,51 @@ WinActivate, ahk_id %id_end_alt%
 return
 
 <#^'::
-WinGet, id_quote_win, ID, A
+WinGet, id_quote_rshift, ID, A
 return
 
 !'::
-WinActivate, ahk_id %id_quote_win%
+WinActivate, ahk_id %id_quote_rshift%
 return
 
 ^>+Ins::
-WinGet, id_ins_win, ID, A
+WinGet, id_ins_rshift, ID, A
 return
 
 !Ins::
-WinActivate, ahk_id %id_ins_win%
+WinActivate, ahk_id %id_ins_rshift%
 return
 
 <#^O::
-WinGet, id_ins_win, ID, A
+WinGet, id_ins_rshift, ID, A
 return
 
 !O::
-WinActivate, ahk_id %id_ins_win%
+WinActivate, ahk_id %id_ins_rshift%
 return
 
 <#^P::
-WinGet, id_home_win, ID, A
+WinGet, id_home_rshift, ID, A
 return
 
 !Home::
-WinActivate, ahk_id %id_home_win%
+WinActivate, ahk_id %id_home_rshift%
 return
 
 ^>+Home::
-WinGet, id_home_win, ID, A
+WinGet, id_home_rshift, ID, A
 return
 
 !P::
-WinActivate, ahk_id %id_home_win%
+WinActivate, ahk_id %id_home_rshift%
 return
 
 <#^[::
-WinGet, id_left_bracket_win, ID, A
+WinGet, id_left_bracket_rshift, ID, A
 return
 
 ![::
-WinActivate, ahk_id %id_left_bracket_win%
+WinActivate, ahk_id %id_left_bracket_rshift%
 return
 
 +!q::
@@ -784,18 +774,6 @@ id_temp := ""
 
 <#!Enter::
 Send {RButton}
-return
-
-<#Up::
-Send {Up}
-Send {Up}
-Send {Up}
-return
-
-<#Down::
-Send {Down}
-Send {Down}
-Send {Down}
 return
 
 !Left::
@@ -999,48 +977,18 @@ return
 ^<#Enter::
 return
 
-; <#;::
-; ResizeWin(0, 0, A_ScreenWidth / 3, A_ScreenHeight)
-; return
-
-; <#'::
-; ResizeWin(A_ScreenWidth / 3, 0, A_ScreenWidth / 3, A_ScreenHeight)
-; return
-
-; <#\::
-; ResizeWin(A_ScreenWidth * 2 / 3, 0, A_ScreenWidth / 3, A_ScreenHeight)
-; return
-
-;<#!Left::
-;ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
-;return
-
-;<#!Right::
-;ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
-;return
-
 <#!Up::
 ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
 return
 
-<#Left::
-Send {Left}
-Send {Left}
-Send {Left}
-Send {Left}
-Send {Left}
+!<+Left::
 Send {Left}
 Send {Left}
 Send {Left}
 Send {Left}
 return
 
-<#Right::
-Send {Right}
-Send {Right}
-Send {Right}
-Send {Right}
-Send {Right}
+!<+Right::
 Send {Right}
 Send {Right}
 Send {Right}
