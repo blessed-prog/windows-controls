@@ -908,42 +908,6 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
 
-!<+E::
-Run C:\
-return
-
-!<+W::
-Run C:\Work
-return
-
-!<+C::
-Run C:\
-return
-
-!<+Q::
-Run C:\Programs
-return
-
-!<+S::
-Run %A_MyDocuments%
-return
-
-!<+X::
-Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs
-return
-
-!<+Z::
-Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-return
-
-!<+A::
-Run C:\Windows\System32\cmd.exe
-return
-
-!<+T::
-Run C:\Temp
-return
-
 <^WheelUp::
 return
 
