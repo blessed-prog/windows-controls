@@ -770,7 +770,9 @@ WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
 return
 
-id_temp := ""
+!Backspace::
+Send {Delete}
+return
 
 <#!Enter::
 Send {RButton}
