@@ -1001,3 +1001,11 @@ Send {Down}
 Send {Down}
 Send {Down}
 return
+
+!<+E::
+Run C:\
+return
+
+!<+W::
+Run C:\Work
+return
