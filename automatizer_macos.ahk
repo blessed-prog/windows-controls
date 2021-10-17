@@ -37,6 +37,9 @@ id_c_alt := ""
 id_r_alt := ""
 id_f_alt := ""
 id_v_alt := ""
+id_t_alt := ""
+id_g_alt := ""
+id_h_alt := ""
 
 id_i_alt := ""
 id_9_alt := ""
@@ -379,6 +382,30 @@ return
 
 !V::
 WinActivate, ahk_id %id_v_alt%
+return
+
+^>+T::
+WinGet, id_t_alt, ID, A
+return
+
+!T::
+WinActivate, ahk_id %id_t_alt%
+return
+
+^>+G::
+WinGet, id_g_alt, ID, A
+return
+
+!G::
+WinActivate, ahk_id %id_g_alt%
+return
+
+^>+B::
+WinGet, id_b_alt, ID, A
+return
+
+!B::
+WinActivate, ahk_id %id_b_alt%
 return
 
 #>+Q::
