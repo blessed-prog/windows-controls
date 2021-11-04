@@ -54,23 +54,13 @@ id_2_dig_alt := ""
 id_3_dig_alt := ""
 id_5_dig_alt := ""
 
-id_pgup_alt := ""
-id_pgdn_alt := ""
-
 id_1 := ""
 id_2 := ""
 id_3 := ""
-id_del_ctrl := ""
-id_end_ctrl := ""
-id_ins_ctrl := ""
-id_home_ctrl := ""
-id_pgup_ctrl := ""
-id_pgdn_ctrl := ""
 
 id_i_ctrl := ""
 id_9_ctrl := ""
 
-id_right_bracket_ctrl := ""
 id_minus := ""
 
 ; ===================== DIGITS ======================
@@ -402,46 +392,6 @@ return
 WinActivate, ahk_id %id_3%
 return
 
->^>!\::
-WinGet, id_minus, ID, A
-return
-
-^\::
-WinActivate, ahk_id %id_minus%
-return
-
->^>!]::
-WinGet, id_right_bracket_ctrl, ID, A
-return
-
-^]::
-WinActivate, ahk_id %id_right_bracket_ctrl%
-return
-
->^>!'::
-WinGet, id_pgdn_ctrl, ID, A
-return
-
-^'::
-WinActivate, ahk_id %id_pgdn_ctrl%
-return
-
->^>!;::
-WinGet, id_end_ctrl, ID, A
-return
-
-^;::
-WinActivate, ahk_id %id_end_ctrl%
-return
-
->^>!End::
-WinGet, id_end_ctrl, ID, A
-return
-
-^End::
-WinActivate, ahk_id %id_end_ctrl%
-return
-
 >^>!.::
 WinGet, id_2, ID, A
 return
@@ -456,22 +406,6 @@ return
 
 ^,::
 WinActivate, ahk_id %id_1%
-return
-
->^>!P::
-WinGet, id_home_ctrl, ID, A
-return
-
-^P::
-WinActivate, ahk_id %id_home_ctrl%
-return
-
->^>!Home::
-WinGet, id_home_ctrl, ID, A
-return
-
-^Home::
-WinActivate, ahk_id %id_home_ctrl%
 return
 
 #>+9::
