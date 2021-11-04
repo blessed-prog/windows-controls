@@ -3,15 +3,6 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-id_f1_alt := ""
-id_f2_alt := ""
-id_f3_alt := ""
-id_f4_alt := ""
-id_f5_alt := ""
-id_f6_alt := ""
-id_f7_alt := ""
-id_f8_alt := ""
-
 id_q_alt := ""
 id_w_alt := ""
 id_e_alt := ""
@@ -479,30 +470,6 @@ return
 
 ^Home::
 WinActivate, ahk_id %id_home_ctrl%
-return
-
->^>![::
-WinGet, id_pgup_ctrl, ID, A
-return
-
-^[::
-WinActivate, ahk_id %id_pgup_ctrl%
-return
-
->^>!O::
-WinGet, id_ins_ctrl, ID, A
-return
-
-^O::
-WinActivate, ahk_id %id_ins_ctrl%
-return
-
->^>!Ins::
-WinGet, id_ins_ctrl, ID, A
-return
-
-^Ins::
-WinActivate, ahk_id %id_ins_ctrl%
 return
 
 #>+9::
