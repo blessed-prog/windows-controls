@@ -30,7 +30,9 @@ id_gt_alt := ""
 id_slash_alt := ""
 
 id_i_alt := ""
+id_u_alt := ""
 id_9_alt := ""
+id_8_alt := ""
 
 id_comma_rshift := ""
 id_pt_rshift := ""
@@ -484,6 +486,18 @@ return
 WinActivate, ahk_id %id_9_alt%
 return
 
+#>+8::
+WinGet, id_8_alt, ID, A
+return
+
+^>+8::
+WinGet, id_8_alt, ID, A
+return
+
+!8::
+WinActivate, ahk_id %id_8_alt%
+return
+
 #>+I::
 WinGet, id_i_alt, ID, A
 return
@@ -494,6 +508,18 @@ return
 
 !I::
 WinActivate, ahk_id %id_i_alt%
+return
+
+#>+U::
+WinGet, id_u_alt, ID, A
+return
+
+^>+U::
+WinGet, id_u_alt, ID, A
+return
+
+!U::
+WinActivate, ahk_id %id_u_alt%
 return
 
 >^>!I::
