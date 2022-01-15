@@ -35,7 +35,7 @@ return
 Send !{F4}
 return
 
-!BackSpace::
+<#BackSpace::
 Send {Delete}
 return
 
