@@ -573,7 +573,7 @@ WinGetClass, CurrentClass, A
 MsgBox, class is "%CurrentClass%"
 return
 
-!Backspace::
+!BackSpace::
 Send {Delete}
 return
 
@@ -784,4 +784,12 @@ return
 
 !<+W::
 Run C:\Work
+return
+
+!<+Z::
+Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+return
+
+!<+A::
+Run C:\Windows\System32\cmd.exe
 return
