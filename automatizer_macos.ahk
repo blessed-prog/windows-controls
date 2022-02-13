@@ -149,6 +149,16 @@ MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
 ClickNow()
 return
 
+!RShift::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
+ClickNow()
+return
+
+!RCtrl::
+MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
+ClickNow()
+return
+
 Home::
 MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
 ClickNow()
