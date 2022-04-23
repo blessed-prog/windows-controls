@@ -11,14 +11,15 @@ return
 Run C:\Work
 return
 
+!<+A::
+Run C:\Windows\System32\cmd.exe
+return
+
+
 !<+Z::
 Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 return
 
 !<+X::
 Run C:\Windows\System32\wsl.exe
-return
-
-!<+A::
-Run C:\Windows\System32\cmd.exe
 return
