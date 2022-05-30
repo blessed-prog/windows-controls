@@ -78,6 +78,14 @@ MouseMove, A_ScreenWidth / 12, A_ScreenHeight / 2
 ClickNow()
 return
 
+<#!Enter::
+Send {RButton}
+return
+
+<#Enter::
+Send {RButton}
+return
+
 <^WheelUp::
 return
 

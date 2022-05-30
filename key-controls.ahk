@@ -15,10 +15,6 @@ return
 Send {Delete}
 return
 
-<#!Enter::
-Send {RButton}
-return
-
 !Left::
 Send ^{PgUp}
 return
@@ -204,6 +200,20 @@ Send {Up}
 return
 
 !<+Down::
+Send {Down}
+Send {Down}
+Send {Down}
+Send {Down}
+return
+
+<#Up::
+Send {Up}
+Send {Up}
+Send {Up}
+Send {Up}
+return
+
+<#Down::
 Send {Down}
 Send {Down}
 Send {Down}
