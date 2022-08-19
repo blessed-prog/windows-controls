@@ -213,6 +213,32 @@ Send {Up}
 Send {Up}
 return
 
+<#Left::
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+Send {Left}
+return
+
+<#Right::
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+Send {Right}
+return
+
 <#Down::
 Send {Down}
 Send {Down}
