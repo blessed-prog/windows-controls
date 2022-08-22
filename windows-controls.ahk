@@ -34,9 +34,6 @@ id_u_alt := ""
 id_9_alt := ""
 id_8_alt := ""
 
-id_del_alt := ""
-id_end_alt := ""
-
 id_1_dig := ""
 id_2_dig := ""
 id_3_dig := ""
@@ -53,8 +50,6 @@ id_3 := ""
 
 id_i_ctrl := ""
 id_9_ctrl := ""
-
-id_minus := ""
 
 ; ===================== DIGITS ======================
 
