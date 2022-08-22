@@ -17,7 +17,6 @@ id_f_alt := ""
 id_v_alt := ""
 id_t_alt := ""
 id_g_alt := ""
-id_h_alt := ""
 
 id_o_alt := ""
 id_p_alt := ""
