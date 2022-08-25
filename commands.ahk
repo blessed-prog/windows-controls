@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Run C:\
 return
 
-!<+W::
+<#W::
 Run C:\Work
 return
 
