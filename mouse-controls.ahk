@@ -83,7 +83,11 @@ Send {RButton}
 return
 
 <#Enter::
-Send {RButton}
+ClickNow()
+return
+
+<#+Enter::
+ClickNow()
 return
 
 <^WheelUp::
