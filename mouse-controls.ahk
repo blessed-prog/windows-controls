@@ -23,16 +23,6 @@ MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
 ClickNow()
 return
 
-Home::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
-ClickNow()
-return
-
-End::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
-ClickNow()
-return
-
 <#,::
 MouseMove, A_ScreenWidth / 12, A_ScreenHeight * 3 / 4
 ClickNow()
@@ -82,11 +72,11 @@ return
 Send {RButton}
 return
 
-<#Enter::
-ClickNow()
+<#+Enter::
+Send {RButton}
 return
 
-<#+Enter::
+<#Enter::
 ClickNow()
 return
 
