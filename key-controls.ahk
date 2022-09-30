@@ -8,48 +8,24 @@ return
 
 ^F4::
 Send !{F4}
-return
-
->^Home::
-Send {Home}
-return
-
->^End::
-Send {End}
+SendInput {LCtrl Up}
 return
 
 !BackSpace::
 Send {Delete}
+SendInput {LAlt Up}
 return
 
 !Left::
 Send ^{PgUp}
+SendInput {LAlt Up}
+SendInput {Ctrl Up}
 return
 
 !Right::
 Send ^{PgDn}
-return
-
-<#^Left::
-Send ^{PgUp}
-return
-
-<#^Right::
-Send ^{PgDn}
-return
-
-<#^Up::
-Send {WheelUp}
-Send {WheelUp}
-Send {WheelUp}
-Send {WheelUp}
-return
-
-<#^Down::
-Send {WheelDown}
-Send {WheelDown}
-Send {WheelDown}
-Send {WheelDown}
+SendInput {LAlt Up}
+SendInput {Ctrl Up}
 return
 
 +!q::
@@ -155,28 +131,13 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
 
 ^-::
 Send ^{WheelDown}
+SendInput {LCtrl Up}
 return
 
 ^=::
 Send ^{WheelUp}
+SendInput {LCtrl Up}
 return
-
-<#WheelUp::
-Send {WheelUp}
-Send {WheelUp}
-Send {WheelUp}
-Send {WheelUp}
-Send {WheelUp}
-return
-
-<#WheelDown::
-Send {WheelDown}
-Send {WheelDown}
-Send {WheelDown}
-Send {WheelDown}
-Send {WheelDown}
-return
-
 
 ^<#Enter::
 return
@@ -185,39 +146,12 @@ return
 ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
 return
 
-!<+Left::
-Send {Left}
-Send {Left}
-Send {Left}
-Send {Left}
-return
-
-!<+Right::
-Send {Right}
-Send {Right}
-Send {Right}
-Send {Right}
-return
-
-!<+Up::
-Send {Up}
-Send {Up}
-Send {Up}
-Send {Up}
-return
-
-!<+Down::
-Send {Down}
-Send {Down}
-Send {Down}
-Send {Down}
-return
-
 <#Up::
 Send {Up}
 Send {Up}
 Send {Up}
 Send {Up}
+SendInput {LWin Up}
 return
 
 <#Left::
@@ -231,6 +165,7 @@ Send {Left}
 Send {Left}
 Send {Left}
 Send {Left}
+SendInput {LWin Up}
 return
 
 <#Right::
@@ -244,6 +179,7 @@ Send {Right}
 Send {Right}
 Send {Right}
 Send {Right}
+SendInput {LWin Up}
 return
 
 <#Down::
@@ -251,4 +187,5 @@ Send {Down}
 Send {Down}
 Send {Down}
 Send {Down}
+SendInput {LWin Up}
 return
