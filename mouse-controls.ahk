@@ -70,6 +70,12 @@ return
 <^WheelDown::
 return
 
+XButton2::
+Send {MButton}
+Send ^{PgDn}
+SendInput {Ctrl Up}
+return
+
 ClickNow()
 {
 MouseGetPos, xpos, ypos
