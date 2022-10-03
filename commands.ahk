@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 <#E::
-Run C:\
+Run C:\ws
 SendInput {LWin Up}
 return
 
@@ -20,6 +20,11 @@ return
 
 <#Z::
 Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+SendInput {LWin Up}
+return
+
+<#T::
+Run C:\Temp
 SendInput {LWin Up}
 return
 
