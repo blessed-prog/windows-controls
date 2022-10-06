@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 <#E::
-Run C:\ws
+Run C:\
 SendInput {LWin Up}
 return
 
