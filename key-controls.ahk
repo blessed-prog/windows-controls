@@ -6,6 +6,24 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 LWin::
 return
 
+;=========== COPY/PASTE for Cygwin
+
+^!V::
+Send +{Insert}
+return
+
+!+V::
+Send +{Insert}
+return
+
+^!C::
+Send ^{Insert}
+return
+
+!+C::
+Send ^{Insert}
+return
+
 ^F4::
 Send !{F4}
 SendInput {LCtrl Up}
@@ -18,14 +36,10 @@ return
 
 !Left::
 Send ^{PgUp}
-SendInput {LAlt Up}
-SendInput {Ctrl Up}
 return
 
 !Right::
 Send ^{PgDn}
-SendInput {LAlt Up}
-SendInput {Ctrl Up}
 return
 
 +!q::
