@@ -5,12 +5,18 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 <#E::
 Run C:\
-SendInput {LWin Up}
+return
+
+<#Q::
+Run C:\Programs
 return
 
 <#W::
 Run C:\Work
-SendInput {LWin Up}
+return
+
+<#T::
+Run C:\Temp
 return
 
 <#A::
@@ -23,12 +29,7 @@ Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 SendInput {LWin Up}
 return
 
-<#T::
-Run C:\Temp
-SendInput {LWin Up}
-return
-
 <#X::
-Run C:\Windows\System32\wsl.exe
+Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Cygwin\cyg.lnk
 SendInput {LWin Up}
 return
