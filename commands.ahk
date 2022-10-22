@@ -19,17 +19,12 @@ return
 Run C:\Temp
 return
 
-<#A::
-Run C:\Windows\System32\cmd.exe
-SendInput {LWin Up}
-return
-
 <#Z::
 Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 SendInput {LWin Up}
 return
 
-<#X::
+<#A::
 Run C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Cygwin\cyg.lnk
 SendInput {LWin Up}
 return

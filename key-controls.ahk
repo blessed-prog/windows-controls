@@ -6,6 +6,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 LWin::
 return
 
+;=========== Win 11 context menu
+
+<#X::
+Send +{F10}
+return
+
+
 ;=========== COPY/PASTE for Cygwin
 
 ^!V::
