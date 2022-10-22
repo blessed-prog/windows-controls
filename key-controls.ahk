@@ -8,10 +8,13 @@ return
 
 ;=========== Win 11 context menu
 
-<#X::
+<#S::
 Send +{F10}
 return
 
+<#X::
+Send +{F10}
+return
 
 ;=========== COPY/PASTE for Cygwin
 
@@ -33,12 +36,10 @@ return
 
 ^F4::
 Send !{F4}
-SendInput {LCtrl Up}
 return
 
 !BackSpace::
 Send {Delete}
-SendInput {LAlt Up}
 return
 
 !Left::
@@ -152,12 +153,10 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
 
 ^-::
 Send ^{WheelDown}
-SendInput {LCtrl Up}
 return
 
 ^=::
 Send ^{WheelUp}
-SendInput {LCtrl Up}
 return
 
 ^<#Enter::
@@ -172,7 +171,6 @@ Send {Up}
 Send {Up}
 Send {Up}
 Send {Up}
-SendInput {LWin Up}
 return
 
 <#Left::
@@ -186,7 +184,6 @@ Send {Left}
 Send {Left}
 Send {Left}
 Send {Left}
-SendInput {LWin Up}
 return
 
 <#Right::
@@ -200,7 +197,6 @@ Send {Right}
 Send {Right}
 Send {Right}
 Send {Right}
-SendInput {LWin Up}
 return
 
 <#Down::
@@ -208,5 +204,4 @@ Send {Down}
 Send {Down}
 Send {Down}
 Send {Down}
-SendInput {LWin Up}
 return
