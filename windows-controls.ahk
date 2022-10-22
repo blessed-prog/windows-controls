@@ -22,6 +22,13 @@ id_t_alt := ""
 id_g_alt := ""
 
 id_o_win := ""
+id_p_win := ""
+id_left_bracket_win := ""
+id_semicolon_win := ""
+id_single_quote_win := ""
+id_ls_win := ""
+id_gt_win := ""
+id_slash_win := ""
 
 id_o_alt := ""
 id_p_alt := ""
@@ -409,10 +416,6 @@ return
 WinActivate, ahk_id %id_l_alt%
 return
 
-#>+;::
-WinGet, id_semicolon_alt, ID, A
-return
-
 ^>+;::
 WinGet, id_semicolon_alt, ID, A
 return
@@ -421,8 +424,12 @@ return
 WinActivate, ahk_id %id_semicolon_alt%
 return
 
-#>+'::
-WinGet, id_single_quote_alt, ID, A
+#>+;::
+WinGet, id_semicolon_win, ID, A
+return
+
+<#;::
+WinActivate, ahk_id %id_semicolon_win%
 return
 
 ^>+'::
@@ -433,12 +440,28 @@ return
 WinActivate, ahk_id %id_single_quote_alt%
 return
 
+#>+'::
+WinGet, id_single_quote_win, ID, A
+return
+
+<#'::
+WinActivate, ahk_id %id_single_quote_win%
+return
+
 ^>+,::
 WinGet, id_ls_alt, ID, A
 return
 
 !,::
 WinActivate, ahk_id %id_ls_alt%
+return
+
+#>+,::
+WinGet, id_ls_win, ID, A
+return
+
+<#,::
+WinActivate, ahk_id %id_ls_win%
 return
 
 ^>+.::
@@ -449,12 +472,28 @@ return
 WinActivate, ahk_id %id_gt_alt%
 return
 
+#>+.::
+WinGet, id_gt_win, ID, A
+return
+
+#.::
+WinActivate, ahk_id %id_gt_win%
+return
+
 ^>+/::
 WinGet, id_slash_alt, ID, A
 return
 
 !/::
 WinActivate, ahk_id %id_slash_alt%
+return
+
+#>+/::
+WinGet, id_slash_win, ID, A
+return
+
+#/::
+WinActivate, ahk_id %id_slash_win%
 return
 
 ^>+O::
@@ -473,10 +512,6 @@ return
 WinActivate, ahk_id %id_o_win%
 return
 
-#>+P::
-WinGet, id_p_alt, ID, A
-return
-
 ^>+P::
 WinGet, id_p_alt, ID, A
 return
@@ -485,8 +520,12 @@ return
 WinActivate, ahk_id %id_p_alt%
 return
 
-#>+[::
-WinGet, id_left_bracket_alt, ID, A
+#>+P::
+WinGet, id_p_win, ID, A
+return
+
+<#P::
+WinActivate, ahk_id %id_p_win%
 return
 
 ^>+[::
@@ -496,6 +535,16 @@ return
 ![::
 WinActivate, ahk_id %id_left_bracket_alt%
 return
+
+#>+[::
+WinGet, id_left_bracket_win, ID, A
+return
+
+<#[::
+WinActivate, ahk_id %id_left_bracket_win%
+return
+
+; Additional keys
 
 !PgUp::
 WinActivate, ahk_id %id_left_bracket_alt%
