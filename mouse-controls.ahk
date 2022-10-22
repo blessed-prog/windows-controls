@@ -58,10 +58,14 @@ return
 <^WheelDown::
 return
 
+^<#Enter::
+Send {MButton}
+Send ^{PgDn}
+return
+
 XButton2::
 Send {MButton}
 Send ^{PgDn}
-SendInput {Ctrl Up}
 return
 
 ClickNow()
