@@ -21,6 +21,7 @@ id_v_alt := ""
 id_t_alt := ""
 id_g_alt := ""
 
+id_l_win := ""
 id_o_win := ""
 id_p_win := ""
 id_left_bracket_win := ""
@@ -404,12 +405,16 @@ return
 WinActivate, ahk_id %id_9_ctrl%
 return
 
-#>+L::
+^>+L::
 WinGet, id_l_alt, ID, A
 return
 
-^>+L::
-WinGet, id_l_alt, ID, A
+#>+L::
+WinGet, id_l_win, ID, A
+return
+
+#L::
+WinActivate, ahk_id %id_l_win%
 return
 
 !L::
