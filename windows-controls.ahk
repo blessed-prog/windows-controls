@@ -3,6 +3,15 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+id_pgup_alt := ""
+id_pgdn_alt := ""
+id_home_alt := ""
+id_end_alt := ""
+id_pgup_win := ""
+id_pgdn_win := ""
+id_home_win := ""
+id_end_win := ""
+
 id_a_win := ""
 id_d_win := ""
 
@@ -565,28 +574,66 @@ return
 WinActivate, ahk_id %id_left_bracket_win%
 return
 
-; Additional keys
+^>+PgUp::
+WinGet, id_pgup_alt, ID, A
+return
 
 !PgUp::
-WinActivate, ahk_id %id_left_bracket_alt%
+WinActivate, ahk_id %id_pgup_alt%
+return
+
+<#>+PgUp::
+WinGet, id_pgup_win, ID, A
+return
+
+<#PgUp::
+WinActivate, ahk_id %id_pgup_win%
+return
+
+^>+PgDn::
+WinGet, id_pgdn_alt, ID, A
 return
 
 !PgDn::
-WinActivate, ahk_id %id_single_quote_alt%
+WinActivate, ahk_id %id_pgdn_alt%
 return
 
-!Del::
-WinActivate, ahk_id %id_l_alt%
+<#>+PgDn::
+WinGet, id_pgdn_win, ID, A
+return
+
+<#PgDn::
+WinActivate, ahk_id %id_pgdn_win%
+return
+
+^>+End::
+WinGet, id_end_alt, ID, A
 return
 
 !End::
-WinActivate, ahk_id %id_semicolon_alt%
+WinActivate, ahk_id %id_end_alt%
 return
 
-!Ins::
-WinActivate, ahk_id %id_o_alt%
+<#>+End::
+WinGet, id_end_win, ID, A
+return
+
+<#End::
+WinActivate, ahk_id %id_end_win%
+return
+
+^>+Home::
+WinGet, id_home_alt, ID, A
 return
 
 !Home::
-WinActivate, ahk_id %id_p_alt%
+WinActivate, ahk_id %id_home_alt%
+return
+
+<#>+Home::
+WinGet, id_home_win, ID, A
+return
+
+<#Home::
+WinActivate, ahk_id %id_home_win%
 return
