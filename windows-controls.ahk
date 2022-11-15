@@ -56,6 +56,8 @@ id_slash_alt := ""
 
 id_i_alt := ""
 id_u_alt := ""
+id_j_alt := ""
+id_m_alt := ""
 id_9_alt := ""
 id_8_alt := ""
 
@@ -412,6 +414,30 @@ return
 
 !U::
 WinActivate, ahk_id %id_u_alt%
+return
+
+#>+J::
+WinGet, id_j_alt, ID, A
+return
+
+^>+J::
+WinGet, id_j_alt, ID, A
+return
+
+!J::
+WinActivate, ahk_id %id_j_alt%
+return
+
+#>+M::
+WinGet, id_m_alt, ID, A
+return
+
+^>+M::
+WinGet, id_m_alt, ID, A
+return
+
+!M::
+WinActivate, ahk_id %id_m_alt%
 return
 
 >^>!I::
