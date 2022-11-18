@@ -48,6 +48,10 @@ Send {WheelDown}
 Send {WheelDown}
 return
 
+<#A::
+ClickNow()
+return
+
 <#Enter::
 ClickNow()
 return
