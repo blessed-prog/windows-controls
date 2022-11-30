@@ -11,14 +11,10 @@ return
 Run C:\Programs
 return
 
-<#W::
+<^<!W::
 Run C:\Work
 return
 
-<#T::
+<^<!T::
 Run C:\Temp
-return
-
-<#Z::
-Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 return
