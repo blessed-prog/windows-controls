@@ -62,7 +62,7 @@ return
 <^WheelDown::
 return
 
-^<#Enter::
+<#D::
 Send {MButton}
 Send ^{PgDn}
 return
