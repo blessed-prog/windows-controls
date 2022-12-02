@@ -48,6 +48,10 @@ Send {WheelDown}
 Send {WheelDown}
 return
 
+LWin::
+ClickNow()
+return
+
 <#A::
 ClickNow()
 return
@@ -63,11 +67,6 @@ return
 return
 
 <#D::
-Send {MButton}
-Send ^{PgDn}
-return
-
-XButton2::
 Send {MButton}
 Send ^{PgDn}
 return
