@@ -67,6 +67,10 @@ return
 return
 
 <#D::
+Send {RButton}
+return
+
+<#F::
 Send {MButton}
 Send ^{PgDn}
 return
