@@ -47,11 +47,6 @@ return
 Send ^{PgDn}
 return
 
-+!q::
-WinGetClass, CurrentClass, A
-MsgBox, class is "%CurrentClass%"
-return
-
 WinGetPosEx(hWindow,ByRef X="",ByRef Y="",ByRef Width="",ByRef Height=""
 			,ByRef Offset_Left="",ByRef Offset_Top=""
 			,ByRef Offset_Right="",ByRef Offset_Bottom="")
