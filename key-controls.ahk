@@ -5,6 +5,22 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;=========== Win 11 context menu
 
+<#E::
+Run C:\
+return
+
+<^<!Q::
+Run C:\Programs
+return
+
+<^<!W::
+Run C:\Work
+return
+
+<^<!T::
+Run C:\Temp
+return
+
 <#S::
 Send +{F10}
 return
