@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 !Enter::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 4
+MouseMove, A_ScreenWidth / 2, 5 * A_ScreenHeight / 16
 ClickNow()
 return
 
