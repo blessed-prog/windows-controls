@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;=========== Win 11 context menu
+;=========== Folders
 
 <#E::
 Run C:\
@@ -20,6 +20,8 @@ return
 <^<!T::
 Run C:\Temp
 return
+
+;=========== Win 11 context menu
 
 <#S::
 Send +{F10}
@@ -51,9 +53,13 @@ return
 Send !{F4}
 return
 
+;=========== Delete
+
 <#BackSpace::
 Send {Delete}
 return
+
+;=========== Tab switchers
 
 !Left::
 Send ^{PgUp}
@@ -62,6 +68,8 @@ return
 !Right::
 Send ^{PgDn}
 return
+
+;=========== Window resize
 
 WinGetPosEx(hWindow,ByRef X="",ByRef Y="",ByRef Width="",ByRef Height=""
 			,ByRef Offset_Left="",ByRef Offset_Top=""
@@ -159,6 +167,12 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
 
+<#!Up::
+ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
+return
+
+;=========== Font resize
+
 ^-::
 Send ^{WheelDown}
 return
@@ -168,10 +182,6 @@ Send ^{WheelUp}
 return
 
 ^<#Enter::
-return
-
-<#!Up::
-ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
 return
 
 <#Up::
