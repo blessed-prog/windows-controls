@@ -34,6 +34,16 @@ id_y_alt := ""
 id_h_alt := ""
 id_n_alt := ""
 
+id_r_win := ""
+id_f_win := ""
+id_v_win := ""
+id_t_win := ""
+id_g_win := ""
+id_b_win := ""
+id_y_win := ""
+id_h_win := ""
+id_n_win := ""
+
 id_l_win := ""
 id_o_win := ""
 id_p_win := ""
@@ -260,10 +270,6 @@ return
 WinActivate, ahk_id %id_c_alt%
 return
 
-#>+R::
-WinGet, id_r_alt, ID, A
-return
-
 ^>+R::
 WinGet, id_r_alt, ID, A
 return
@@ -272,8 +278,12 @@ return
 WinActivate, ahk_id %id_r_alt%
 return
 
-#>+F::
-WinGet, id_f_alt, ID, A
+#>+R::
+WinGet, id_r_win, ID, A
+return
+
+#R::
+WinActivate, ahk_id %id_r_win%
 return
 
 ^>+F::
@@ -284,8 +294,12 @@ return
 WinActivate, ahk_id %id_f_alt%
 return
 
-#>+V::
-WinGet, id_v_alt, ID, A
+#>+F::
+WinGet, id_f_win, ID, A
+return
+
+#F::
+WinActivate, ahk_id %id_f_win%
 return
 
 ^>+V::
@@ -296,12 +310,28 @@ return
 WinActivate, ahk_id %id_v_alt%
 return
 
+#>+V::
+WinGet, id_v_win, ID, A
+return
+
+#V::
+WinActivate, ahk_id %id_v_win%
+return
+
 ^>+T::
 WinGet, id_t_alt, ID, A
 return
 
 !T::
 WinActivate, ahk_id %id_t_alt%
+return
+
+#>+T::
+WinGet, id_t_win, ID, A
+return
+
+#T::
+WinActivate, ahk_id %id_t_win%
 return
 
 ^>+G::
@@ -312,12 +342,28 @@ return
 WinActivate, ahk_id %id_g_alt%
 return
 
+#>+G::
+WinGet, id_g_win, ID, A
+return
+
+#G::
+WinActivate, ahk_id %id_g_win%
+return
+
 ^>+B::
 WinGet, id_b_alt, ID, A
 return
 
 !B::
 WinActivate, ahk_id %id_b_alt%
+return
+
+#>+B::
+WinGet, id_b_win, ID, A
+return
+
+#B::
+WinActivate, ahk_id %id_b_win%
 return
 
 ^>+Y::
