@@ -49,7 +49,6 @@ Send {WheelDown}
 return
 
 LWin::
-ClickNow()
 return
 
 <#A::
