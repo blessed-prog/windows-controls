@@ -7,10 +7,14 @@ id_pgup_alt := ""
 id_pgdn_alt := ""
 id_home_alt := ""
 id_end_alt := ""
+id_insert_alt := ""
+id_del_alt := ""
 id_pgup_win := ""
 id_pgdn_win := ""
 id_home_win := ""
 id_end_win := ""
+id_del_win := ""
+id_insert_win := ""
 
 id_a_win := ""
 id_d_win := ""
@@ -692,6 +696,38 @@ return
 
 <#End::
 WinActivate, ahk_id %id_end_win%
+return
+
+^>+Ins::
+WinGet, id_insert_alt, ID, A
+return
+
+!Ins::
+WinActivate, ahk_id %id_insert_alt%
+return
+
+<#>+Ins::
+WinGet, id_insert_win, ID, A
+return
+
+<#Ins::
+WinActivate, ahk_id %id_insert_win%
+return
+
+^>+Del::
+WinGet, id_del_alt, ID, A
+return
+
+!Del::
+WinActivate, ahk_id %id_del_alt%
+return
+
+<#>+Del::
+WinGet, id_del_win, ID, A
+return
+
+<#Del::
+WinActivate, ahk_id %id_del_win%
 return
 
 ^>+Home::
