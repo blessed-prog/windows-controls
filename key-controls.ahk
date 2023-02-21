@@ -175,6 +175,14 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
 ResizeWin(0, 0, A_ScreenWidth, A_ScreenHeight)
 return
 
+<#!Left::
+ResizeWin(0, 0, A_ScreenWidth / 2, A_ScreenHeight)
+return
+
+<#!Right::
+ResizeWin(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, A_ScreenHeight)
+return
+
 ;=========== Font resize
 
 ^-::
