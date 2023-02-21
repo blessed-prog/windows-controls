@@ -21,6 +21,10 @@ return
 Run C:\Temp
 return
 
+<^<!S::
+Run %A_MyDocuments%
+return
+
 ;=========== Win 11 context menu
 
 <#S::
