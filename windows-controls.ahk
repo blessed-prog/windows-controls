@@ -18,6 +18,9 @@ id_insert_win := ""
 
 id_a_win := ""
 id_d_win := ""
+id_q_win := ""
+id_w_win := ""
+id_e_win := ""
 
 id_q_alt := ""
 id_w_alt := ""
@@ -162,16 +165,16 @@ return
 WinGet, id_q_alt, ID, A
 return
 
-#>+Q::
-WinGet, id_q_alt, ID, A
-return
-
 !Q::
 WinActivate, ahk_id %id_q_alt%
 return
 
-#>+W::
-WinGet, id_w_alt, ID, A
+#>+Q::
+WinGet, id_q_win, ID, A
+return
+
+#Q::
+WinActivate, ahk_id %id_q_win%
 return
 
 ^>+W::
@@ -182,8 +185,12 @@ return
 WinActivate, ahk_id %id_w_alt%
 return
 
-#>+E::
-WinGet, id_e_alt, ID, A
+#>+W::
+WinGet, id_w_win, ID, A
+return
+
+#W::
+WinActivate, ahk_id %id_w_win%
 return
 
 ^>+E::
@@ -192,6 +199,14 @@ return
 
 !E::
 WinActivate, ahk_id %id_e_alt%
+return
+
+#>+E::
+WinGet, id_e_win, ID, A
+return
+
+#E::
+WinActivate, ahk_id %id_e_win%
 return
 
 ^>+A::
