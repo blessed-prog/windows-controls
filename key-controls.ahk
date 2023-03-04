@@ -13,6 +13,10 @@ return
 Run C:\Programs
 return
 
+<^<!D::
+Run %A_MyDocuments%\..\Downloads
+return
+
 <^<!W::
 Run C:\Work
 return
