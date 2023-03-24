@@ -433,18 +433,6 @@ return
 WinActivate, ahk_id %id_1%
 return
 
-#>+9::
-WinGet, id_9_alt, ID, A
-return
-
-^>+9::
-WinGet, id_9_alt, ID, A
-return
-
-!9::
-WinActivate, ahk_id %id_9_alt%
-return
-
 #>+8::
 WinGet, id_8_alt, ID, A
 return
