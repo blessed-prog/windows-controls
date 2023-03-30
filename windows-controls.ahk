@@ -97,46 +97,6 @@ id_9_ctrl := ""
 
 ; ===================== DIGITS ======================
 
-<+>+1::
-WinGet, id_1_dig, ID, A
-return
-
-^1::
-WinActivate, ahk_id %id_1_dig%
-return
-
-<+>+2::
-WinGet, id_2_dig, ID, A
-return
-
-^2::
-WinActivate, ahk_id %id_2_dig%
-return
-
-<+>+3::
-WinGet, id_3_dig, ID, A
-return
-
-^3::
-WinActivate, ahk_id %id_3_dig%
-return
-
-<+>+4::
-WinGet, id_4_dig, ID, A
-return
-
-^4::
-WinActivate, ahk_id %id_4_dig%
-return
-
-<+>+5::
-WinGet, id_5_dig, ID, A
-return
-
-^5::
-WinActivate, ahk_id %id_5_dig%
-return
-
 ^>+2::
 WinGet, id_2_dig_alt, ID, A
 return
