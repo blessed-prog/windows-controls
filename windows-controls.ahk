@@ -113,14 +113,6 @@ return
 WinActivate, ahk_id %id_3_dig_alt%
 return
 
-^>+5::
-WinGet, id_5_dig_alt, ID, A
-return
-
-!5::
-WinActivate, ahk_id %id_5_dig_alt%
-return
-
 ^>+Q::
 WinGet, id_q_alt, ID, A
 return
