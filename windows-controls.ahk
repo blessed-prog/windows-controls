@@ -78,12 +78,6 @@ id_m_alt := ""
 id_9_alt := ""
 id_8_alt := ""
 
-id_1_dig := ""
-id_2_dig := ""
-id_3_dig := ""
-id_4_dig := ""
-id_5_dig := ""
-
 id_2_dig_alt := ""
 id_3_dig_alt := ""
 id_5_dig_alt := ""
