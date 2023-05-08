@@ -86,6 +86,13 @@ id_1 := ""
 id_2 := ""
 id_3 := ""
 
+id_grave_accent_win := ""
+id_1_win := ""
+id_2_win := ""
+id_3_win := ""
+id_4_win := ""
+id_5_win := ""
+
 id_i_ctrl := ""
 id_9_ctrl := ""
 
@@ -106,6 +113,51 @@ return
 !3::
 WinActivate, ahk_id %id_3_dig_alt%
 return
+
+; ===================== DIGITS WIN ======================
+
+#>+`::
+WinGet, id_id_grave_accent_win_win, ID, A
+return
+
+#`::
+WinActivate, ahk_id %id_id_grave_accent_win_win%
+return
+
+
+#>+1::
+WinGet, id_1_win, ID, A
+return
+
+#1::
+WinActivate, ahk_id %id_1_win%
+return
+
+#>+2::
+WinGet, id_2_win, ID, A
+return
+
+#2::
+WinActivate, ahk_id %id_2_win%
+return
+
+#>+3::
+WinGet, id_3_win, ID, A
+return
+
+#3::
+WinActivate, ahk_id %id_3_win%
+return
+
+#>+4::
+WinGet, id_4_win, ID, A
+return
+
+#4::
+WinActivate, ahk_id %id_4_win%
+return
+
+; ===================== MAIN KEYS ======================
 
 ^>+Q::
 WinGet, id_q_alt, ID, A
