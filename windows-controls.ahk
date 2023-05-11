@@ -117,11 +117,11 @@ return
 ; ===================== DIGITS WIN ======================
 
 #>+`::
-WinGet, id_id_grave_accent_win_win, ID, A
+WinGet, id_grave_accent_win, ID, A
 return
 
 #`::
-WinActivate, ahk_id %id_id_grave_accent_win_win%
+WinActivate, ahk_id %id_grave_accent_win%
 return
 
 
