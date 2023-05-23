@@ -86,6 +86,7 @@ id_1 := ""
 id_2 := ""
 id_3 := ""
 
+id_grave_accent_alt := ""
 id_grave_accent_win := ""
 id_1_win := ""
 id_2_win := ""
@@ -96,7 +97,7 @@ id_5_win := ""
 id_i_ctrl := ""
 id_9_ctrl := ""
 
-; ===================== DIGITS ======================
+; ===================== DIGITS ALT======================
 
 ^>+2::
 WinGet, id_2_dig_alt, ID, A
@@ -112,6 +113,14 @@ return
 
 !3::
 WinActivate, ahk_id %id_3_dig_alt%
+return
+
+^>+`::
+WinGet, id_grave_accent_alt, ID, A
+return
+
+!`::
+WinActivate, ahk_id %id_grave_accent_alt%
 return
 
 ; ===================== DIGITS WIN ======================
