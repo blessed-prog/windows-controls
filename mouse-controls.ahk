@@ -22,7 +22,7 @@ return
 Send {RButton}
 return
 
-<#+Enter::
+<#Enter::
 Send {RButton}
 return
 
@@ -52,10 +52,6 @@ LWin::
 return
 
 <#A::
-ClickNow()
-return
-
-<#Enter::
 ClickNow()
 return
 
