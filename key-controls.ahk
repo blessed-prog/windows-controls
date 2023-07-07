@@ -39,10 +39,6 @@ return
 Send +{F10}
 return
 
-<#X::
-Send +{F10}
-return
-
 ;=========== COPY/PASTE for Cygwin
 
 ^!V::
