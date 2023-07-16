@@ -8,16 +8,6 @@ MouseMove, A_ScreenWidth / 2, 5 * A_ScreenHeight / 16
 ClickNow()
 return
 
-!RShift::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight / 2
-ClickNow()
-return
-
-!RCtrl::
-MouseMove, A_ScreenWidth / 2, A_ScreenHeight * 3 / 4
-ClickNow()
-return
-
 <#!Enter::
 Send {RButton}
 return
