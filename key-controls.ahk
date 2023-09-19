@@ -9,6 +9,9 @@ FormatTime, Time, ,HH:mm:ss tt
 SendInput, %Time%
 Return
 
+CapsLock::
+return
+
 ;=========== Folders
 
 <^<!E::
