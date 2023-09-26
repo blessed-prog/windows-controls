@@ -10,13 +10,13 @@ return
 
 <#!Enter::
 Send {RButton}
-return
 
 <#Enter::
+return
 Send {RButton}
 return
 
-<#<+Up::
+#!Up::
 Send {WheelUp}
 Send {WheelUp}
 Send {WheelUp}
@@ -27,7 +27,7 @@ Send {WheelUp}
 Send {WheelUp}
 return
 
-<#<+Down::
+#!Down::
 Send {WheelDown}
 Send {WheelDown}
 Send {WheelDown}
