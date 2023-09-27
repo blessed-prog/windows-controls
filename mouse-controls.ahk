@@ -16,6 +16,28 @@ return
 Send {RButton}
 return
 
+>^Up::
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+Send {WheelUp}
+return
+
+>^Down::
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+Send {WheelDown}
+return
+
 #!Up::
 Send {WheelUp}
 Send {WheelUp}
