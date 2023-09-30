@@ -3,11 +3,6 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-!Enter::
-MouseMove, A_ScreenWidth / 2, 5 * A_ScreenHeight / 16
-ClickNow()
-return
-
 <#!Enter::
 Send {RButton}
 
@@ -63,10 +58,6 @@ return
 LWin::
 return
 
-<#A::
-ClickNow()
-return
-
 <^WheelUp::
 return
 
@@ -87,3 +78,20 @@ ClickNow()
 MouseGetPos, xpos, ypos
 Send {Click, xpos, ypos}
 }
+
+;====== Mouse moves
+
+<#Q::
+MouseMove, A_ScreenWidth / 8, A_ScreenHeight / 8
+ClickNow()
+return
+
+<#A::
+MouseMove, A_ScreenWidth / 8, A_ScreenHeight / 2
+ClickNow()
+return
+
+<#Z::
+MouseMove, A_ScreenWidth / 8, A_ScreenHeight * 7 / 8
+ClickNow()
+return

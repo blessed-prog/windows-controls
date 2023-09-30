@@ -186,10 +186,6 @@ return
 WinGet, id_q_win, ID, A
 return
 
-#Q::
-WinActivate, ahk_id %id_q_win%
-return
-
 ^>+W::
 WinGet, id_w_alt, ID, A
 return
@@ -232,10 +228,6 @@ return
 
 #>+A::
 WinGet, id_a_win, ID, A
-return
-
-<#A::
-WinActivate, ahk_id %id_a_win%
 return
 
 #>+S::
