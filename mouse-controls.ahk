@@ -81,6 +81,11 @@ Send {Click, xpos, ypos}
 
 ;====== Mouse moves
 
+!Enter::
+MouseMove, A_ScreenWidth / 2, 5 * A_ScreenHeight / 16
+ClickNow()
+return
+
 <#Q::
 MouseMove, A_ScreenWidth / 8, A_ScreenHeight / 8
 ClickNow()
