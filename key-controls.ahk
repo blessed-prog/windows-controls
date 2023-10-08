@@ -184,6 +184,12 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
     WinMove,A,,%Left%,%Top%,%Width%,%Height%
 }
 
+;=========== Windows
+
+<#W::
+WinClose, A
+return
+
 ;=========== Font resize
 
 ^-::

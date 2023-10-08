@@ -198,10 +198,6 @@ return
 WinGet, id_w_win, ID, A
 return
 
-#W::
-WinActivate, ahk_id %id_w_win%
-return
-
 ^>+E::
 WinGet, id_e_alt, ID, A
 return
