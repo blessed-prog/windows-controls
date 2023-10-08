@@ -44,9 +44,9 @@ return
 
 ;=========== Win 11 context menu
 
-<#S::
-Send +{F10}
-return
+;<#S::
+;Send +{F10}
+;return
 
 ;=========== COPY/PASTE for Cygwin
 
@@ -188,6 +188,10 @@ ResizeWin(Left = 0, Top = 0, Width = 0, Height = 0)
 
 <#W::
 WinClose, A
+return
+
+<#S::
+WinMinimize, A
 return
 
 ;=========== Font resize
