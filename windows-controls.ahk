@@ -450,7 +450,7 @@ return
 WinGet, id_i_alt, ID, A
 return
 
-^>+I::
+!>+I::
 WinGet, id_i_alt, ID, A
 return
 
@@ -486,7 +486,7 @@ return
 WinGet, id_m_alt, ID, A
 return
 
-^>+M::
+!>+M::
 WinGet, id_m_alt, ID, A
 return
 
@@ -510,8 +510,12 @@ return
 WinActivate, ahk_id %id_9_ctrl%
 return
 
-^>+L::
+!>+L::
 WinGet, id_l_alt, ID, A
+return
+
+!L::
+WinActivate, ahk_id %id_l_alt%
 return
 
 #>+L::
@@ -522,11 +526,7 @@ return
 WinActivate, ahk_id %id_l_win%
 return
 
-!L::
-WinActivate, ahk_id %id_l_alt%
-return
-
-^>+;::
+!>+;::
 WinGet, id_semicolon_alt, ID, A
 return
 
@@ -542,7 +542,7 @@ return
 WinActivate, ahk_id %id_semicolon_win%
 return
 
-^>+'::
+!>+'::
 WinGet, id_single_quote_alt, ID, A
 return
 
@@ -558,7 +558,7 @@ return
 WinActivate, ahk_id %id_single_quote_win%
 return
 
-^>+,::
+!>+,::
 WinGet, id_ls_alt, ID, A
 return
 
@@ -574,7 +574,7 @@ return
 WinActivate, ahk_id %id_ls_win%
 return
 
-^>+.::
+!>+.::
 WinGet, id_gt_alt, ID, A
 return
 
@@ -590,7 +590,7 @@ return
 WinActivate, ahk_id %id_gt_win%
 return
 
-^>+/::
+!>+/::
 WinGet, id_slash_alt, ID, A
 return
 
@@ -606,7 +606,7 @@ return
 WinActivate, ahk_id %id_slash_win%
 return
 
-^>+O::
+!>+O::
 WinGet, id_o_alt, ID, A
 return
 
@@ -622,7 +622,7 @@ return
 WinActivate, ahk_id %id_o_win%
 return
 
-^>+P::
+!>+P::
 WinGet, id_p_alt, ID, A
 return
 
@@ -638,7 +638,7 @@ return
 WinActivate, ahk_id %id_p_win%
 return
 
-^>+[::
+!>+[::
 WinGet, id_left_bracket_alt, ID, A
 return
 

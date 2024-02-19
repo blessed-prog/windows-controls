@@ -78,6 +78,22 @@ return
 
 ;=========== Tab switchers
 
+>^>+Up::
+Send {Home}
+return
+
+>^>+Down::
+Send {End}
+return
+
+>+Up::
+Send {PgUp}
+return
+
+>+Down::
+Send {PgDn}
+return
+
 !Left::
 Send ^{PgUp}
 return
