@@ -5,10 +5,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 <#!Enter::
 Send {RButton}
+return
 
 <#Enter::
-return
-Send {RButton}
+ClickNow()
 return
 
 >^Up::
